@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta property="og:title" content="Contact 3 Pilgrim LLC" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "3 Pilgrim LLC",
+    "url": "https://3pilgrimllc.github.io/3pilgrim.github.io/",
+    "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "foundingDate": "2013"
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact form for inquiries regarding 3 Pilgrim LLC research and publications.">
+  <meta name="keywords" content="contact, research inquiry, behavioral finance, decision theory, 3 Pilgrim LLC">
+  <title>Contact 3 Pilgrim LLC</title>
+
+  <style>
+    /* -------- GLOBAL -------- */
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: "Georgia", serif;
+      background-color: #fff;
+      color: #000;
+      overflow-x: hidden;
+    }
+
+    /* -------- HEADER -------- */
+    header {
+      position: relative;
+      margin-top: 50px;
+      padding-bottom: 120px; /* creates space for ellipse + quotes */
+    }
+
+    .logo {
+      width: 125px;
+      height: auto;
+    }
+
+    .ellipse {
+      width: 600px;
+      height: auto;
+      display: block;
+      margin: -50px auto 0 auto;
+      transform: translateX(10px); /* small right offset */
+    }
+
+    .content {
+      width: 60%;               /* matches ellipse width better */
+      margin: 40px auto 40px;   /* smaller top margin = tighter spacing under nav */
+      text-align: left;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    form {
+      width: 100%;              /* inherits the .content width */
+      margin-top: 20px;         /* small breathing room under paragraph */
+      text-align: left;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      font-family: Georgia, serif;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: Georgia, serif;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+
+    /* -------- QUOTE LAYER -------- */
+    .quote-layer {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0 25%;
+      box-sizing: border-box;
+    }
+
+    .quote-left,
+    .quote-right {
+      width: 250px;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #000;
+      font-family: "Georgia", serif;
+    }
+
+    .quote-left { text-align: left; }
+    .quote-right { text-align: left; }
+
+    /* -------- NAVIGATION -------- */
+    .main-nav {
+      position: absolute;
+      top: 225px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      font-size: 18px;
+      font-family: "Georgia", serif;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      color: #444;
+    }
+
+    /* -------- FOOTER -------- */
+    footer {
+      width: 80%;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      padding: 4px 0 0 0;
+      border-top: 1px solid #ccc;
+      line-height: 1.5;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #000;
+    }
+
+    /* -------- RESPONSIVE -------- */
+    @media (max-width: 800px) {
+      .quote-layer {
+        position: static;
+        margin-top: 20px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .quote-left, .quote-right {
+        position: static;
+        width: 90%;
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .main-nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ---------- HEADER ---------- -->
+  <header>
+    <img src="assets/logo.png" alt="3 Pilgrim LLC Logo" class="logo">
+    <img src="assets/ellipse.png" alt="Decorative ellipse" class="ellipse">
+
+    <!-- QUOTES -->
+    <div class="quote-layer">
+      <div class="quote-left">
+        <p>Life begins at grade, accomplishment is our asymptote</p>
+        <p></p>
+        <p>a = f(strive), lim(strive→∞) a → A  {a = accomplishment, A = ideal}</p>
+      </div>
+      <div class="quote-right">
+        <p>Meaning emerges only through others.</p>
+        <p></p>
+        <p>m = f(v), v = Σ(connectionᵢ), where ego = 1ₙ {m=meaning, v=value, n= Q humans}</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ---------- NAVIGATION ---------- -->
+  <nav class="main-nav">
+    <a href="about.html">About</a>
+    <a href="library.html">Library</a>
+    <a href="contact.html">Contact</a>
+    <a href="legal.html">Legal</a>
+  </nav>
+
+  <main class="content">
+    <h2>Contact 3 Pilgrim LLC</h2>
+    <p>We welcome thoughtful correspondence regarding our publications or research inquiries. Please complete the form below; submissions are reviewed periodically and responded to as appropriate.</p>
+
+    <form action="https://formspree.io/f/xdkpqpgq" method="POST">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="_replyto" required><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="6" required></textarea><br>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p style="font-size: 12px; margin-top: 20px;">
+      By submitting this form, you acknowledge that 3 Pilgrim LLC may retain your message for archival and reference purposes. No data is shared or sold to any third party.
+    </p>
+  </main>
+
+  <!-- ---------- FOOTER ---------- -->
+  <footer>
+    <p>
+      Entity Declaration: Founded in 2013, 3 Pilgrim LLC is an independent research organization focused on cross-disciplinary models in behavioral systems, mathematics, and information theory. Scope Declaration: This site hosts the canonical references for original research artifacts authored exclusively by 3 Pilgrim LLC. All materials contained herein have been authored exclusively by 3 Pilgrim LLC. All information contained on this site is the property of 3 Pilgrim LLC. Legal Disclaimer: All information is provided freely, and no warranty of accuracy is expressed or implied. We assume no responsibility for any injury or harm caused by direct or indirect use. All documents are working drafts and subject to revision at any time.<br> 
+      Please reference our <a href="legal.html">Legal</a> page for full terms.
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta property="og:title" content="About 3 Pilgrim LLC" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "3 Pilgrim LLC",
+    "url": "https://3pilgrimllc.github.io/3pilgrim.github.io/",
+    "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "foundingDate": "2013"
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Independent research organization exploring behavioral finance, mathematics, and cognition.">
+  <meta name="keywords" content="behavioral finance, combinatorics, emergence, AI modeling, market psychology, 3 Pilgrim LLC">
+  <title>3 Pilgrim LLC</title>
+  <style>
+    /* -------- GLOBAL -------- */
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: "Georgia", serif;
+      background-color: #fff;
+      color: #000;
+      overflow-x: hidden;
+    }
+
+    /* -------- HEADER -------- */
+    header {
+      position: relative;
+      margin-top: 50px;
+      padding-bottom: 120px; /* creates space for ellipse + quotes */
+    }
+
+    .logo {
+      width: 125px;
+      height: auto;
+    }
+
+    .ellipse {
+      width: 600px;
+      height: auto;
+      display: block;
+      margin: -50px auto 0 auto;
+      transform: translateX(10px); /* small right offset */
+    }
+
+/* -------- QUOTE LAYER -------- */
+.quote-layer {
+  position: absolute;
+  top: 30px; /* adjust this to move quotes up/down */
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 25%;
+  box-sizing: border-box;
+}
+
+.quote-left,
+.quote-right {
+  width: 250px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #000;
+  font-family: "Georgia", serif;
+}
+
+.quote-left {
+  text-align: left;
+}
+
+.quote-right {
+  text-align: left;
+}
+
+
+    /* -------- NAVIGATION -------- */
+    .main-nav {
+  position: absolute;
+  top: 225px;          /* raise links closer under the ellipse */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 100px;           /* keep spacing between links */
+  font-size: 18px;
+  font-family: "Georgia", serif;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      color: #444;
+    }
+
+    /* -------- FOOTER -------- */
+    footer {
+      width: 80%;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      padding: 4px 0 0 0;
+      border-top: 1px solid #ccc;
+      line-height: 1.5;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #000;
+    }
+
+    /* -------- RESPONSIVE -------- */
+    @media (max-width: 800px) {
+      .quote-layer {
+        position: static;
+        margin-top: 20px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .quote-left, .quote-right {
+        position: static;
+        width: 90%;
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .main-nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ---------- HEADER ---------- -->
+  <header>
+    <img src="assets/logo.png" alt="3 Pilgrim LLC Logo" class="logo">
+    <img src="assets/ellipse.png" alt="Decorative ellipse" class="ellipse">
+
+    <!-- QUOTES -->
+    <div class="quote-layer">
+      <div class="quote-left">
+        <p>The price of knowledge is the acceptance of truth, in whatever form it takes.</p>
+      </div>
+      <div class="quote-right">
+        <p>The pursuit of knowledge requires the discovery of truth.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ---------- NAVIGATION ---------- -->
+  <nav class="main-nav">
+    <a href="about.html">About</a>
+    <a href="library.html">Library</a>
+    <a href="contact.html">Contact</a>
+    <a href="legal.html">Legal</a>
+  </nav>
+
+  <!-- ---------- FOOTER ---------- -->
+  <footer>
+    <p>
+      Entity Declaration: Founded in 2013, 3 Pilgrim LLC is an independent research organization focused on cross-disciplinary models in behavioral systems, mathematics, and information theory. Scope Declaration: This site hosts the canonical references for original research artifacts authored exclusively by 3 Pilgrim LLC. All materials contained herein have been authored exclusively by 3 Pilgrim LLC. All information contained on this site is the property of 3 Pilgrim LLC. Legal Disclaimer: All information is provided freely, and no warranty of accuracy is expressed or implied. We assume no responsibility for any injury or harm caused by direct or indirect use. All documents are working drafts and subject to revision at any time.<br> 
+      Please reference our <a href="legal.html">Legal</a> page for full terms.
+    </p>
+  </footer>
+</body>
+</html>
