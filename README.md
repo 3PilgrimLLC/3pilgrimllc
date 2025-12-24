@@ -8,7 +8,7 @@ This repository serves as our public-facing library: a curated collection of **e
 The intent is to contribute reusable building blocks that others may implement, extend, test, critique, or cite.
 
 ## Contents
-- Major publications (PDF with Zenodo DOIs) – listed in [/library.html](/library.html)
+- Major publications (PDF with Zenodo DOIs) – listed in [Library](https://3pilgrimllc.github.io/3pilgrimllc/library.html)
 - Core primitives across disciplines – compiled in [primitives.md](primitives.md)
 - Minor and developmental notes – in [/notes/](/notes/)
 
@@ -33,4 +33,5 @@ No support or consultation are provided through this repository.
 - [Legal](https://3pilgrimllc.github.io/3pilgrimllc/legal.html) - Legal Terms
 
 *Last updated: December 2025*
+
 
