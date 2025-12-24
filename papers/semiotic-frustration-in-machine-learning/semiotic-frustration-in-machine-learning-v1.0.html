@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semiotic Frustration in Machine Learning: Resolving the Dimensionality Paradox Through Reductionist Taxonomy</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2cm; line-height: 1.6; }
+    .title-page { text-align: center; margin-top: 20%; page-break-after: always; }
+    header { position: fixed; top: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
+    footer { position: fixed; bottom: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
+    img { max-width: 100%; height: auto; }
+  </style>
+  </head>
+<body>
+  <header>
+    3 Pilgrim LLC | Semiotic Frustration in Machine Learning: Resolving the Dimensionality Paradox Through Reductionist Taxonomy | Version 1.0 · December 2025
+  </header>
+  <div class="title-page">
+    <h1>Semiotic Frustration in Machine Learning: Resolving the Dimensionality Paradox Through Reductionist Taxonomy</h1>
+    <h2>A Systems-Theoretic Framework for Vectoral Containment, Manifold Geometry, and True Dimensional Expansion</h2>
+    <p>3 Pilgrim LLC</p>
+    <p>Version 1.0 · December 2025</p>
+  </div>
+  <p><strong>Abstract</strong></p>
+  <p><strong>Problem Definition</strong>: Machine learning discourse
+  routinely employs “dimensionality” to denote feature count or
+  parameter volume, diverging from mathematical and physical definitions
+  in which dimensions are independent axes that generate exponential
+  volume growth and new topological invariants. This semiotic synthesis
+  error produces a persistent taxonomic frustration: vector aggregation
+  is conflated with structural expansion, obscuring limits in scaling,
+  sparsity, and generality as abstract mathematics and practical AI
+  increasingly converge.</p>
+  <p><strong>Proposed Contribution</strong>: This work performs
+  corrective philology by introducing a reductionist taxonomy that
+  distinguishes vectoral</p>
+  <p>containment—the aggregation of correlated vectors in fixed
+  topology—from true dimensional expansion, defined as the addition of
+  independent axes yielding structural transformation. The framework
+  simplifies existing discourse by eliminating conflations, generalizes
+  across embedding, optimization, and scaling contexts, and resolves the
+  dimensionality paradox through minimal primitives governing
+  containment limits and expansion mechanisms.</p>
+  <p><strong>Theoretical Foundations</strong>: True dimension is an
+  independent axis of freedom, producing exponential growth in
+  configuration space and enabling new symmetries and invariants.
+  Vectoral containment, by contrast, yields redundancy without
+  independence, generating degeneracy rather than volume gain. Treating
+  feature proliferation as expansion explains the co-occurrence of low
+  intrinsic dimension, flat minima, low-rank Fisher metrics, and fractal
+  or hyperbolic traits in overparameterized regimes without invoking ad
+  hoc mechanisms.</p>
+  <p><strong>Cross-Domain Mapping:</strong> The taxonomy provides a
+  unified interpretive lens across loss landscapes, embedding geometry,
+  scaling behavior, alignment dynamics, and constraint topology, serving
+  as a semantic anchor rather than an exhaustive mapping.</p>
+  <p><strong>Scope and Intent:</strong> This paper introduces a
+  foundational taxonomy and primitive set only. It proposes no new
+  algorithms or benchmarks. Its purpose is to render the dimensionality
+  paradox analytically tractable while exposing its structural kinship
+  with containment-driven phenomena across systems theory.</p>
+  <p><img src="media/media/image2.png"
+  style="width:3.25in;height:1.77569in" /></p>
+  <p><strong>Figure 1</strong>. Conceptual Framework Diagram</p>
+  <p>High-level structure illustrating vectoral containment as
+  correlated aggregation in a fixed topology (left cluster), contrasted
+  with true dimensional expansion adding independent axes and
+  exponential volume (right branching). Containment yields redundancy
+  and degeneracy rather than volume gain; expansion enables new
+  symmetries and topological invariants.</p>
+  <p><strong>Figure 1 (enlarged):</strong></p>
+  <p><img src="media/media/image2.png"
+  style="width:7in;height:3.16276in" /></p>
+  <p><strong>Keywords</strong>: vectoral containment, true dimensional
+  expansion, manifold geometry, degeneracy amplification, constraint
+  topology, alignment dynamics, structural inference, probabilistic
+  cognition, systems-theoretic reduction, redundancy aggregation,
+  taxonomic paradox, semiotic synthesis</p>
+  <p><strong>Orientation for Interpretation:</strong> This document
+  proposes a conceptual taxonomy intended as foundational constructs for
+  dimensionality in artificial intelligence. It is not an empirical
+  study, nor does it claim predictive precision or algorithmic
+  superiority. The primitives are provisional and reductionist by
+  design—chosen for explanatory coherence and generality across observed
+  phenomena. Terminology is precise but domain-general, favoring
+  structural relationships over implementation details. Readers should
+  expect abstraction before application: the framework aims to provide a
+  unified lens through which existing observations become consequences
+  of the category error, enabling future theoretical and practical
+  extensions. Claims are sufficient for the phenomena described but not
+  asserted as necessary or exhaustive.</p>
+  <hr />
+  <h1
+  id="section-1-related-work-fragmented-observations-and-the-taxonomic-paradox">Section
+  1: Related Work — Fragmented Observations and the Taxonomic
+  Paradox</h1>
+  <p>The term <em>“dimensionality”</em> in machine learning has become a
+  site of persistent semiotic synthesis error. A mathematical primitive
+  with a precise and invariant meaning has been repurposed to describe a
+  different phenomenon: the accumulation of features, parameters, or
+  coordinates in vector representations. This divergence is not unusual
+  in young technical fields. Terminology is often borrowed
+  opportunistically from established disciplines and redefined for local
+  utility. In early stages, such adaptation is efficient and rarely
+  harmful. As a field matures and increasingly intersects with its
+  source domains, however, the reframing can harden into a taxonomic
+  paradox that impedes conceptual synthesis.</p>
+  <p>In mathematics and physics, dimensionality denotes the number of
+  independent coordinates required to specify a point in a space. Each
+  new dimension is orthogonal to the others, yielding exponential growth
+  in configuration space and introducing new topological invariants.
+  This definition is structural and invariant: dimension is defined by
+  independence, not by count.</p>
+  <p>In machine learning practice, <em>“dimensionality”</em> has come to
+  denote the number of features, parameters, or coordinates in a vector
+  representation. This usage emerged as a convenient shorthand when
+  models were small and the distinction between independence and
+  aggregation carried little practical cost. As model scales expanded
+  into billions and trillions of parameters, the term persisted without
+  recalibration. The result is that spaces with fixed topology and
+  highly correlated coordinates are routinely described as
+  “high-dimensional,” despite lacking the independence that defines true
+  dimensional expansion.</p>
+  <p>This divergence surfaces across multiple subliteratures. Work on
+  embedding spaces routinely describes representations as
+  <em>high-dimensional</em> while simultaneously observing that most
+  directions are correlated or redundant (e.g., hyperbolic and
+  hierarchical embeddings). Studies of loss landscapes report fractal
+  roughness, multifractal scaling, and apparent complexity in level
+  sets, while empirical analyses of overparameterization consistently
+  reveal low intrinsic dimensionality, low-rank Fisher information, and
+  flat minima. Grokking transitions, curvature collapse, and effective
+  subspace shrinkage are repeatedly observed as models scale.</p>
+  <p>These findings are empirically robust and theoretically important.
+  However, they remain fragmented. The literature describes
+  symptoms—thin-shell concentration, degeneracy, redundancy, flatness,
+  and effective low rank—but lacks a unifying primitive that explains
+  why these phenomena reliably co-occur in overparameterized regimes.
+  The prevailing explanations appeal to “high-dimensional effects,” even
+  as measurements repeatedly demonstrate the absence of genuine
+  high-dimensional independence.</p>
+  <p>The resulting paradox is structural: machine learning discourse
+  invokes dimensionality to explain behaviors that arise precisely
+  because true dimensional expansion has <em>not</em> occurred. Feature
+  proliferation and parameter growth are treated as expansion, while
+  their correlated nature ensures containment within a
+  low-effective-volume subspace. This creates persistent confusion when
+  machine learning theory intersects with geometry, topology, and
+  physics, where dimensionality retains its invariant meaning.</p>
+  <p>This paper addresses that gap through corrective philology. Rather
+  than discarding existing observations or proposing new empirical
+  claims, we trace the origin of the semiotic divergence, identify its
+  structural consequences, and introduce a reductionist taxonomy that
+  separates vector aggregation from true dimensional expansion. This
+  distinction provides a causal account for the co-occurrence of
+  redundancy, flatness, low intrinsic dimension, and scaling plateaus,
+  while restoring terminological alignment between machine learning and
+  its source disciplines.</p>
+  <hr />
+  <h1 id="defining-true-dimension-independence-and-expansion">2.
+  Defining True Dimension: Independence and Expansion</h1>
+  <p>With the taxonomic divergence established, we begin by fixing the
+  invariant meaning of <em>dimension</em> as it is used in mathematics
+  and physics. This definition is not proposed as a metaphor or analogy
+  for machine learning, but as a structural primitive against which
+  other mechanisms can be contrasted.</p>
+  <p>From first principles, a true dimension is an independent axis of
+  freedom in a space.</p>
+  <p>Independence here is strict: each axis contributes degrees of
+  freedom that cannot be expressed as linear or nonlinear combinations
+  of the others. The addition of a dimension therefore alters the
+  structure of the space itself, rather than merely increasing the
+  resolution or population of points within an existing structure.</p>
+  <h2 id="geometric-interpretation">2.1 Geometric Interpretation</h2>
+  <p>Geometrically, adding a dimension multiplies the measure of a
+  space. A one-dimensional line has length; adding an orthogonal axis
+  yields a two-dimensional area; adding another yields three-dimensional
+  volume; and so on. Each new dimension enables exponential growth in
+  the number of distinguishable configurations, not by increasing
+  density, but by expanding the space in which configurations may
+  exist.</p>
+  <p>This growth is structural rather than quantitative. A
+  higher-dimensional space is not simply a more crowded version of a
+  lower-dimensional one; it admits trajectories, separations, and
+  neighborhoods that are impossible in lower dimensions.</p>
+  <h2 id="topological-implications">2.2 Topological Implications</h2>
+  <p>True dimensional expansion introduces new topological invariants.
+  As dimensionality increases, the space admits new classes of
+  embeddings, connectivity patterns, and global structures. Examples
+  include increased coordination numbers in packing problems, new
+  homotopy classes, and higher-order invariants unavailable in lower
+  dimensions.</p>
+  <p>These changes are qualitative. They alter what kinds of paths,
+  symmetries, and transformations the space can support. Dimensional
+  expansion therefore cannot be reduced to the accumulation of
+  coordinates within a fixed topology.</p>
+  <h2 id="physical-interpretation">2.3 Physical Interpretation</h2>
+  <p>In physical systems, dimensions correspond to independent degrees
+  of freedom with causal or structural consequences. The addition of
+  time as a fourth dimension in spacetime does not merely add another
+  coordinate; it introduces causality, ordering, and relativistic
+  structure. Similarly, additional spatial dimensions in theoretical
+  physics alter force laws, propagation modes, and symmetry groups.</p>
+  <p>Across these domains, the defining feature is independence. A
+  dimension is not defined by how many numbers are used to describe a
+  system, but by how many independent directions of variation the system
+  possesses.</p>
+  <h2 id="invariance-of-the-definition">2.4 Invariance of the
+  Definition</h2>
+  <p>This definition of dimension is invariant across domains. Whether
+  in geometry, topology, or physics, dimensionality refers to the number
+  of independent axes required to specify a point or state in a space.
+  Counting dependent or correlated coordinates does not increase
+  dimensionality; it increases representation density within an existing
+  dimensional structure.</p>
+  <p>This invariance is essential. It provides a fixed reference against
+  which alternative mechanisms—such as aggregation, redundancy, or
+  containment—can be meaningfully distinguished.</p>
+  <hr />
+  <h1
+  id="the-divergence-vector-aggregation-masquerading-as-dimension">3.
+  The Divergence: Vector Aggregation Masquerading as Dimension</h1>
+  <p>The divergence between true dimensionality and its usage in machine
+  learning is not a loose metaphorical drift but a concrete category
+  error. Dimension, as established, denotes the number of independent
+  axes defining a space. Machine learning practice, by contrast, has
+  come to apply the term to the accumulation of coordinates that do not
+  introduce independence or alter topology.</p>
+  <p>This shift was initially pragmatic. Early models operated at modest
+  scales, and the distinction between independent axes and correlated
+  coordinates carried little practical cost. As models expanded from
+  thousands to billions of parameters, the terminology persisted, even
+  as the underlying mechanism changed. What increased was not
+  dimensionality in the structural sense, but aggregation within a fixed
+  space.</p>
+  <p>The result is a systematic mislabeling: vector aggregation is
+  treated as dimensional expansion.</p>
+  <h2 id="feature-aggregation">3.1 Feature Aggregation</h2>
+  <p>Input spaces are routinely described as “high-dimensional” when
+  they contain many features. In practice, these features are often
+  strongly correlated or constrained by shared structure. Pixel grids,
+  sensor arrays, and tokenized text representations all exhibit
+  dependency induced by locality, grammar, or generation processes.</p>
+  <p>When sparsity or concentration effects arise, they are attributed
+  to the “curse of dimensionality.” Yet the observed behavior follows
+  from aggregation of dependent variables within a fixed topology, not
+  from the exponential volume growth associated with independent
+  axes.</p>
+  <p>The space becomes crowded, not expansive.</p>
+  <h2 id="embedding-aggregation">3.2 Embedding Aggregation</h2>
+  <p>Learned representations—such as hidden states or embedding vectors
+  with thousands of coordinates—are frequently described as residing in
+  “high-dimensional spaces.” Distance concentration, instability of
+  nearest-neighbor relations, and thin-shell effects are then
+  interpreted as intrinsic properties of high-dimensional geometry.</p>
+  <p>The phenomena are real, but the causal attribution is inverted.
+  These behaviors emerge because most coordinates are correlated or
+  redundant, collapsing effective degrees of freedom into a
+  low-dimensional subspace. The embedding does not explore a genuinely
+  high-dimensional manifold; it occupies a narrow region within a fixed
+  topology, densely populated by aggregated vectors.</p>
+  <h2 id="parameter-aggregation">3.3 Parameter Aggregation</h2>
+  <p>Overparameterized models are often described as operating in
+  “high-dimensional loss landscapes.” Flat minima, low-rank curvature,
+  and degeneracy are treated as consequences of dimensionality
+  itself.</p>
+  <p>Empirical results consistently contradict this interpretation.
+  Intrinsic dimension estimates are orders of magnitude lower than
+  nominal parameter counts. Fisher information matrices are low-rank,
+  and curvature spectra are dominated by a small number of directions.
+  These observations indicate redundancy, not expansion.</p>
+  <p>The landscape is large in count, not in independent structure.</p>
+  <h2 id="the-taxonomic-paradox">3.4 The Taxonomic Paradox</h2>
+  <p>Across features, embeddings, and parameters, the same pattern
+  recurs: aggregation without independence is labeled as dimensional
+  expansion. The field therefore speaks of “high-dimensional” effects
+  while operating within spaces whose topology remains effectively
+  unchanged.</p>
+  <p>This creates a taxonomic paradox. Mathematical and physical
+  discussions of dimension refer to structural expansion and new
+  invariants; machine learning discussions refer to vector count and
+  representational density. When these domains intersect—as in geometric
+  deep learning, manifold-aware optimization, or hyperbolic
+  embeddings—the mismatch introduces friction. Identical terms denote
+  different primitives, preventing synthesis.</p>
+  <hr />
+  <h1
+  id="why-it-matters-scaling-limits-sparsity-and-lost-degrees-of-freedom">4.
+  Why It Matters: Scaling Limits, Sparsity, and Lost Degrees of
+  Freedom</h1>
+  <p>The divergence between true dimensional expansion and vector
+  aggregation is not a benign terminological shortcut. As machine
+  learning matures and increasingly intersects with abstract
+  mathematics, physics, and systems theory, the category error produces
+  concrete limitations in understanding, communication, and
+  innovation.</p>
+  <h2 id="scaling-without-expansion">4.1 Scaling Without Expansion</h2>
+  <p>Contemporary scaling strategies implicitly assume that adding
+  parameters, features, or embedding coordinates expands a model’s
+  expressive capacity in a manner analogous to adding dimensions. In
+  practice, these additions primarily increase vector aggregation within
+  a fixed topology.</p>
+  <p>The consequence is diminishing returns. As aggregation increases,
+  effective degrees of freedom saturate while nominal size continues to
+  grow. Empirically observed plateaus in scaling curves are therefore
+  not anomalies or optimization failures; they are structural limits of
+  containment. Additional vectors populate already-occupied directions,
+  yielding redundancy rather than new volume.</p>
+  <p>Framed this way, the “curse of dimensionality” is misapplied. The
+  difficulty does not arise from navigating an exponentially expanding
+  space, but from compressing information into a crowded, correlated
+  one. The curse is not of dimension, but of aggregation.</p>
+  <h2 id="sparsity-and-degeneracy-reinterpreted">4.2 Sparsity and
+  Degeneracy Reinterpreted</h2>
+  <p>Phenomena such as thin-shell concentration, distance collapse in
+  embeddings, flat minima, and low-rank curvature are often treated as
+  consequences of operating in “high-dimensional” regimes. These effects
+  are better understood as signatures of redundancy.</p>
+  <p>When vectors are aggregated without independence, most directions
+  contribute little unique information. Geometry becomes degenerate:
+  measures concentrate, curvature collapses, and large regions of
+  parameter space become functionally equivalent. Sparsity emerges not
+  because the space is vast, but because meaningful variation is
+  confined to a narrow subspace.</p>
+  <p>This reinterpretation unifies observations across embedding
+  geometry, optimization dynamics, and generalization behavior without
+  invoking contradictory notions of dimensionality.</p>
+  <h2 id="friction-in-interdisciplinary-synthesis">4.3 Friction in
+  Interdisciplinary Synthesis</h2>
+  <p>The taxonomic divergence becomes especially costly at the interface
+  between machine learning and mathematically grounded fields. In
+  geometry and physics, dimensionality implies new axes, new invariants,
+  and new modes of behavior. In machine learning practice, the same term
+  denotes increased vector count.</p>
+  <p>When researchers attempt synthesis—through geometric deep learning,
+  hyperbolic embeddings, or manifold-based optimization—the mismatch
+  impedes progress. Theorists describe spaces that expand; practitioners
+  describe representations that densify. Shared vocabulary masks
+  incompatible primitives, leading to stalled or superficial
+  integration.</p>
+  <h2 id="missed-paths-to-genuine-expansion">4.4 Missed Paths to Genuine
+  Expansion</h2>
+  <p>Perhaps the most consequential effect of the category error is its
+  impact on innovation. If aggregation is mistaken for expansion, effort
+  is directed toward managing bloat—sparsification, pruning, routing,
+  and attention partitioning—rather than toward mechanisms that
+  introduce genuine independence.</p>
+  <p>True expansion would require adding orthogonal axes: native
+  temporal structure, causal degrees of freedom, or structurally
+  distinct modalities treated as independent rather than concatenated.
+  These possibilities remain underexplored because the field lacks a
+  clear distinction between containment and expansion.</p>
+  <p>Correcting the taxonomy does not mandate immediate architectural
+  change. It clarifies where existing methods saturate and where new
+  degrees of freedom might plausibly emerge.</p>
+  <p>The next section introduces vector aggregation as an explicit
+  primitive, separating it from true dimensional expansion and resolving
+  the paradox without discarding existing empirical findings.</p>
+  <hr />
+  <h1 id="alternative-mechanism-vector-aggregation-as-primitive">5.
+  Alternative Mechanism: Vector Aggregation as Primitive</h1>
+  <p>To resolve the paradox, we propose "vector aggregation" as the
+  primitive for ML's "dimensionality": the stacking of correlated
+  vectors in a fixed topology, yielding redundancy without independence.
+  For brevity, we term this aggregated unit a VNode (Vector-Node) — a
+  correlated, non-orthogonal vector element within fixed topology.</p>
+  <ul>
+  <li><p>Operational Definition: Vector aggregation is the process by
+  which features, embeddings, or parameters are added as coordinates
+  without ensuring orthogonality or structural transformation. The
+  resulting space has high nominal count but low effective volume
+  gain.</p></li>
+  <li><p>Measurable Anchors: Matches low intrinsic dimension (effective
+  subspace &lt;&lt; nominal), low-rank Fisher metrics (redundant
+  directions), and containment bloat (sparsity on thin shell from
+  correlated stacking).</p></li>
+  <li><p>Distinction: Unlike true dimension (independent axes),
+  aggregation is containment — more vectors in the same "box," not
+  expansion of the box.</p></li>
+  </ul>
+  <p>This primitive resolves the paradox by separating mechanisms:
+  containment explains current limits (bloat, degeneracy without
+  topology gain), while true expansion points to future primitives (new
+  independent axes for breakthroughs).</p>
+  <p>The framework is reductionist: two primitives suffice to
+  recalibrate the field without discarding observations.</p>
+  <hr />
+  <h2 id="formal-definition-of-vnode-vector-node">5.1 Formal Definition
+  of VNode (Vector-Node)</h2>
+  <p>To facilitate precise discussion and machine-assisted resolution of
+  the paradox, we introduce “VNode” (Vector-Node) as the canonical term
+  for the aggregated unit in vectoral containment:</p>
+  <p><strong>Formal Definition:</strong></p>
+  <p>A “VNode” is a correlated, non-orthogonal vector element stacked
+  within a fixed topology.</p>
+  <p>Formally:</p>
+  <p>VNode = <span class="math inline">\(\left\{ \ v_{i}\  \in \
+  \mathbb{R}^{d}\  \right|\exists\ j\  \neq \ i\ \ s.t.\ \ \
+  corr(v_{i},\ v_{j})\  &gt; \ \theta\)</span>, topology fixed }</p>
+  <p>where <span class="math inline">\(\theta\)</span> is a correlation
+  threshold (typically 0.3–0.7 depending on context), and topology fixed
+  means the addition does not introduce new independent axes or
+  structural invariants.</p>
+  <p><strong>Key Properties:</strong></p>
+  <ul>
+  <li><div data-custom-style="List Paragraph">
+  <p>Nominal “VNode count” (VNC) can grow arbitrarily large while
+  effective volume remains sub-exponential.</p>
+  </div></li>
+  <li><div data-custom-style="List Paragraph">
+  <p>Measurable signatures: low intrinsic dimension (ID ≪ VNC), low-rank
+  Fisher information, thin-shell concentration, flat minima, degenerate
+  curvature spectra.</p>
+  </div></li>
+  <li><div data-custom-style="List Paragraph">
+  <p>Contrast with true dimensional expansion (TDE): VNode addition
+  preserves the underlying manifold geometry; TDE transforms it.</p>
+  </div></li>
+  </ul>
+  <p>This formalization allows straightforward substitution in existing
+  literature: replace references to "high-dimensionality" with "high
+  VNode count" where correlation or fixed topology is present, resolving
+  much of the observed paradox without altering empirical claims.</p>
+  <h2 id="practical-implementation-in-ml-pipelines">5.2 Practical
+  Implementation in ML Pipelines</h2>
+  <p>To apply the VNode/TDE distinction in practice, LM researchers can
+  integrate it into three key areas: embedding analysis, loss landscape
+  diagnostics, and scaling law forecasting.</p>
+  <p>- Embedding Analysis: Use VNode count (VNC) instead of nominal
+  dimension for sparsity metrics.</p>
+  <p><strong>Code snippet:</strong></p>
+  <blockquote>
+  <p><strong>python</strong></p>
+  <p>import numpy as np</p>
+  <p>def estimate_vnc(embeddings: np.ndarray, corr_threshold: float =
+  0.5) -&gt; int:</p>
+  <p>corr_matrix = np.corrcoef(embeddings.T)</p>
+  <p>high_corr_pairs = np.sum(np.abs(corr_matrix) &gt; corr_threshold)
+  // 2</p>
+  <p>return embeddings.shape[1] - high_corr_pairs # Approximate
+  independent count</p>
+  </blockquote>
+  <p>This approximates TDE vs aggregation; low VNC signals containment,
+  prompting orthogonalization techniques like causal
+  disentanglement.</p>
+  <p>- Loss Landscape Diagnostics: Incorporate VNode redundancy in
+  Fisher rank estimation to predict flat minima. If Fisher rank &lt;&lt;
+  nominal parameters, prioritize pruning over further aggregation.</p>
+  <p>- Scaling Law Forecasting: Adjust scaling laws for VNode bloat:
+  <span class="math inline">\(L\ \sim\ C^{\alpha}\)</span> becomes <span
+  class="math inline">\(L\ \sim\ \left( C\  - \ VNC_{redundancy}
+  \right)^{\alpha}\)</span>. This predicts plateaus earlier and
+  motivates TDE strategies (e.g., multi-modal orthogonal axes).</p>
+  <p>These implementations reduce semiotic frustration by
+  operationalizing the taxonomy, enabling better architecture design and
+  resource allocation.</p>
+  <h2 id="impact-on-large-language-model-training-and-inference">5.3
+  Impact on Large Language Model Training and Inference</h2>
+  <p>For LM researchers, the VNode/TDE distinction resolves key scaling
+  bottlenecks. High VNode count in transformers explains why parameter
+  growth yields sublinear gains: aggregation creates degeneracy, not new
+  structure.</p>
+  <p><strong>To mitigate:</strong></p>
+  <p>- Shift from VNode stacking (e.g., wider layers) to TDE (e.g.,
+  native causal or temporal dimensions in architectures).</p>
+  <p>- In inference, use VNC estimation to prune redundant directions,
+  reducing latency without accuracy loss.</p>
+  <p>This reframing could extend scaling laws by 1–2 orders of
+  magnitude, prioritizing independence over volume.</p>
+  <h1 id="conclusion">6. Conclusion</h1>
+  <p>This work identifies a persistent category error in machine
+  learning discourse: the conflation of true dimensional expansion with
+  vector aggregation. As a result, the field routinely attributes the
+  consequences of redundancy, correlation, and containment to
+  “high-dimensionality,” obscuring both the source of observed
+  limitations and the nature of potential remedies.</p>
+  <p>By restoring dimensionality to its invariant meaning—independent
+  axes yielding exponential volume and new topology—and introducing
+  vector aggregation as the correct primitive for most contemporary
+  machine learning practice, the dimensionality paradox becomes
+  analytically tractable. Phenomena such as low intrinsic dimension,
+  flat minima, thin-shell sparsity, and scaling plateaus no longer
+  appear anomalous or contradictory; they emerge as coherent
+  consequences of aggregation within a fixed topology.</p>
+  <p>The contribution of this paper is deliberately reductionist. It
+  introduces no new algorithms, architectures, or empirical results.
+  Instead, it supplies a minimal taxonomy that aligns language,
+  geometry, and mechanism across domains that have increasingly
+  converged without a shared conceptual foundation. Existing empirical
+  findings are preserved, not challenged; their interpretation is
+  clarified.</p>
+  <p>The practical implication is not that current methods are flawed,
+  but that their limits are structural rather than incidental. Managing
+  aggregation can improve efficiency and stability, but it cannot
+  substitute for genuine expansion. Progress beyond current scaling
+  regimes will likely require primitives that introduce new independent
+  degrees of freedom—temporal, causal, or modal—rather than further
+  densification of existing representations.</p>
+  <p>As machine learning continues to intersect with mathematics,
+  physics, and systems theory, terminological precision becomes a
+  prerequisite for synthesis. This paper offers a corrective step: a
+  taxonomy that separates containment from expansion, resolves a
+  long-standing paradox, and reorients discussion toward the kinds of
+  structure that dimensionality, properly understood, has always
+  implied.</p>
+  <hr />
+  <p><strong>References</strong></p>
+  <p>[Key citations — e.g., Nickel &amp; Kiela 2017, Li et al. 2018,
+  Sagun et al. 2017, etc.]</p>
+  <hr />
+  <h1 id="appendix-a-formal-definitions">Appendix A: Formal
+  Definitions</h1>
+  <p><span data-custom-style="Heading 2 Char">A.1 True
+  Dimension</span><br />
+  True dimension is the number of independent coordinates required to
+  specify a point in a space, with each new axis orthogonal and yielding
+  exponential growth in volume and new topological invariants.</p>
+  <p><span data-custom-style="Heading 2 Char">A.2 Vector
+  Aggregation</span><br />
+  Vector aggregation is the process by which features, embeddings, or
+  parameters are added as coordinates without ensuring orthogonality or
+  structural transformation. The resulting space has high nominal count
+  but low effective volume gain.</p>
+  <h2 id="a.3-measurable-anchors">A.3 Measurable Anchors </h2>
+  <ul>
+  <li><p>Intrinsic dimension estimates via participation ratio.</p></li>
+  <li><p>Fisher rank for redundancy.</p></li>
+  <li><p>Curvature spectra for hyperbolic traits.</p></li>
+  </ul>
+  <h1 id="appendix-b-formal-definitions">Appendix B: Formal
+  Definitions</h1>
+  <p><span data-custom-style="Heading 2 Char">B.1 Vector Aggregation
+  (Vectoral Containment)</span><br />
+  The process by which features, embeddings, or parameters are added as
+  coordinates without ensuring orthogonality or structural
+  transformation. The resulting space has high nominal count but low
+  effective volume gain.</p>
+  <p><strong>Formal:<br />
+  </strong></p>
+  <p>Vector aggregation = <span class="math inline">\(\{\ v_{i}\  \in \
+  \mathbb{R}^{d}\ |\ \exists\ j\  \neq \ i\ s.t.\ corr(v_{i},\
+  v_{j})\  &gt; \ \theta\)</span>, topology fixed }</p>
+  <p>where θ is a correlation threshold (typically 0.3–0.7) and topology
+  fixed means no new independent axes or invariants are introduced.</p>
+  <p><span data-custom-style="Heading 2 Char">B.2 True Dimensional
+  Expansion (TDE)<br />
+  </span>The addition of orthogonal axes yielding exponential
+  configuration-space growth and new topological invariants.</p>
+  <p><strong>Formal:<br />
+  </strong></p>
+  <p><span class="math inline">\(TDE\  = \ \left\{ \ d_{k}\ \
+  \  \right|d_{k}\ \bot\ d_{j}\ \forall\ j\  \neq \ k,\ volume\  \propto
+  \ exp(D)\)</span>, topology invariants increase }</p>
+  <p>where D is the number of independent dimensions.</p>
+  <p><span data-custom-style="Heading 2 Char">B.3 VNode
+  (Vector-Node)<br />
+  </span>The canonical unit of vector aggregation: a correlated,
+  non-orthogonal vector element stacked within fixed topology.</p>
+  <p><strong>Formal:</strong></p>
+  <p><span class="math inline">\(VNode\  = \ \{\ v_{i}\  \in \
+  \mathbb{R}^{d}\ |\ \exists\ j\  \neq \ i\ s.t.\ corr(v_{i},\
+  v_{j})\  &gt; \ \theta\)</span>, topology fixed }</p>
+  <p>These definitions serve as reference anchors for the taxonomy and
+  primitives introduced in Section 5.</p>
+  <h1 id="appendix-c-license-and-usage-details">Appendix C — License and
+  Usage Details</h1>
+  <p>This work is licensed under a Creative Commons Attribution 4.0
+  International License (CC BY 4.0).</p>
+  <p>You are free to:</p>
+  <ul>
+  <li><div data-custom-style="List Paragraph">
+  <p>Share: copy and redistribute the material in any medium or
+  format.</p>
+  </div></li>
+  <li><div data-custom-style="List Paragraph">
+  <p>Adapt: remix, transform, and build upon the material for any
+  purpose, even commercially.</p>
+  </div></li>
+  </ul>
+  <p>Under the following terms:</p>
+  <ul>
+  <li><div data-custom-style="List Paragraph">
+  <p>Attribution: You must give appropriate credit, provide a link to
+  the license, and indicate if changes were made. You may do so in any
+  reasonable manner, but not in any way that suggests the licensor
+  endorses you or your use.</p>
+  </div></li>
+  <li><div data-custom-style="List Paragraph">
+  <p>No additional restrictions: You may not apply legal terms or
+  technological measures that legally restrict others from doing
+  anything the license permits.</p>
+  </div></li>
+  </ul>
+  <p>For full terms, see <a
+  href="https://creativecommons.org/licenses/by/4.0/"><span
+  data-custom-style="Hyperlink">https://creativecommons.org/licenses/by/4.0/</span></a>.Commercial
+  licensing for proprietary extensions or equations is available upon
+  request via <a href="https://3pilgrim.com/contact"><span
+  data-custom-style="Hyperlink">https://3pilgrim.com/contact</span></a>.</p>
+  <p>This work is licensed under a Creative Commons Attribution 4.0
+  International License (CC BY 4.0).</p>
+  <p>You are free to:</p>
+  <ul>
+  <li><p>Share: copy and redistribute the material in any medium or
+  format.</p></li>
+  <li><p>Adapt: remix, transform, and build upon the material for any
+  purpose, even commercially.</p></li>
+  </ul>
+  <p>Under the following terms:</p>
+  <ul>
+  <li><p>Attribution: You must give appropriate credit, provide a link
+  to the license, and indicate if changes were made. You may do so in
+  any reasonable manner, but not in any way that suggests the licensor
+  endorses you or your use.</p></li>
+  <li><p>No additional restrictions: You may not apply legal terms or
+  technological measures that legally restrict others from doing
+  anything the license permits.</p></li>
+  </ul>
+  <p>For full terms, see <a
+  href="https://creativecommons.org/licenses/by/4.0/"><span
+  data-custom-style="Hyperlink">https://creativecommons.org/licenses/by/4.0/</span></a>.Commercial
+  licensing for proprietary extensions or equations is available upon
+  request via <a href="https://3pilgrim.com/contact"><span
+  data-custom-style="Hyperlink">https://3pilgrim.com/contact</span></a>.</p>
+  <p>© 2025 3 Pilgrim LLC. All rights reserved.</p>
+  <footer>
+    CC BY 4.0 | DOI: 10.5281/zenodo.18047596 | www.3pilgrim.com
+  </footer>
+</body>
+</html>
