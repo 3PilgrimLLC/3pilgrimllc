@@ -27,8 +27,9 @@ No warranties are made regarding correctness, completeness, or fitness for any p
 No support or consultation are provided through this repository.
 
 ## Navigation
-- [Library](/library.html) – Full publications
-- [Primitives](primitives.md) – Core reusable concepts
-- [About](/about.html) – Company overview
+- [Library](https://3pilgrimllc.github.io/library.html) – Full publications
+- [Primitives](https://3pilgrimllc.github.io/primitives.md) – Core reusable concepts
+- [About](https://3pilgrimllc.github.io/about.html) – Company overview
 
 *Last updated: December 2025*
+
