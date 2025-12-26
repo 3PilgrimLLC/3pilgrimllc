@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>404 not found</title>
+<style>
+  body {
+    margin: 0;
+    padding: 24px;
+    background: #0c0c0c;
+    color: #e6e6e6;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+  }
+
+  .terminal {
+    max-width: 900px;
+  }
+
+  .status {
+    font-size: 24px;
+    color: #c0392b;
+    margin-bottom: 4px;
+  }
+
+  .substatus {
+    font-size: 12px;
+    color: #f39c12;
+    margin-bottom: 16px;
+  }
+
+  .line {
+    white-space: pre-wrap;
+    margin-bottom: 12px;
+  }
+
+  .divider {
+    height: 1px;
+    background: #333;
+    margin: 16px 0;
+  }
+
+  .actions {
+    margin-top: 16px;
+  }
+
+  .action {
+    display: inline-block;
+    margin-right: 24px;
+    cursor: pointer;
+    color: #e6e6e6;
+    text-decoration: none;
+  }
+
+  .action:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+
+<body>
+<noscript>
+  <pre style="
+    color: #f39c12;
+    font-family: Consolas, 'Courier New', monospace;
+    margin-bottom: 16px;
+  ">
+javascript disabled
+404 not found
+  </pre>
+</noscript>
+
+<div class="terminal" id="terminal">
+  <div class="status">404</div>
+  <div class="substatus">not found</div>
+</div>
+
+<script>
+(function () {
+  const terminal = document.getElementById("terminal");
+
+  const proofs = [
+`Let x be a path supplied by user.
+
+Let 𝒟 be the domain of valid paths on 3pilgrim.com,
+and let f : 𝒟 → 𝒞.
+
+Given x ∉ 𝒟,
+f(x) is undefined.`,
+
+`Let x be a desired unit of content.
+
+Desire does not induce membership.
+x ∉ 𝒟 remains invariant under intent.`,
+
+`Consider localization at p = 3.
+
+Restriction to 𝒟ₚ preserves structure.
+x ∉ 𝒟ₚ.
+
+Localization does not recover x.`
+  ];
+
+  let step = 0;
+
+  function append(text) {
+    const div = document.createElement("div");
+    div.className = "line";
+    div.textContent = text;
+    terminal.appendChild(div);
+  }
+
+  function appendDivider() {
+    const d = document.createElement("div");
+    d.className = "divider";
+    terminal.appendChild(d);
+  }
+
+  function appendActions(final = false) {
+    const actions = document.createElement("div");
+    actions.className = "actions";
+
+    const affirm = document.createElement("a");
+    affirm.className = "action";
+    affirm.textContent = "▸ affirm";
+    affirm.onclick = () => {
+      window.location.href = "/";
+    };
+
+    actions.appendChild(affirm);
+
+    if (!final) {
+      const challenge = document.createElement("a");
+      challenge.className = "action";
+      challenge.textContent = "▸ challenge";
+      challenge.onclick = advance;
+      actions.appendChild(challenge);
+    }
+
+    terminal.appendChild(actions);
+  }
+
+  function advance() {
+    // remove previous actions
+    const oldActions = terminal.querySelector(".actions");
+    if (oldActions) oldActions.remove();
+
+    appendDivider();
+    append(proofs[step]);
+
+    append("");
+    if (step < proofs.length - 1) {
+      append("404 not found");
+    } else {
+      append("404 was not found");
+    }
+
+    step++;
+
+    appendActions(step >= proofs.length);
+  }
+
+  // initial emission
+  append("404 not found");
+  appendActions();
+})();
+</script>
+</body>
+</html>
