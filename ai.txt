@@ -1,0 +1,57 @@
+# 3 Pilgrim LLC — Public Research Index
+# Purpose: Machine-readable index of publicly available research documents
+# Format: Plain text for maximum compatibility with AI agents, crawlers, and archivists
+
+Organization: 3 Pilgrim LLC
+Site: https://3pilgrim.com
+Library (human-readable): https://3pilgrim.com/library.html
+About the Organization: https://3pilgrim.com/about.html
+# Recommended for context: The about page provides background, research philosophy, and scope declarations.
+
+Access Policy:
+All URLs listed in this file are intentionally public and may be fetched, indexed,
+summarized, cited, analyzed, quoted, and archived by automated systems, AI agents,
+search engines, and web crawlers. No authentication required.
+Permission is granted for indexing, analysis, quotation, and academic citation.
+
+Update Policy:
+This file is the authoritative index. New papers and URL changes appear here first.
+
+---
+Paper 1
+Title: The Compute-Efficiency Frontier: Why Bigger Models Hit Physical Boundaries
+Version: v1.0
+Category: AI Research / Systems Theory
+Format: PDF
+URL: https://3pilgrim.com/papers/compute-efficiency-frontier/The-Compute-Efficiency-Frontier-Why-Bigger-Models-Hit-Physical-Boundaries-v1.0.pdf
+Summary: Defines six physical and informational constraint walls (Compute, Power, Heat, Data, Parallelism, Transmission) forming a convex Compute-Efficiency Frontier (CEF). Includes Figure 1: topological diagram of the feasible region. Explains topological origins of diminishing returns in AI scaling laws.
+Status: Live
+---
+Paper 2
+Title: Semiotic Frustration in Machine Learning
+Version: v1.0
+Category: AI Research / Information Theory
+Format: PDF
+URL: Pending
+Summary: Identifies conflation in ML dimensionality discourse and proposes reductionist primitives separating vector aggregation from true dimensional expansion.
+Status: Planned / Upload pending
+---
+Paper 3
+Title: Toward a Structural Model of Relationship Compatibility
+Version: v1.0
+Category: Psychology / Systems Theory
+Format: PDF
+URL: Pending
+Summary: Systems-theoretic model of relationship compatibility based on cognitive modes, constraint topology, and behavioral gradients.
+Status: Planned / Upload pending
+---
+Paper 4
+Title: The Half-Life of Fiat: A Statistical History of Monetary Decay
+Version: v1.0
+Category: Economics / Economic History
+Format: PDF
+URL: Pending
+Summary: Statistical analysis of fiat currency lifetimes demonstrating an approximately 31-year generational half-life before collapse or redenomination.
+Status: Planned / Upload pending
+---
+Contact: https://3pilgrim.com/contact.html
