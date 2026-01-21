@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta property="og:title" content="Notes Repository — 3 Pilgrim LLC" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "3 Pilgrim LLC",
+  "url": "https://3pilgrimllc.github.io/3pilgrimllc/",
+  "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+  "foundingDate": "2013"
+}
+</script>
+ 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Our Notes Repository — 3 Pilgrim LLC",
+  "description": "Raw foundational primitives, technical notes, and conceptual building blocks from 3 Pilgrim LLC. Evolving materials supporting formal research in the Library.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "3 Pilgrim LLC"
+  },
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "Negative Tomography: Structural Inference via Failure-First Primitives",
+      "description": "Framework treating structural failure modes as first-class primitives for inference in sparse spaces."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "VNode Framework: AI Resolution Dimensionality Paradox v1.0",
+      "description": "Exploration of resolution limits and paradoxes in virtual node systems for AI contexts."
+    }
+  ]
+}
+</script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="3 Pilgrim LLC Notes Repository: raw primitives, technical notes, and foundational concepts in mathematics, inference, AI, and complex systems. Direct access to markdown sources for context and refinement.">
+  <meta name="keywords" content="primitives, negative tomography, failure-first inference, AI resolution, technical notes, 3 Pilgrim LLC">
+  <title>3 Pilgrim LLC's Notes Repository</title>
+   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <style>
+    /* -------- GLOBAL -------- */
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: "Georgia", serif;
+      background-color: #fff;
+      color: #000;
+      overflow-x: hidden;
+    }
+
+    /* -------- HEADER -------- */
+    header {
+      position: relative;
+      margin-top: 50px;
+      padding-bottom: 120px;
+    }
+
+    .logo {
+      width: 125px;
+      height: auto;
+    }
+
+    .ellipse {
+      width: 600px;
+      height: auto;
+      display: block;
+      margin: -50px auto 0 auto;
+      transform: translateX(10px);
+    }
+
+    /* -------- QUOTE LAYER -------- */
+    .quote-layer {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0 25%;
+      box-sizing: border-box;
+    }
+
+    .quote-left,
+    .quote-right {
+      width: 250px;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #000;
+      font-family: "Georgia", serif;
+    }
+
+    .quote-left {
+      text-align: left;
+    }
+
+    .quote-right {
+      text-align: left;
+    }
+
+    /* -------- NAVIGATION -------- */
+    .main-nav {
+      position: absolute;
+      top: 225px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      font-size: 18px;
+      font-family: "Georgia", serif;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      color: #444;
+    }
+
+    /* -------- LIBRARY -------- */
+.content {
+  width: 80%;
+  margin: 60px auto;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+    .content h2 {
+  width: 80%;
+  margin: 0 auto 15px auto; /* centers and matches paragraph width */
+  text-align: left;
+}
+
+.content p {
+  width: 80%;
+  margin: 0 auto 20px auto; /* centers text and matches table width */
+}
+    
+    .library-container {
+      width: 80%;
+      margin: 40px auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+      padding: 10px;
+    }
+
+    th {
+      cursor: pointer;
+      background-color: #f8f8f8;
+    }
+
+    th:hover {
+      background-color: #eee;
+    }
+    
+
+    /* -------- FOOTER -------- */
+    footer {
+      width: 80%;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      padding: 4px 0 0 0;
+      border-top: 1px solid #ccc;
+      line-height: 1.5;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #000;
+    }
+    
+    /* Smaller font for library table */
+    .library-container table {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .library-container td {
+      vertical-align: top;
+    }
+
+    /* Slightly smaller font for description column */
+    .library-container td:nth-child(3) {
+      font-size: 13px;
+    }
+
+    /* Keep 'Read Online | PDF' links inline and smaller */
+    .library-container td:last-child {
+      font-size: 12.5px;       /* slightly smaller than rest */
+      white-space: nowrap;     /* prevents wrapping */
+    }
+
+    .library-container td:last-child a {
+      text-decoration: none;
+      color: #000;
+      margin: 0 2px;
+    }
+
+    .library-container td:last-child a:hover {
+      text-decoration: underline;
+      color: #444;
+    }
+    
+    /* -------- RESPONSIVE -------- */
+    @media (max-width: 800px) {
+      .quote-layer {
+        position: static;
+        margin-top: 20px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .quote-left, .quote-right {
+        position: static;
+        width: 90%;
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .main-nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ---------- HEADER ---------- -->
+  <header>
+    <img src="assets/logo.png" alt="3 Pilgrim LLC Logo" class="logo">
+    <img src="assets/ellipse.png" alt="Decorative ellipse" class="ellipse">
+
+    <div class="quote-layer">
+      <div class="quote-left">
+        <p>What cannot happen defines the shape of what can.</p>
+      </div>
+      <div class="quote-right">
+        <p>Structure is the residue of eliminated impossibility.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ---------- NAVIGATION ---------- -->
+  <nav class="main-nav">
+    <a href="about.html">About</a>
+    <a href="library.html">Library</a>
+    <a href="contact.html">Contact</a>
+    <a href="legal.html">Legal</a>
+  </nav>
+
+  <!-- ---------- MAIN CONTENT ---------- -->
+  <main class="content">
+    <h2>Our Notes Repository</h2>
+    <p>
+     The 3 Pilgrim Notes Repository is an evolving collection of raw primitives, technical notes, and foundational concepts.
+     These materials serve as building blocks and exploratory sketches supporting the self-contained investigations in the Public Library. They are less formal, often domain-agnostic, and intended for machine context, cross-referencing, and future refinement rather than standalone publication.
+     All items are hosted directly here as markdown sources under CC BY 4.0.
+    </p>
+
+    <div class="library-container">
+      <table id="notesTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">Title</th>
+            <th onclick="sortTable(1)">Category</th>
+            <th onclick="sortTable(2)">Description</th>
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody>
+
+  <tr>
+    <td>Negative Tomography: Structural Inference via Failure-First Primitives</td>
+    <td>Inference Framework</td>
+    <td>Universal method inverting positive-first inference: structural failures as first-class primitives define dual space; complement reconstructs latent objects via constraint satisfaction and symmetry as fixed point. Domain-agnostic foundation.</td>
+    <td><a href="https://raw.githubusercontent.com/3PilgrimLLC/3pilgrimllc/main/notes/Negative%20Tomography-%20Structural%20Inference%20via%20Failure-First%20Primitives.md.docx">Raw Markdown</a></td>
+  </tr>
+  
+  <tr>
+    <td>VNode Framework: AI Resolution Dimensionality Paradox v1.0</td>
+    <td>AI Architecture</td>
+    <td>Framework addressing resolution limits, dimensionality paradoxes, and virtual node constraints in AI systems. Explores implications for context representation and scaling in sparse or high-entropy environments.</td>
+    <td><a href="https://raw.githubusercontent.com/3PilgrimLLC/3pilgrimllc/main/notes/vnode-framework-ai-resolution-dimensionality-paradox-v1.0.md">Raw Markdown</a></td>
+  </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script>
+    function sortTable(n) {
+      const table = document.getElementById("notesTable");
+      let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      switching = true;
+      dir = "asc";
+      while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false;
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          if (dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          } else if (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          switchcount++;
+        } else if (switchcount === 0 && dir === "asc") {
+          dir = "desc";
+          switching = true;
+        }
+      }
+    }
+  </script>
+
+  <!-- ---------- FOOTER ---------- -->
+  <footer>
+    <p>
+     Entity Declaration: Founded in 2013, 3 Pilgrim LLC is an independent research organization focused on cross-disciplinary models in behavioral systems, mathematics, and information theory. Scope Declaration: This site hosts the canonical references for original research artifacts authored exclusively by 3 Pilgrim LLC. All materials contained herein have been authored exclusively by 3 Pilgrim LLC. All information contained on this site is the property of 3 Pilgrim LLC. Legal Disclaimer: All information is provided freely, and no warranty of accuracy is expressed or implied. We assume no responsibility for any injury or harm caused by direct or indirect use. All documents are working drafts and subject to revision at any time.<br> 
+      Please reference our <a href="legal.html">Legal</a> page for full terms.
+    </p>
+  </footer>
+</body>
+</html>
