@@ -1,110 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-    <meta property="og:title" content="About 3 Pilgrim LLC" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "3 Pilgrim LLC",
-  "url": "https://3pilgrimllc.github.io/3pilgrim.github.io/",
-  "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
-  "foundingDate": "2013"
-}
-</script>
- 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Our Public Library — 3 Pilgrim LLC",
-  "description": "Catalog of original research artifacts authored by 3 Pilgrim LLC, spanning mathematics, monetary theory, behavioral systems, and AI economics. Available for academic review, citation, and synthesis.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "3 Pilgrim LLC"
-  },
-  "hasPart": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "<placeholder>",
-      "description": "<description here>"
-    },
-
-    /* Add 1–2 more if you want, but 4 is plenty */
-  ]
-}
-</script>
-  
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="3 Pilgrim LLC Public Library: catalog of independent research artifacts in mathematics, monetary theory, behavioral systems, and AI economics. Includes titles, categories, descriptions, and downloadable PDFs for academic citation and synthesis.">
-  <meta name="keywords" content="behavioral finance, combinatorics, emergence, AI modeling, market psychology, 3 Pilgrim LLC">
-  <title>3 Pilgrim LLC's Public Library</title>
-   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <title>Library | 3 Pilgrim LLC</title>
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/manifest.json" noopener type="application/manifest+json">
+
+   <meta name="description" content="3 Pilgrim LLC: independent research in decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems. Original papers on Zenodo; plain-English companions here.">
+
+  <meta name="description" content="3 Pilgrim LLC: independent research in decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems. Original papers on Zenodo; plain-English companions here.">
+  <meta name="keywords" content="behavioral finance, combinatorics, emergence, AI modeling, market psychology, decision theory, 3 Pilgrim LLC">
+
+  <link rel="canonical" href="https://3pilgrim.com/library.html">
+   <link rel="alternate" type="application/rss+xml" href="https://3pilgrim.com/papers/papers/companion/rss.xml">
+    <link rel="alternate" type="application/atom+xml" href="https://3pilgrim.com/papers/papers/companion/atom.xml">
+
+    <meta property="og:site_name" content="3 Pilgrim LLC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="3 Pilgrim LLC — Library">
+  <meta property="og:description" content="Independent research in decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.">
+  <meta property="og:url" content="https://3pilgrim.com/library.html">
+  <meta property="og:image" content="https://3pilgrim.com/assets/logo.png">
+  <meta property="og:image:alt" content="3 Pilgrim LLC Logo">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="3 Pilgrim LLC — Library">
+  <meta name="twitter:description" content="Independent research in decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.">
+  <meta name="twitter:image" content="https://3pilgrim.com/assets/logo.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "3 Pilgrim LLC",
+    "url": "https://3pilgrim.com/",
+    "logo": "https://3pilgrim.com/assets/logo.png",
+    "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "foundingDate": "2013",
+    "sameAs": [
+      "https://x.com/3PilgrimLLC"  // @3pilgrimllc on X
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "3 Pilgrim LLC",
+    "url": "https://3pilgrim.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://3pilgrim.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+
   <style>
-    /* -------- GLOBAL -------- */
-    body {
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      font-family: "Georgia", serif;
-      background-color: #fff;
-      color: #000;
-      overflow-x: hidden;
-    }
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  line-height: 1.5;
+}
 
-    /* -------- HEADER -------- */
-    header {
-      position: relative;
-      margin-top: 50px;
-      padding-bottom: 120px;
-    }
-
-    .logo {
-      width: 125px;
-      height: auto;
-    }
-
-    .ellipse {
-      width: 600px;
-      height: auto;
-      display: block;
-      margin: -50px auto 0 auto;
-      transform: translateX(10px);
-    }
-
-    /* -------- QUOTE LAYER -------- */
-    .quote-layer {
-      position: absolute;
-      top: 30px;
-      left: 0;
-      width: 100%;
-      height: 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 0 25%;
-      box-sizing: border-box;
-    }
-
-    .quote-left,
-    .quote-right {
-      width: 250px;
-      font-size: 16px;
-      line-height: 1.4;
-      color: #000;
-      font-family: "Georgia", serif;
-    }
-
-    .quote-left {
-      text-align: left;
-    }
-
-    .quote-right {
-      text-align: left;
-    }
-
-    /* -------- NAVIGATION -------- */
+.content {
+  width: 80%;
+  margin: 20px auto;
+  text-align: left;
+  line-height: 1.0;
+  font-size: 16px;
+}
 
     .nav-link {
   color: #000;
@@ -113,191 +87,168 @@
   letter-spacing: 0.5px;
 }
 
-.nav-link:visited {
-  color: #000;
+.hero {
+  width: min(92vw, 1200px);
+  margin: 40px auto 0;
+  position: relative;
 }
 
-.nav-link:hover {
-  color: #444;
+svg.hero-emblem {
+  width: 100%;
+  height: auto;
+  display: block;
 }
-    
-    .main-nav {
-      position: absolute;
-      top: 225px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      gap: 100px;
-      font-size: 18px;
-      font-family: "Georgia", serif;
-    }
 
-    .main-nav a {
-      text-decoration: none;
-      color: #000;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      transition: color 0.2s ease;
-    }
+.nav-item .underline {
+  opacity: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
 
-    .main-nav a:hover {
-      color: #444;
-    }
+.nav-item:hover .underline {
+  transform: scaleX(1);
+}
 
-    /* -------- LIBRARY -------- */
-.content {
-  width: 80%;
-  margin: 60px auto;
-  text-align: left;
+.nav-item:hover text {
+  fill: #444;
+}
+
+footer {
+  width: 100%;
+  background: #fff;
+  color: #555;
+  font-size: clamp(10px, 1.4vw, 10px);
   line-height: 1.6;
-  font-size: 16px;
+  padding: clamp(60px, 8vw) 20px clamp(40px, 6vw, 80px);
+  border-top: 1px solid #ccc;
+  text-align: center;
 }
 
-    .content h2 {
-  width: 80%;
-  margin: 0 auto 15px auto; /* centers and matches paragraph width */
+.footer-frame {
+  width: min(90vw, 900px);           
+  margin: 0 auto;
+}
+
+.papers-container {
+  width: 100%;
+  max-width: 1000px;                   
+  margin: 20px auto 40px;
+  overflow-x: auto;                     
+  -webkit-overflow-scrolling: touch;    
+  border: 1px solid #eee;               
+  border-radius: 6px;
+  background: #fff;
+}
+
+table {
+  width: 100%;
+  min-width: 800px;                     
+  border-collapse: collapse;
+  font-size: clamp(13px, 1.4vw, 15px);
+}
+
+td, th {
+  padding: 10px 14px;
   text-align: left;
+  border-bottom: 1px solid #eee;
 }
 
-.content p {
-  width: 80%;
-  margin: 0 auto 20px auto; /* centers text and matches table width */
+th {
+      position: sticky;
+  top: 0;
+  z-index: 2;                 
+  background: #f8f8f8;        
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);  
+  will-change: transform;     
+  background: #f8f8f8;
+  font-weight: bold;
+  white-space: nowrap;                  
+  cursor: pointer;                      
 }
-    
-    .library-container {
-      width: 80%;
-      margin: 40px auto;
-    }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
+td:nth-child(3) {                      
+  width: 50%;                           
+  white-space: normal;                  
+}
 
-    th, td {
-      border-bottom: 1px solid #ccc;
-      text-align: left;
-      padding: 10px;
-    }
+td a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    th {
-      cursor: pointer;
-      background-color: #f8f8f8;
-    }
+td a:hover {
+  text-decoration: underline;
+}
+html, body {
+  height: 100%;
+  overscroll-behavior: none;  
+}
 
-    th:hover {
-      background-color: #eee;
-    }
-    
-
-    /* -------- FOOTER -------- */
-    footer {
-      width: 80%;
-      margin: 80px auto 0 auto;
-      text-align: center;
-      font-size: 12px;
-      color: #555;
-      padding: 4px 0 0 0;
-      border-top: 1px solid #ccc;
-      line-height: 1.5;
-    }
-
-    footer a {
-      color: #333;
-      text-decoration: underline;
-    }
-
-    footer a:hover {
-      color: #000;
-    }
-    
-    /* Smaller font for library table */
-    .library-container table {
-      font-size: 14px;
-      line-height: 1.4;
-    }
-
-    .library-container td {
-      vertical-align: top;
-    }
-
-    /* Slightly smaller font for description column */
-    .library-container td:nth-child(3) {
-      font-size: 13px;
-    }
-
-    /* Keep 'Read Online | PDF' links inline and smaller */
-    .library-container td:last-child {
-      font-size: 12.5px;       /* slightly smaller than rest */
-      white-space: nowrap;     /* prevents wrapping */
-    }
-
-    .library-container td:last-child a {
-      text-decoration: none;
-      color: #000;
-      margin: 0 2px;
-    }
-
-    .library-container td:last-child a:hover {
-      text-decoration: underline;
-      color: #444;
-    }
-    
-    /* -------- RESPONSIVE -------- */
-    @media (max-width: 800px) {
-      .quote-layer {
-        position: static;
-        margin-top: 20px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .quote-left, .quote-right {
-        position: static;
-        width: 90%;
-        text-align: center;
-        margin: 10px 0;
-      }
-
-      .main-nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
-  </style>
+</style>
 </head>
+     <script>
+  fetch('papers/lists/library-papers.html')
+    .then(res => res.ok ? res.text() : Promise.reject('File not found'))
+    .then(html => document.getElementById('companionsBody').innerHTML = html)
+    .catch(() => document.getElementById('companionsBody').innerHTML = '<tr><td colspan="4" style="text-align:center;">Could not load companions.</td></tr>');
+</script>
+     <body>
 
-<body>
-  <!-- ---------- HEADER ---------- -->
-  <header>
-    <img src="assets/logo.png" alt="3 Pilgrim LLC Logo" class="logo">
-    <img src="assets/ellipse.png" alt="Decorative ellipse" class="ellipse">
+     <div class="hero">
+     <svg class="hero-emblem" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet">
+ 
+  <image href="assets/logo.png" x="480" y="57" width="240" height="240" />
+  
+  <image href="assets/ellipse.png" x="150" y="180" width="900" height="160" />
 
-    <div class="quote-layer">
-      <div class="quote-left">
-        <p>Existant: the penultimate repository of knowledge. A well from which we all drink.</p>
-      </div>
-      <div class="quote-right">
-        <p>Lexeme – born from emotion, imprecise by our nature; the ultimate expression… for most.</p>
-      </div>
-    </div>
-  </header>
+  <text x="180" y="140" font-size="18" nt-family="Georgia, serif" fill="#000" text-anchor="start">
+    <tspan x="180" dy="0">Existant: the penultimate</tspan>
+    <tspan x="180" dy="1.4em">repository of knowledge. A well</tspan>
+    <tspan x="180" dy="1.4em">from which we all drink.</tspan>
+  </text>
 
-  <!-- ---------- NAVIGATION ---------- -->
-  <nav class="main-nav">
-    <a href="about.html">About</a>
-    <a href="library.html">Library</a>
-    <a href="contact.html">Contact</a>
-    <a href="legal.html">Legal</a>
-  </nav>
+  <text x="1020" y="140" font-size="18" font-family="Georgia, serif" fill="#000" text-anchor="end">
+    <tspan x="1020" dy="0">Lexeme – born from emotion,</tspan>
+    <tspan x="1020" dy="1.4em">imprecise by our nature; the</tspan>
+    <tspan x="1020" dy="1.4em">ultimate expression… for most.</tspan>
+  </text>
 
-  <!-- ---------- MAIN CONTENT ---------- -->
+<g class="nav-group">
+  <g class="nav-item">
+    <a xlink:href="about.html">
+      <text x="260" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">About</text>
+      <line x1="220" y1="328" x2="300" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+    </a>
+  </g>
+
+  <g class="nav-item">
+    <a xlink:href="index.html"> 
+      <text x="475" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Home</text>
+      <line x1="435" y1="328" x2="515" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+    </a>
+  </g>
+
+  <g class="nav-item">
+    <a xlink:href="contact.html">
+      <text x="700" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Contact</text>
+      <line x1="660" y1="328" x2="740" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+    </a>
+  </g>
+
+  <g class="nav-item">
+    <a xlink:href="legal.html">
+      <text x="900" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Legal</text>
+      <line x1="860" y1="328" x2="940" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+    </a>
+  </g>
+</g>
+</svg>
+  </div>
   <main class="content">
     <h2>Our Public Library</h2>
+   <p> Follow: <a href="https://3pilgrim.com/papers/papers/companion/rss.xml" rel=noopener target="_blank">RSS</a> | <a href="https://3pilgrim.com/papers/papers/companion/atom.xml" rel=noopener target="_blank">ATOM</a>)</p>
     <p>
      The 3 Pilgrim Public Library is an evolving archive of independent research papers and <a href="/notes.html" class="nav-link">technical notes</a>.
      Each document reflects a self-contained investigation within mathematics, finance, psychology, or information theory.
@@ -305,18 +256,16 @@
      These works are freely available for review, citation, and academic discussion.
     </p>
 
-    <div class="library-container">
-      <table id="libraryTable">
-        <thead>
-          <tr>
-            <th onclick="sortTable(0)">Title</th>
-            <th onclick="sortTable(1)">Category</th>
-            <th onclick="sortTable(2)">Description</th>
-            <th>PDF</th>
-          </tr>
-        </thead>
-        <tbody>
+ <p>(Non-technical, Plain-English explainers of these papers can be found on the <a href="index.html">Homepage.</a> )</p>
+  <div class="papers-container">
+       <table id="companions-table">
+      <tbody id="companionsBody">
+         </tbody>
+    </table>
+  </div>
+</div>
 
+<<<<<<< Updated upstream
 <tbody>
 
   
@@ -433,10 +382,16 @@
 
   <!-- ---------- FOOTER ---------- -->
   <footer>
+=======
+<footer>
+  <div class="footer-frame">
+>>>>>>> Stashed changes
     <p>
-     Entity Declaration: Founded in 2013, 3 Pilgrim LLC is an independent research organization focused on cross-disciplinary models in behavioral systems, mathematics, and information theory. Scope Declaration: This site hosts the canonical references for original research artifacts authored exclusively by 3 Pilgrim LLC. All materials contained herein have been authored exclusively by 3 Pilgrim LLC. All information contained on this site is the property of 3 Pilgrim LLC. Legal Disclaimer: All information is provided freely, and no warranty of accuracy is expressed or implied. We assume no responsibility for any injury or harm caused by direct or indirect use. All documents are working drafts and subject to revision at any time.<br> 
+      Entity Declaration: Founded in 2013, 3 Pilgrim LLC is an independent research organization focused on cross-disciplinary models in behavioral systems, mathematics, and information theory. Scope Declaration: This site hosts the canonical references for original research artifacts authored exclusively by 3 Pilgrim LLC. All materials contained herein have been authored exclusively by 3 Pilgrim LLC. All information contained on this site is the property of 3 Pilgrim LLC. Legal Disclaimer: All information is provided freely, and no warranty of accuracy is expressed or implied. We assume no responsibility for any injury or harm caused by direct or indirect use. All documents are working drafts and subject to revision at any time.<br>
       Please reference our <a href="legal.html">Legal</a> page for full terms.
     </p>
-  </footer>
-</body>
-</html>
+  </div>
+</footer>
+
+     </body>
+     </html>

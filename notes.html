@@ -1,288 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-    <meta property="og:title" content="Notes Repository — 3 Pilgrim LLC" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "3 Pilgrim LLC",
-  "url": "https://3pilgrimllc.github.io/3pilgrimllc/",
-  "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
-  "foundingDate": "2013"
-}
-</script>
- 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Our Notes Repository — 3 Pilgrim LLC",
-  "description": "Raw foundational primitives, technical notes, and conceptual building blocks from 3 Pilgrim LLC. Evolving materials supporting formal research in the Library.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "3 Pilgrim LLC"
-  },
-  "hasPart": [
-    {
-      "@type": "CreativeWork",
-      "name": "Negative Tomography: Structural Inference via Failure-First Primitives",
-      "description": "Framework treating structural failure modes as first-class primitives for inference in sparse spaces."
-    },
-    {
-      "@type": "CreativeWork",
-      "name": "VNode Framework: AI Resolution Dimensionality Paradox v1.0",
-      "description": "Exploration of resolution limits and paradoxes in virtual node systems for AI contexts."
-    }
-  ]
-}
-</script>
-  
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="3 Pilgrim LLC Notes Repository: raw primitives, technical notes, and foundational concepts in mathematics, inference, AI, and complex systems. Direct access to markdown sources for context and refinement.">
-  <meta name="keywords" content="primitives, negative tomography, failure-first inference, AI resolution, technical notes, 3 Pilgrim LLC">
-  <title>3 Pilgrim LLC's Notes Repository</title>
-   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <title>Notes | 3 Pilgrim LLC</title>
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <meta name="description" content="3 Pilgrim LLC: independent research in decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems. Original papers on Zenodo; plain-English companions here.">
+  <meta name="keywords" content="behavioral finance, combinatorics, emergence, AI modeling, market psychology, decision theory, 3 Pilgrim LLC">
+
+  <link rel="canonical" href="https://3pilgrim.com/notes.html">
+
+  <meta property="og:site_name" content="3 Pilgrim LLC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="3 Pilgrim LLC — Notes">
+  <meta property="og:description" content="Independent research in decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.">
+  <meta property="og:url" content="https://3pilgrim.com/notes.html">
+  <meta property="og:image" content="https://3pilgrim.com/assets/logo.png">
+  <meta property="og:image:alt" content="3 Pilgrim LLC Logo">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="3 Pilgrim LLC — Notes">
+  <meta name="twitter:description" content="Independent research in decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.">
+  <meta name="twitter:image" content="https://3pilgrim.com/assets/logo.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "3 Pilgrim LLC",
+    "url": "https://3pilgrim.com/",
+    "logo": "https://3pilgrim.com/assets/logo.png",
+    "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "foundingDate": "2013",
+    "sameAs": [
+      "https://x.com/3PilgrimLLC"  // @3pilgrimllc on X
+    ]
+  }
+  </script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "3 Pilgrim LLC",
+    "url": "https://3pilgrim.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://3pilgrim.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+
   <style>
-    /* -------- GLOBAL -------- */
-    body {
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      font-family: "Georgia", serif;
-      background-color: #fff;
-      color: #000;
-      overflow-x: hidden;
-    }
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  line-height: 1.5;
+}
 
-    /* -------- HEADER -------- */
-    header {
-      position: relative;
-      margin-top: 50px;
-      padding-bottom: 120px;
-    }
+.hero {
+  width: min(92vw, 1200px);
+  margin: 40px auto 0;
+  position: relative;
+}
 
-    .logo {
-      width: 125px;
-      height: auto;
-    }
+svg.hero-emblem {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-    .ellipse {
-      width: 600px;
-      height: auto;
-      display: block;
-      margin: -50px auto 0 auto;
-      transform: translateX(10px);
-    }
+.nav-item .underline {
+  opacity: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
 
-    /* -------- QUOTE LAYER -------- */
-    .quote-layer {
-      position: absolute;
-      top: 30px;
-      left: 0;
-      width: 100%;
-      height: 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 0 25%;
-      box-sizing: border-box;
-    }
+.nav-item:hover .underline {
+  transform: scaleX(1);
+}
 
-    .quote-left,
-    .quote-right {
-      width: 250px;
-      font-size: 16px;
-      line-height: 1.4;
-      color: #000;
-      font-family: "Georgia", serif;
-    }
+.nav-item:hover text {
+  fill: #444;
+}
 
-    .quote-left {
-      text-align: left;
-    }
+footer {
+  width: 100%;
+  background: #fff;
+  color: #555;
+  font-size: clamp(10px, 1.4vw, 10px);
+  line-height: 1.6;
+  padding: clamp(60px, 8vw) 20px clamp(40px, 6vw, 80px);
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
 
-    .quote-right {
-      text-align: left;
-    }
+.footer-frame {
+  width: min(90vw, 900px);        
+  margin: 0 auto;
+}
 
-    /* -------- NAVIGATION -------- */
-    .main-nav {
-      position: absolute;
-      top: 225px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      gap: 100px;
-      font-size: 18px;
-      font-family: "Georgia", serif;
-    }
+.papers-container {
+  width: 100%;
+  max-width: 1000px;                   
+  margin: 20px auto 40px;
+  overflow-x: auto;                    
+  -webkit-overflow-scrolling: touch;    
+  border: 1px solid #eee;              
+  border-radius: 6px;
+  background: #fff;
+}
 
-    .main-nav a {
-      text-decoration: none;
-      color: #000;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      transition: color 0.2s ease;
-    }
-
-    .main-nav a:hover {
-      color: #444;
-    }
-
-    /* -------- LIBRARY -------- */
 .content {
   width: 80%;
-  margin: 60px auto;
+  margin: 20px auto;
   text-align: left;
-  line-height: 1.6;
+  line-height: 1.0;
   font-size: 16px;
 }
 
-    .content h2 {
-  width: 80%;
-  margin: 0 auto 15px auto; /* centers and matches paragraph width */
+
+table {
+  width: 100%;
+  min-width: 800px;                     
+  border-collapse: collapse;
+  font-size: clamp(13px, 1.4vw, 15px);
+}
+
+td, th {
+  padding: 10px 14px;
   text-align: left;
+  border-bottom: 1px solid #eee;
 }
 
-.content p {
-  width: 80%;
-  margin: 0 auto 20px auto; /* centers text and matches table width */
+th {
+      position: sticky;
+  top: 0;
+  z-index: 2;                 
+  background: #f8f8f8;        
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);  
+  will-change: transform;     
+  background: #f8f8f8;
+  font-weight: bold;
+  white-space: nowrap;                  
+  cursor: pointer;                     
 }
-    
-    .library-container {
-      width: 80%;
-      margin: 40px auto;
-    }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
+td:nth-child(3) {                       
+  width: 50%;                           
+  white-space: normal;                  
+}
 
-    th, td {
-      border-bottom: 1px solid #ccc;
-      text-align: left;
-      padding: 10px;
-    }
+td a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    th {
-      cursor: pointer;
-      background-color: #f8f8f8;
-    }
+td a:hover {
+  text-decoration: underline;
+}
+html, body {
+  height: 100%;
+  overscroll-behavior: none;  
+}
 
-    th:hover {
-      background-color: #eee;
-    }
-    
-
-    /* -------- FOOTER -------- */
-    footer {
-      width: 80%;
-      margin: 80px auto 0 auto;
-      text-align: center;
-      font-size: 12px;
-      color: #555;
-      padding: 4px 0 0 0;
-      border-top: 1px solid #ccc;
-      line-height: 1.5;
-    }
-
-    footer a {
-      color: #333;
-      text-decoration: underline;
-    }
-
-    footer a:hover {
-      color: #000;
-    }
-    
-    /* Smaller font for library table */
-    .library-container table {
-      font-size: 14px;
-      line-height: 1.4;
-    }
-
-    .library-container td {
-      vertical-align: top;
-    }
-
-    /* Slightly smaller font for description column */
-    .library-container td:nth-child(3) {
-      font-size: 13px;
-    }
-
-    /* Keep 'Read Online | PDF' links inline and smaller */
-    .library-container td:last-child {
-      font-size: 12.5px;       /* slightly smaller than rest */
-      white-space: nowrap;     /* prevents wrapping */
-    }
-
-    .library-container td:last-child a {
-      text-decoration: none;
-      color: #000;
-      margin: 0 2px;
-    }
-
-    .library-container td:last-child a:hover {
-      text-decoration: underline;
-      color: #444;
-    }
-    
-    /* -------- RESPONSIVE -------- */
-    @media (max-width: 800px) {
-      .quote-layer {
-        position: static;
-        margin-top: 20px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .quote-left, .quote-right {
-        position: static;
-        width: 90%;
-        text-align: center;
-        margin: 10px 0;
-      }
-
-      .main-nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
-  </style>
+</style>
 </head>
+     <script>
+  fetch('papers/lists/notes-papers.html')
+    .then(res => res.ok ? res.text() : Promise.reject('File not found'))
+    .then(html => document.getElementById('companionsBody').innerHTML = html)
+    .catch(() => document.getElementById('companionsBody').innerHTML = '<tr><td colspan="4" style="text-align:center;">Could not load companions.</td></tr>');
+</script>
 
-<body>
-  <!-- ---------- HEADER ---------- -->
-  <header>
-    <img src="assets/logo.png" alt="3 Pilgrim LLC Logo" class="logo">
-    <img src="assets/ellipse.png" alt="Decorative ellipse" class="ellipse">
+   <body>
 
-    <div class="quote-layer">
-      <div class="quote-left">
-        <p>What cannot happen defines the shape of what can.</p>
-      </div>
-      <div class="quote-right">
-        <p>Structure is the residue of eliminated impossibility.</p>
-      </div>
-    </div>
-  </header>
+   <div class="hero">
+   <svg class="hero-emblem" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet">
+ 
+  <image href="assets/logo.png" x="480" y="57" width="240" height="240" />
+  
+  <image href="assets/ellipse.png" x="150" y="180" width="900" height="160" />
 
-  <!-- ---------- NAVIGATION ---------- -->
-  <nav class="main-nav">
-    <a href="about.html">About</a>
-    <a href="library.html">Library</a>
-    <a href="contact.html">Contact</a>
-    <a href="legal.html">Legal</a>
-  </nav>
+  <text x="180" y="140" font-size="20" font-family="Georgia, serif" fill="#000" text-anchor="start">
+    <tspan x="180" dy="0">What cannot happen defines the</tspan>
+    <tspan x="180" dy="1.4em">shape of what can.</tspan>
+  </text>
 
-  <!-- ---------- MAIN CONTENT ---------- -->
+  <text x="1020" y="140" font-size="20" font-family="Georgia, serif" fill="#000" text-anchor="end">
+    <tspan x="1020" dy="0">Structure is the residue of</tspan>
+    <tspan x="1020" dy="1.4em">eliminated impossibility.</tspan>
+  </text>
+
+<g class="nav-group">
+  <g class="nav-item">
+    <a xlink:href="about.html">
+      <text x="260" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">About</text>
+      <line x1="220" y1="328" x2="300" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+    </a>
+  </g>
+
+  <g class="nav-item">
+    <a xlink:href="library.html">
+      <text x="475" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Library</text>
+      <line x1="435" y1="328" x2="515" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+    </a>
+  </g>
+
+  <g class="nav-item">
+    <a xlink:href="contact.html">
+      <text x="700" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Contact</text>
+      <line x1="660" y1="328" x2="740" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+    </a>
+  </g>
+
+  <g class="nav-item">
+    <a xlink:href="legal.html">
+      <text x="900" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Legal</text>
+      <line x1="860" y1="328" x2="940" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+    </a>
+  </g>
+</g>
+
+</svg>
+  </div>
+
   <main class="content">
     <h2>Our Notes Repository</h2>
     <p>
@@ -291,76 +245,24 @@
      All items are hosted directly here as markdown sources under CC BY 4.0.
     </p>
 
-    <div class="library-container">
-      <table id="notesTable">
-        <thead>
-          <tr>
-            <th onclick="sortTable(0)">Title</th>
-            <th onclick="sortTable(1)">Category</th>
-            <th onclick="sortTable(2)">Description</th>
-            <th>View</th>
-          </tr>
-        </thead>
-        <tbody>
+ <p>Note: This page is poorly concealed by intent. We do not maintain summary papers for these documents.</p>
+  <div class="papers-container">
+    
+    <table id="companions-table">
+      <tbody id="companionsBody">
+      </tbody>
+    </table>
+  </div>
+</div>
 
-  <tr>
-    <td>Negative Tomography: Structural Inference via Failure-First Primitives</td>
-    <td>Inference Framework</td>
-    <td>Universal method inverting positive-first inference: structural failures as first-class primitives define dual space; complement reconstructs latent objects via constraint satisfaction and symmetry as fixed point. Domain-agnostic foundation.</td>
-    <td><a href="https://raw.githubusercontent.com/3PilgrimLLC/3pilgrimllc/main/notes/Negative%20Tomography-%20Structural%20Inference%20via%20Failure-First%20Primitives.md.docx">Raw Markdown</a></td>
-  </tr>
-  
-  <tr>
-    <td>VNode Framework: AI Resolution Dimensionality Paradox v1.0</td>
-    <td>AI Architecture</td>
-    <td>Framework addressing resolution limits, dimensionality paradoxes, and virtual node constraints in AI systems. Explores implications for context representation and scaling in sparse or high-entropy environments.</td>
-    <td><a href="https://raw.githubusercontent.com/3PilgrimLLC/3pilgrimllc/main/notes/vnode-framework-ai-resolution-dimensionality-paradox-v1.0.md">Raw Markdown</a></td>
-  </tr>
-
-        </tbody>
-      </table>
-    </div>
-  </main>
-
-  <script>
-    function sortTable(n) {
-      const table = document.getElementById("notesTable");
-      let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-      switching = true;
-      dir = "asc";
-      while (switching) {
-        switching = false;
-        rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
-          shouldSwitch = false;
-          x = rows[i].getElementsByTagName("TD")[n];
-          y = rows[i + 1].getElementsByTagName("TD")[n];
-          if (dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-            shouldSwitch = true;
-            break;
-          } else if (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-            shouldSwitch = true;
-            break;
-          }
-        }
-        if (shouldSwitch) {
-          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-          switching = true;
-          switchcount++;
-        } else if (switchcount === 0 && dir === "asc") {
-          dir = "desc";
-          switching = true;
-        }
-      }
-    }
-  </script>
-
-  <!-- ---------- FOOTER ---------- -->
-  <footer>
+<footer>
+  <div class="footer-frame">
     <p>
-     Entity Declaration: Founded in 2013, 3 Pilgrim LLC is an independent research organization focused on cross-disciplinary models in behavioral systems, mathematics, and information theory. Scope Declaration: This site hosts the canonical references for original research artifacts authored exclusively by 3 Pilgrim LLC. All materials contained herein have been authored exclusively by 3 Pilgrim LLC. All information contained on this site is the property of 3 Pilgrim LLC. Legal Disclaimer: All information is provided freely, and no warranty of accuracy is expressed or implied. We assume no responsibility for any injury or harm caused by direct or indirect use. All documents are working drafts and subject to revision at any time.<br> 
+      Entity Declaration: Founded in 2013, 3 Pilgrim LLC is an independent research organization focused on cross-disciplinary models in behavioral systems, mathematics, and information theory. Scope Declaration: This site hosts the canonical references for original research artifacts authored exclusively by 3 Pilgrim LLC. All materials contained herein have been authored exclusively by 3 Pilgrim LLC. All information contained on this site is the property of 3 Pilgrim LLC. Legal Disclaimer: All information is provided freely, and no warranty of accuracy is expressed or implied. We assume no responsibility for any injury or harm caused by direct or indirect use. All documents are working drafts and subject to revision at any time.<br>
       Please reference our <a href="legal.html">Legal</a> page for full terms.
     </p>
-  </footer>
-</body>
-</html>
+  </div>
+</footer>
+
+     </body>
+     </html>

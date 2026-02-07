@@ -2,129 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta property="og:title" content="About 3 Pilgrim LLC" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "3 Pilgrim LLC",
-  "url": "https://3pilgrimllc.github.io/3pilgrim.github.io/",
-  "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
-  "foundingDate": "2013"
-}
-</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Independent research organization exploring behavioral finance, mathematics, and cognition.">
-  <meta name="keywords" content="behavioral finance, combinatorics, emergence, AI modeling, market psychology, 3 Pilgrim LLC">
-  <title>About 3 Pilgrim LLC</title>
+
+  <title>About | 3 Pilgrim LLC</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/manifest.json" type="application/manifest+json">
+
+  <meta name="description" content="About 3 Pilgrim LLC: origins, focus, and purpose in independent research on decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.">
+  <meta name="keywords" content="behavioral finance, combinatorics, emergence, AI modeling, market psychology, decision theory, 3 Pilgrim LLC">
+  <link rel="canonical" href="https://3pilgrim.com/about.html">
+  <meta property="og:site_name" content="3 Pilgrim LLC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="3 Pilgrim LLC — About">
+  <meta property="og:description" content="About 3 Pilgrim LLC: origins, focus, and purpose in independent research on decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.">
+  <meta property="og:url" content="https://3pilgrim.com/about.html">
+  <meta property="og:image" content="https://3pilgrim.com/assets/logo.png">
+  <meta property="og:image:alt" content="3 Pilgrim LLC Logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="3 Pilgrim LLC — About">
+  <meta name="twitter:description" content="About 3 Pilgrim LLC: origins, focus, and purpose in independent research on decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.">
+  <meta name="twitter:image" content="https://3pilgrim.com/assets/logo.png">
+
+   <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "3 Pilgrim LLC",
+    "url": "https://3pilgrim.com/",
+    "logo": "https://3pilgrim.com/assets/logo.png",
+    "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "foundingDate": "2013",
+    "sameAs": [
+      "https://x.com/3PilgrimLLC"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "About 3 Pilgrim LLC",
+    "description": "About 3 Pilgrim LLC: origins, focus, and purpose in independent research on decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "url": "https://3pilgrim.com/about.html"
+  }
+  </script>
+
   <style>
-    /* -------- GLOBAL -------- */
     body {
       margin: 0;
       padding: 0;
-      text-align: center;
-      font-family: "Georgia", serif;
-      background-color: #fff;
+      font-family: Georgia, serif;
+      background: #fff;
       color: #000;
-      overflow-x: hidden;
+      text-align: center;
+      line-height: 1.5;
     }
 
-    /* -------- HEADER -------- */
-    header {
+    .hero {
+      width: min(92vw, 1200px);
+      margin: 40px auto 0;
       position: relative;
-      margin-top: 50px;
-      padding-bottom: 120px; /* creates space for ellipse + quotes */
     }
 
-    .logo {
-      width: 125px;
-      height: auto;
-    }
-
-    .ellipse {
-      width: 600px;
+    svg.hero-emblem {
+      width: 100%;
       height: auto;
       display: block;
-      margin: -50px auto 0 auto;
-      transform: translateX(10px); /* small right offset */
     }
 
-    .content {
-      width: 70%;             /* narrows text for easier reading */
-      margin: 10px auto;      /* centers content horizontally and adds vertical spacing */
-      text-align: left;       /* aligns paragraphs neatly */
-      line-height: 1.6;       /* improves readability */
-      font-size: 16px;        /* consistent with your quotes/nav */
-     }
-    
-    /* -------- QUOTE LAYER -------- */
-    .quote-layer {
-      position: absolute;
-      top: 30px; /* adjust this to move quotes up/down */
-      left: 0;
-      width: 100%;
-      height: 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 0 25%;
-      box-sizing: border-box;
+    .nav-item:hover text {
+      fill: #444;
     }
 
-    .quote-left,
-    .quote-right {
-      width: 250px;
-      font-size: 16px;
-      line-height: 1.4;
-      color: #000;
-      font-family: "Georgia", serif;
-     }
-
-     .quote-left {
+    main.content {
+      width: min(92vw, 900px);
+      margin: 40px auto;
+      padding: 0 20px;
       text-align: left;
-      }
+      font-size: clamp(12px, 1.5vw, 17px);
+    }
 
-      .quote-right {
+    main.content h2 {
       text-align: left;
-       }
-
-
-    /* -------- NAVIGATION -------- */
-    .main-nav {
-  position: absolute;
-  top: 225px;          /* raise links closer under the ellipse */
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 100px;           /* keep spacing between links */
-  font-size: 18px;
-  font-family: "Georgia", serif;
+      margin: 2rem 0 1rem;
+      font-size: clamp(1.4rem, 2vw, 2.4rem);
     }
 
-    .main-nav a {
-      text-decoration: none;
-      color: #000;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      transition: color 0.2s ease;
+    main.content h3 {
+      margin: 2rem 0 1rem;
+      font-size: clamp(1.4rem, 2vw, 1.8rem);
     }
 
-    .main-nav a:hover {
-      color: #444;
+    main.content p, main.content ul {
+      margin-bottom: 1.2rem;
     }
 
-    /* -------- FOOTER -------- */
+    main.content ul {
+      padding-left: 1.5rem;
+    }
+
+    main.content li {
+      margin-bottom: 0.6rem;
+    }
+
     footer {
-      width: 80%;
-      margin: 80px auto 0 auto;
-      text-align: center;
-      font-size: 12px;
+      width: 100%;
+      background: #fff;
       color: #555;
-      padding: 4px 0 0 0;
+      font-size: clamp(12px, 1.4vw, 13px);
+      line-height: 1.6;
+      padding: clamp(60px, 8vw, 100px) 20px clamp(40px, 6vw, 80px);
       border-top: 1px solid #ccc;
-      line-height: 1.5;
+      text-align: center;
+    }
+
+    .footer-frame {
+      width: min(90vw, 900px);
+      margin: 0 auto;
     }
 
     footer a {
@@ -136,95 +130,112 @@
       color: #000;
     }
 
-    /* -------- RESPONSIVE -------- */
-    @media (max-width: 800px) {
-      .quote-layer {
-        position: static;
-        margin-top: 20px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+.nav-item .underline {
+  opacity: 1;                       
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease; 
+}
 
-      .quote-left, .quote-right {
-        position: static;
-        width: 90%;
-        text-align: center;
-        margin: 10px 0;
-      }
+.nav-item:hover .underline {
+  transform: scaleX(1);             
+}
 
-      .main-nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
+.nav-item:hover text {
+  fill: #444;
+}
   </style>
 </head>
-
 <body>
-  <!-- ---------- HEADER ---------- -->
-  <header>
-    <img src="assets/logo.png" alt="3 Pilgrim LLC Logo" class="logo">
-    <img src="assets/ellipse.png" alt="Decorative ellipse" class="ellipse">
 
-    <!-- QUOTES -->
-    <div class="quote-layer">
-      <div class="quote-left">
-        <p>Nature is a silent expression of wisdom; free from taxonomic expression and momentum.  </p>
-      </div>
-      <div class="quote-right">
-        <p>Society is a structural taxonomy; expression of place is a derivative expression of self-constraint. </p>
-      </div>
-    </div>
-  </header>
+  <div class="hero">
+    <svg class="hero-emblem" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet">
+      <image href="assets/logo.png" x="480" y="57" width="240" height="240" />
+      <image href="assets/ellipse.png" x="150" y="180" width="900" height="160" />
 
-  <!-- ---------- NAVIGATION ---------- -->
-  <nav class="main-nav">
-    <a href="about.html">About</a>
-    <a href="library.html">Library</a>
-    <a href="contact.html">Contact</a>
-    <a href="legal.html">Legal</a>
-  </nav>
-<main class="content">
- 
-  <h2>About</h2>
+      <text x="180" y="140" font-size="20" font-family="Georgia, serif" fill="#000" text-anchor="start">
+        <tspan x="180" dy="0">Nature is a silent expression of</tspan>
+        <tspan x="180" dy="1.4em">wisdom; free from taxonomic</tspan>
+        <tspan x="180" dy="1.4em">expression and momentum.</tspan>
+      </text>
 
-  <p><strong>Origins:</strong> The genesis of our creation was catalyzed by Frank C. Meyer, founder of Glenwood Capital and early backer of Citadel Investment Group. Upon his retirement, three individuals made a quiet pilgrimage to Florida, united by shared experience and purpose: to explore new ventures beyond the traditional boundaries of finance.</p>
+      <text x="1020" y="140" font-size="20" font-family="Georgia, serif" fill="#000" text-anchor="end">
+        <tspan x="1020" dy="0">Society is a structural taxonomy;</tspan>
+        <tspan x="1020" dy="1.4em">expression of place is a derivative</tspan>
+        <tspan x="1020" dy="1.4em">  expression of self-constraint.</tspan>
+      </text>
 
-  <p>The firm’s intellectual heritage traces to the early quantitative-finance community that emerged in Chicago during the 1990s. Frank Meyer, a pioneer in hedge-fund structuring and mentorship, provided formative guidance to figures within that community, including Ken Griffin during Citadel’s inception. In the early 2000s, his mentorship extended to our founder, who launched GreenLeaf Financial—a now-defunct equity and commodity hedge fund that achieved a net CAGR exceeding 18% during its lifespan. That lineage, philosophy, and mentorship ultimately culminated in the establishment of 3 Pilgrim LLC in 2013, an independent research firm inspired by the same spirit of disciplined innovation.</p>
+      <g class="nav-group">
+        <g class="nav-item">
+          <a xlink:href="index.html">
+            <text x="260" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Home</text>
+            <line x1="220" y1="328" x2="300" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+          </a>
+        </g>
 
-  <p>Over the subsequent decade, paths naturally diverged—a reflection of differing needs and necessary evolution. Age yields to youth, and ambition builds upon legacy; these are the stones upon which citadels are raised. From reflection comes renewal, the soil from which new structures rise. 3 Pilgrim LLC remains an independent entity, honoring the intellectual lineage that preceded it while charting an original course forward.</p>
+        <g class="nav-item">
+          <a xlink:href="library.html">
+            <text x="475" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Library</text>
+            <line x1="435" y1="328" x2="515" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+          </a>
+        </g>
 
-  <p><em>Where two founders remain in presence, one will always persist in spirit.</em></p>
+        <g class="nav-item">
+          <a xlink:href="contact.html">
+            <text x="700" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Contact</text>
+            <line x1="660" y1="328" x2="740" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+          </a>
+        </g>
 
-  <h3>Who We Are</h3>
-  <p>3 Pilgrim LLC is an independent research firm dedicated to addressing problems most consider intractable. Inspired by the wit and wisdom of Charlie Munger, as articulated in his seminal essay <em>“The Psychology of Human Misjudgment”</em>, we embrace the lollapalooza effect: the convergence of multiple cognitive biases and incentives as a lens for understanding complex systems.</p>
+        <g class="nav-item">
+          <a xlink:href="legal.html">
+            <text x="900" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Legal</text>
+            <line x1="860" y1="328" x2="940" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+          </a>
+        </g>
+      </g>
+    </svg>
+  </div>
 
-  <p>We apply first-principles logic across the lollapalooza matrix—a multidimensional framework where behavioral, mathematical, and informational systems converge. Our work seeks to de-constrain mathematics through intuition; intuition that is all too often lost through excessive formalization. Such dynamic exploration has only recently become viable, enabled by advances in artificial intelligence and high-dimensional computational modeling. At its core, our research translates market psychology into explicit, testable frameworks, converting qualitative behavioral insight into quantitative, reproducible form.</p>
+  <main class="content">
+    <h2>About</h2>
 
-  <p>We publish a small number of white papers—terse, highly technical works designed to document tractable models across disciplines, preserve methodological lineage, and contribute to the shared body of cross-disciplinary knowledge spanning finance, cognition, and mathematics.</p>
+    <p><strong>Origins:</strong> The genesis of our creation was catalyzed by Frank C. Meyer, founder of Glenwood Capital and early backer of Citadel Investment Group. Upon his retirement, three individuals made a quiet pilgrimage to Florida, united by shared experience and purpose: to explore new ventures beyond the traditional boundaries of finance.</p>
 
-  <h3>Primary Focus</h3>
-  <ul>
-    <li>Behavioral finance and market structure — exploring how human bias and institutional design shape systemic behavior.</li>
-    <li>Market cognition and socio-psychic bias — modeling collective perception, narrative contagion, and feedback dynamics.</li>
-    <li>Quantization of behavioral heuristics — converting intuitive decision patterns into formal, testable frameworks.</li>
-    <li>High-dimensional topology, combinatorics, and field dynamics — mapping non-linear interactions to uncover emergent structure.</li>
-    <li>The nature of duality and emergence — studying how opposing constructs yield self-organizing systems.</li>
-  </ul>
+    <p>The firm’s intellectual heritage traces to the early quantitative-finance community that emerged in Chicago during the 1990s. Frank Meyer, a pioneer in hedge-fund structuring and mentorship, provided formative guidance to figures within that community, including Ken Griffin during Citadel’s inception. In the early 2000s, his mentorship extended to our founder, who launched GreenLeaf Financial—a now-defunct equity and commodity hedge fund that achieved a net CAGR exceeding 18% during its lifespan. That lineage, philosophy, and mentorship ultimately culminated in the establishment of 3 Pilgrim LLC in 2013, an independent research firm inspired by the same spirit of disciplined innovation.</p>
 
-  <h3>Purpose</h3>
-  <p>To transform behavioral intuition into formal structure. We are independent, apolitical, and indifferent to fashion—concerned only with what works, and why. Our aim is to question that which most assume to be unquestionable.</p>
+    <p>Over the subsequent decade, paths naturally diverged—a reflection of differing needs and necessary evolution. Age yields to youth, and ambition builds upon legacy; these are the stones upon which citadels are raised. From reflection comes renewal, the soil from which new structures rise. 3 Pilgrim LLC remains an independent entity, honoring the intellectual lineage that preceded it while charting an original course forward.</p>
 
-</main>
+    <p><em>Where two founders remain in presence, one will always persist in spirit.</em></p>
 
-  <!-- ---------- FOOTER ---------- -->
+    <h3>Who We Are</h3>
+    <p>3 Pilgrim LLC is an independent research firm dedicated to addressing problems most consider intractable. Inspired by the wit and wisdom of Charlie Munger, as articulated in his seminal essay <em>“The Psychology of Human Misjudgment”</em>, we embrace the lollapalooza effect: the convergence of multiple cognitive biases and incentives as a lens for understanding complex systems.</p>
+
+    <p>We apply first-principles logic across the lollapalooza matrix—a multidimensional framework where behavioral, mathematical, and informational systems converge. Our work seeks to de-constrain mathematics through intuition; intuition that is all too often lost through excessive formalization. Such dynamic exploration has only recently become viable, enabled by advances in artificial intelligence and high-dimensional computational modeling. At its core, our research translates market psychology into explicit, testable frameworks, converting qualitative behavioral insight into quantitative, reproducible form.</p>
+
+    <p>We publish a small number of white papers—terse, highly technical works designed to document tractable models across disciplines, preserve methodological lineage, and contribute to the shared body of cross-disciplinary knowledge spanning finance, cognition, and mathematics.</p>
+
+    <h3>Primary Focus</h3>
+    <ul>
+      <li>Behavioral finance and market structure — exploring how human bias and institutional design shape systemic behavior.</li>
+      <li>Market cognition and socio-psychic bias — modeling collective perception, narrative contagion, and feedback dynamics.</li>
+      <li>Quantization of behavioral heuristics — converting intuitive decision patterns into formal, testable frameworks.</li>
+      <li>High-dimensional topology, combinatorics, and field dynamics — mapping non-linear interactions to uncover emergent structure.</li>
+      <li>The nature of duality and emergence — studying how opposing constructs yield self-organizing systems.</li>
+    </ul>
+
+    <h3>Purpose</h3>
+    <p>To transform behavioral intuition into formal structure. We are independent, apolitical, and indifferent to fashion—concerned only with what works, and why. Our aim is to question that which most assume to be unquestionable.</p>
+  </main>
+
   <footer>
-    <p>
-      Entity Declaration: Founded in 2013, 3 Pilgrim LLC is an independent research organization focused on cross-disciplinary models in behavioral systems, mathematics, and information theory. Scope Declaration: This site hosts the canonical references for original research artifacts authored exclusively by 3 Pilgrim LLC. All materials contained herein have been authored exclusively by 3 Pilgrim LLC. All information contained on this site is the property of 3 Pilgrim LLC. Legal Disclaimer: All information is provided freely, and no warranty of accuracy is expressed or implied. We assume no responsibility for any injury or harm caused by direct or indirect use. All documents are working drafts and subject to revision at any time.<br> 
-      Please reference our <a href="legal.html">Legal</a> page for full terms.
-    </p>
+    <div class="footer-frame">
+      <p>
+        Entity Declaration: Founded in 2013, 3 Pilgrim LLC is an independent research organization focused on cross-disciplinary models in behavioral systems, mathematics, and information theory. Scope Declaration: This site hosts the canonical references for original research artifacts authored exclusively by 3 Pilgrim LLC. All materials contained herein have been authored exclusively by 3 Pilgrim LLC. All information contained on this site is the property of 3 Pilgrim LLC. Legal Disclaimer: All information is provided freely, and no warranty of accuracy is expressed or implied. We assume no responsibility for any injury or harm caused by direct or indirect use. All documents are working drafts and subject to revision at any time.<br>
+        Please reference our <a href="legal.html">Legal</a> page for full terms.
+      </p>
+    </div>
   </footer>
+
 </body>
 </html>

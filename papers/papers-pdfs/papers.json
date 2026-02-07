@@ -1,0 +1,103 @@
+[
+
+    [
+          {
+    "title": "Friction-Guided Optimization: Negative Tomography in Overparameterized Learning",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18510602",
+    "date": "2026-02-06",
+    "category": ["AI Research"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/Friction-Guided-Optimization-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/Friction-Guided-Optimization-v1.0.pdf"
+  },
+  {
+    "title": "Negative Tomography: Structural Inference via Failure-First Primitives",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18510535",
+    "date": "2026-02-06",
+    "category": ["AI Research"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/Negative-Tomography-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/Negative-Tomography-v1.0.pdf"
+  },
+  {
+    "title": "A Quantitative Model for Pricing Gold",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18235084",
+    "date": "2026-01-23",
+    "category": ["Economics", "Metrology"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/A-Quantitative-Model-for-Pricing-Gold-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/A-Quantitative-Model-for-Pricing-Gold-v1.0.pdf"
+  },
+  {
+    "title": "The Half Life of Fiat",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18055894",
+    "date": "2026-01-23",
+    "category": ["Economics"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/The-Half-Life-of-Fiat-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/The-Half-Life-of-Fiat-A-Statistical-History-of-Monetary-Decay-v1.0.pdf"
+  },
+  {
+    "title": "The Temporal Lattice of Fiat Stability",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18355899",
+    "date": "2026-01-23",
+    "category": ["Economics"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/The-Temporal-Lattice-of-Fiat-Stability-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/Duration-Compression-as-a-Structural-Risk-Signal-v1.0.pdf"
+  },
+  {
+    "title": "Primitive Asymmetries of Persistence",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18273851",
+    "date": "2026-01-23",
+    "category": ["AI Research"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/Primitive-Asymmetries-of-Persistence-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/Primitive-Asymmetries-of-Persistence-v1.0.pdf"
+  },
+  {
+    "title": "The Compute Efficiency Frontier",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18055054",
+    "date": "2026-01-23",
+    "category": ["AI Research"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/The-Compute-Efficiency-Frontier-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/The-Compute-Efficiency-Frontier-Why-Bigger-Models-Hit-Physical-Boundaries-v1.0.pdf"
+  },
+  {
+    "title": "Semiotic Frustration in Machine Learning",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18047596",
+    "date": "2026-01-23",
+    "category": ["AI Research"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/Semiotic-Frustration-in-Machine-Learning-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/semiotic-frustration-in-machine-learning-v1.0.pdf"
+  },
+  {
+    "title": "Toward a Structural Model of Relationship Compatibility",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18050285",
+    "date": "2026-01-23",
+    "category": ["Psychology"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/Toward-a-Structural-Model-of-Relationship-Compatibility-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/toward-a-structural-model-of-relationship-compatibility-v1.pdf"
+  },
+  {
+    "title": "A Geometric Theory of Cognition",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18391688",
+    "date": "2026-01-23",
+    "category": ["Evolution", "Cognition"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/Bias-as-Landscape-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/Bias-As-Geometry-v1.0.pdf"
+  },
+  {
+    "title": "Fractal–Hyperbolic Degeneracy in Overparameterized Learning Manifolds",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18489279",
+    "date": "2026-01-23",
+    "category": ["AI Research"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/Fractal-Hyperbolic-degeneracy-in-overparamertized-learning-models-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/Fractal-Hyperbolic-Degeneracy-in-Overparameterized-Learning-Manifolds-v1.0.pdf"
+  }
+    ]

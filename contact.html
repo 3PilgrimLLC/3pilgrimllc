@@ -2,222 +2,267 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta property="og:title" content="Contact 3 Pilgrim LLC" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title -->
+  <title>Contact | 3 Pilgrim LLC</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Primary meta -->
+  <meta name="description" content="Contact information for 3 Pilgrim LLC: email, social media, and other ways to get in touch.">
+  <meta name="keywords" content="behavioral finance, combinatorics, emergence, AI modeling, market psychology, decision theory, 3 Pilgrim LLC">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://3pilgrim.com/contact.html">
+
+  <!-- OpenGraph -->
+  <meta property="og:site_name" content="3 Pilgrim LLC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="3 Pilgrim LLC — Contact">
+  <meta property="og:description" content="Contact information for 3 Pilgrim LLC: email, social media, and other ways to get in touch.">
+  <meta property="og:url" content="https://3pilgrim.com/contact.html">
+  <meta property="og:image" content="https://3pilgrim.com/assets/logo.png">
+  <meta property="og:image:alt" content="3 Pilgrim LLC Logo">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="3 Pilgrim LLC — Contact">
+  <meta name="twitter:description" content="Contact information for 3 Pilgrim LLC: email, social media, and other ways to get in touch.">
+  <meta name="twitter:image" content="https://3pilgrim.com/assets/logo.png">
+
+  <!-- JSON-LD Organization (base) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "3 Pilgrim LLC",
-    "url": "https://3pilgrimllc.github.io/3pilgrim.github.io/",
+    "url": "https://3pilgrim.com/",
+    "logo": "https://3pilgrim.com/assets/logo.png",
     "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
-    "foundingDate": "2013"
+    "foundingDate": "2013",
+    "sameAs": [
+      "https://x.com/3PilgrimLLC"
+    ]
   }
   </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact form for inquiries regarding 3 Pilgrim LLC research and publications.">
-  <meta name="keywords" content="contact, research inquiry, behavioral finance, decision theory, 3 Pilgrim LLC">
-  <title>Contact 3 Pilgrim LLC</title>
-   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Page-specific JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Contact 3 Pilgrim LLC",
+    "description": "Contact information for 3 Pilgrim LLC: email, social media, and other ways to get in touch.",
+    "url": "https://3pilgrim.com/contact.html"
+  }
+  </script>
+
   <style>
-    /* -------- GLOBAL -------- */
     body {
       margin: 0;
       padding: 0;
-      text-align: center;
-      font-family: "Georgia", serif;
-      background-color: #fff;
-      color: #000;
-      overflow-x: hidden;
-    }
-
-    /* -------- HEADER -------- */
-    header {
-      position: relative;
-      margin-top: 50px;
-      padding-bottom: 120px; /* creates space for ellipse + quotes */
-    }
-
-    .logo {
-      width: 125px;
-      height: auto;
-    }
-
-    .ellipse {
-      width: 600px;
-      height: auto;
-      display: block;
-      margin: -50px auto 0 auto;
-      transform: translateX(10px); /* small right offset */
-    }
-
-    .content {
-      width: 60%;               /* matches ellipse width better */
-      margin: 40px auto 40px;   /* smaller top margin = tighter spacing under nav */
-      text-align: left;
-      line-height: 1.6;
-      font-size: 16px;
-    }
-
-    form {
-      width: 100%;              /* inherits the .content width */
-      margin-top: 20px;         /* small breathing room under paragraph */
-      text-align: left;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 8px;
       font-family: Georgia, serif;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-bottom: 15px;
-    }
-
-    button {
-      background-color: #000;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: Georgia, serif;
-    }
-
-    button:hover {
-      background-color: #444;
-    }
-
-    /* -------- QUOTE LAYER -------- */
-    .quote-layer {
-      position: absolute;
-      top: 30px;
-      left: 0;
-      width: 100%;
-      height: 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 0 25%;
-      box-sizing: border-box;
-    }
-
-    .quote-left,
-    .quote-right {
-      width: 250px;
-      font-size: 13px;
-      line-height: 1.4;
+      background: #fff;
       color: #000;
-      font-family: "Georgia", serif;
-    }
-
-    .quote-left { text-align: left; }
-    .quote-right { text-align: left; }
-
-    /* -------- NAVIGATION -------- */
-    .main-nav {
-      position: absolute;
-      top: 225px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      gap: 100px;
-      font-size: 18px;
-      font-family: "Georgia", serif;
-    }
-
-    .main-nav a {
-      text-decoration: none;
-      color: #000;
-      font-weight: 400;
-      letter-spacing: 0.5px;
-      transition: color 0.2s ease;
-    }
-
-    .main-nav a:hover {
-      color: #444;
-    }
-
-    /* -------- FOOTER -------- */
-    footer {
-      width: 80%;
-      margin: 80px auto 0 auto;
       text-align: center;
-      font-size: 12px;
-      color: #555;
-      padding: 4px 0 0 0;
-      border-top: 1px solid #ccc;
       line-height: 1.5;
     }
 
-    footer a {
-      color: #333;
-      text-decoration: underline;
+    /* Hero container */
+    .hero {
+      width: min(92vw, 1200px);
+      margin: 40px auto 0;
+      position: relative;
     }
 
-    footer a:hover {
-      color: #000;
+    /* SVG emblem */
+    svg.hero-emblem {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    /* -------- RESPONSIVE -------- */
-    @media (max-width: 800px) {
-      .quote-layer {
-        position: static;
-        margin-top: 20px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .quote-left, .quote-right {
-        position: static;
-        width: 90%;
-        text-align: center;
-        margin: 10px 0;
-      }
-
-      .main-nav {
-        flex-direction: column;
-        gap: 15px;
-      }
+    /* Nav (inside SVG) hover color change */
+    .nav-item:hover text {
+      fill: #444;
     }
+
+form {
+  max-width: 800px;   /* wider, like the old contact page */
+  margin: 0 auto;
+  text-align: left;
+}
+
+    /* Content area (for about text) */
+    main.content {
+      width: min(92vw, 900px);
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: left;
+      font-size: clamp(12px, 1.5vw, 17px);
+    }
+
+    main.content h2 {
+      text-align: left;
+      margin: 2rem 0 1rem;
+      font-size: clamp(1.4rem, 2vw, 2.4rem);
+    }
+
+    main.content h3 {
+      margin: 2rem 0 1rem;
+      font-size: clamp(1.4rem, 2vw, 1.8rem);
+    }
+
+    main.content p, main.content ul {
+      margin-bottom: 1.2rem;
+    }
+
+    main.content ul {
+      padding-left: 1.5rem;
+    }
+
+    main.content li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* Footer */
+/* Footer — now scaled and capped like hero */
+footer {
+  width: 100%;
+  background: #fff;
+  color: #555;
+  font-size: clamp(12px, 1.4vw, 13px);     /* gentle scaling */
+  line-height: 1.6;
+  padding: clamp(60px, 8vw, 100px) 20px clamp(40px, 6vw, 80px);  /* fixed clamp */
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.footer-frame {
+  width: min(90vw, 900px);                 /* cap + center like hero */
+  margin: 0 auto;
+}
+
+footer a {
+  color: #333;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #000;
+}
+
+/* Form styling — make sure it's after footer and has no syntax errors */
+form {
+  max-width: 800px;   /* wider, like the old contact page */
+  margin: 0 auto;
+  text-align: left;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #333;
+}
+
+    /* SVG nav underline: grow from left on hover */
+.nav-item .underline {
+  opacity: 1;                       /* always visible but scaled to 0 */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease; /* smooth grow speed */
+}
+
+.nav-item:hover .underline {
+  transform: scaleX(1);             /* expand to full width */
+}
+
+/* Optional: slight text color shift on hover (matches live site) */
+.nav-item:hover text {
+  fill: #444;
+}
+
+
   </style>
 </head>
-
 <body>
-  <!-- ---------- HEADER ---------- -->
-  <header>
-    <img src="assets/logo.png" alt="3 Pilgrim LLC Logo" class="logo">
-    <img src="assets/ellipse.png" alt="Decorative ellipse" class="ellipse">
 
-    <!-- QUOTES -->
-    <div class="quote-layer">
-      <div class="quote-left">
-        <p>Life begins at grade, accomplishment is our asymptote</p>
-        <p></p>
-        <p>a = f(strive), lim(strive→∞) a → A  {a = accomplishment, A = ideal}</p>
-      </div>
-      <div class="quote-right">
-        <p>Meaning emerges only through others.</p>
-        <p></p>
-        <p>m = f(v), v = Σ(connectionᵢ), where ego = 1ₙ {m=meaning, v=value, n= Q humans}</p>
-      </div>
-    </div>
-  </header>
+  <div class="hero">
+    <svg class="hero-emblem" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet">
+      <image href="assets/logo.png" x="480" y="57" width="240" height="240" />
+         <image href="assets/ellipse.png" x="150" y="180" width="900" height="160" />
 
-  <!-- ---------- NAVIGATION ---------- -->
-  <nav class="main-nav">
-    <a href="about.html">About</a>
-    <a href="library.html">Library</a>
-    <a href="contact.html">Contact</a>
-    <a href="legal.html">Legal</a>
-  </nav>
+        <text x="180" y="140" font-size="16" font-family="Georgia, serif" fill="#000" text-anchor="start">
+        <tspan x="180" dy="0">Life begins at grade, accomplishment is our</tspan>
+        <tspan x="180" dy="1.4em">asymptote</tspan>
+        <tspan x="180" dy="1.4em">a = f(strive), lim(strive→∞) a → A {a =</tspan>
+        <tspan x="180" dy="1.4em">1ₙ {m=meaning, v=value, n= Q humans}</tspan>
+      </text>
+
+       <text x="1020" y="140" font-size="16" font-family="Georgia, serif" fill="#000" text-anchor="end">
+        <tspan x="1020" dy="0">Meaning emerges only through others.</tspan>
+        <tspan x="1020" dy="1.4em">m = f(v), v = Σ(connectionᵢ), where ego =</tspan>
+        <tspan x="1020" dy="1.4em">should be our collective goal.</tspan>
+      </text>
+
+      <g class="nav-group">
+        <g class="nav-item">
+          <a xlink:href="about.html">
+            <text x="260" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">About</text>
+            <line x1="220" y1="328" x2="300" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+          </a>
+        </g>
+
+        <g class="nav-item">
+          <a xlink:href="library.html">
+            <text x="475" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Library</text>
+            <line x1="435" y1="328" x2="515" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+          </a>
+        </g>
+
+        <g class="nav-item">
+          <a xlink:href="index.html">
+            <text x="700" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Home</text>
+            <line x1="660" y1="328" x2="740" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+          </a>
+        </g>
+
+        <g class="nav-item">
+          <a xlink:href="legal.html">
+            <text x="900" y="310" font-size="24" font-weight="500" fill="#000" text-anchor="middle" class="nav-link">Legal</text>
+            <line x1="860" y1="328" x2="940" y2="328" stroke="#000" stroke-width="2" opacity="0" class="underline" />
+          </a>
+        </g>
+      </g>
+    </svg>
+  </div>
 
   <main class="content">
     <h2>Contact 3 Pilgrim LLC</h2>
-    <p>We welcome thoughtful correspondence regarding our publications or research inquiries. Please complete the form below; submissions are reviewed periodically and responded to as appropriate.</p>
+    <p>We welcome thoughtful correspondence regarding our publications or research inquiries. We can be reached on Twitter / X.com <a href="https://x.com/3pilgrimllc" target="_blank" rel="noopener noreferrer">@3PilgrimLLC</a>. Or please feel free to complete the form below. Submissions are reviewed periodically and responded to as appropriate.</p>
 
     <form action="https://formspree.io/f/xdkpqpgq" method="POST">
       <label for="name">Name:</label><br>
@@ -237,18 +282,14 @@
     </p>
   </main>
 
-  <!-- ---------- FOOTER ---------- -->
   <footer>
-    <p>
-      Entity Declaration: Founded in 2013, 3 Pilgrim LLC is an independent research organization focused on cross-disciplinary models in behavioral systems, mathematics, and information theory. Scope Declaration: This site hosts the canonical references for original research artifacts authored exclusively by 3 Pilgrim LLC. All materials contained herein have been authored exclusively by 3 Pilgrim LLC. All information contained on this site is the property of 3 Pilgrim LLC. Legal Disclaimer: All information is provided freely, and no warranty of accuracy is expressed or implied. We assume no responsibility for any injury or harm caused by direct or indirect use. All documents are working drafts and subject to revision at any time.<br> 
-      Please reference our <a href="legal.html">Legal</a> page for full terms.
-    </p>
-   
-    <p style="margin-top: 25px; font-size: 14px;">
-  Follow / Connect on X: 
-  <a href="https://x.com/3PilgrimLLC" target="_blank" rel="noopener noreferrer">@3PilgrimLLC</a>
-</p>
-    
+    <div class="footer-frame">
+      <p>
+        Entity Declaration: Founded in 2013, 3 Pilgrim LLC is an independent research organization focused on cross-disciplinary models in behavioral systems, mathematics, and information theory. Scope Declaration: This site hosts the canonical references for original research artifacts authored exclusively by 3 Pilgrim LLC. All materials contained herein have been authored exclusively by 3 Pilgrim LLC. All information contained on this site is the property of 3 Pilgrim LLC. Legal Disclaimer: All information is provided freely, and no warranty of accuracy is expressed or implied. We assume no responsibility for any injury or harm caused by direct or indirect use. All documents are working drafts and subject to revision at any time.<br>
+        Please reference our <a href="legal.html">Legal</a> page for full terms.
+      </p>
+    </div>
   </footer>
+
 </body>
 </html>

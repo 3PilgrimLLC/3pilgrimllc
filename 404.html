@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 not found</title>
 <style>
   body {
@@ -141,8 +142,7 @@ Localization does not recover x.`
   }
 
   function advance() {
-    // remove previous actions
-    const oldActions = terminal.querySelector(".actions");
+     const oldActions = terminal.querySelector(".actions");
     if (oldActions) oldActions.remove();
 
     appendDivider();
@@ -160,7 +160,6 @@ Localization does not recover x.`
     appendActions(step >= proofs.length);
   }
 
-  // initial emission
   append("404 not found");
   appendActions();
 })();

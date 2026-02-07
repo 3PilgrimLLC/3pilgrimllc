@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>3 Pilgrim Research — Companion Papers</title>
+    <link>https://3pilgrim.com/papers/papers/companion/</link>
+    <description>Plain‑language companion explainers for the 3 Pilgrim research library. Each entry links to the companion page (canonical) and the PDF/DOI of the full paper.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Feb 2026 17:32:59 -0500</lastBuildDate>
+    <ttl>360</ttl>
+    <generator>3pilgrim.com</generator>
+
+     
+      <item>
+     <title>Negative Tomography: Structural Inference via Failure‑First Primitives</title>
+     <link>https://doi.org/10.5281/zenodo.18510535</link>
+     <guid isPermaLink="false">doi:10.5281/zenodo.18510535</guid>
+     <description><![CDATA[
+     Defines a domain‑agnostic, failure‑first inference framework using negative primitives; shows symmetry as the fixed point under exhaustive negative satisfaction; provides design invariants. CC BY 4.0. 
+     ]]></description>
+     <category>Research</category>
+     <category>Inference</category>
+     <pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate> 
+     </item>
+
+       <item>
+      <title>Friction‑Guided Optimization: Negative Tomography in Overparameterized Learning</title>
+      <link>https://doi.org/10.5281/zenodo.18510602</link>
+      <guid isPermaLink="false">doi:10.5281/zenodo.18510602</guid>
+      <description><![CDATA[
+      Instantiates Negative Tomography for ML: gradient erosion carves negative space; Fisher information defines a parametric friction field; overparameterization amplifies degeneracy. Presents a 3‑phase FGO schedule with diagnostics. CC BY 4.0.
+      ]]></description>
+      <category>Research</category>
+      <category>Machine Learning</category>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate> 
+     </item>
+
+     <item>
+      <title>A Quantitative Model for Pricing Gold — Companion</title>
+      <link>https://3pilgrim.com/papers/papers/companion/A-Quantitative-Model-for-Pricing-Gold-v1.0.html</link>
+      <guid isPermaLink="true">https://3pilgrim.com/papers/papers/companion/A-Quantitative-Model-for-Pricing-Gold-v1.0.html</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 -0500</pubDate>
+      <category>Economics</category>
+      <category>Metrology</category>
+      <description><![CDATA[
+        A simple model for estimating the intrinsic value of gold. Long‑run gold supply tightly tracks global GDP and labor output, enabling rational pricing based on utility, productivity, and persistent demand trends.
+        <br/><br/>
+        PDF: https://3pilgrim.com/papers-pdfs/A-Quantitative-Model-for-Pricing-Gold-v1.0.pdf<br/>
+        DOI: https://doi.org/10.5281/zenodo.18235084
+      ]]></description>
+    </item>
+
+    <item>
+      <title>The Half‑Life of Fiat — Companion</title>
+      <link>https://3pilgrim.com/papers/papers/companion/The-Half-Life-of-Fiat-v1.0.html</link>
+      <guid isPermaLink="true">https://3pilgrim.com/papers/papers/companion/The-Half-Life-of-Fiat-v1.0.html</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 -0500</pubDate>
+      <category>Economics</category>
+      <description><![CDATA[
+        Fiat systems have a generational half‑life. Monetary drift follows a predictable temporal decay curve; stability erodes on a decades‑scale clock.
+        <br/><br/>
+        PDF: https://3pilgrim.com/papers-pdfs/The-Half-Life-of-Fiat-A-Statistical-History-of-Monetary-Decay-v1.0.pdf<br/>
+        DOI: https://doi.org/10.5281/zenodo.18055894
+      ]]></description>
+    </item>
+
+    <item>
+      <title>The Temporal Lattice of Fiat Stability — Companion</title>
+      <link>https://3pilgrim.com/papers/papers/companion/The-Temporal-Lattice-of-Fiat-Stability-v1.0.html</link>
+      <guid isPermaLink="true">https://3pilgrim.com/papers/papers/companion/The-Temporal-Lattice-of-Fiat-Stability-v1.0.html</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 -0500</pubDate>
+      <category>Economics</category>
+      <description><![CDATA[
+        Time, not levels, stabilizes fiat. WAM and the compression rate κ act as first‑order signals; TSR diagnoses when stability flips from damped to reflexive.
+        <br/><br/>
+        PDF: https://3pilgrim.com/papers-pdfs/Duration-Compression-as-a-Structural-Risk-Signal-v1.0.pdf<br/>
+        DOI: https://doi.org/10.5281/zenodo.18355899
+      ]]></description>
+    </item>
+
+    <item>
+      <title>Primitive Asymmetries of Persistence — Companion</title>
+      <link>https://3pilgrim.com/papers/papers/companion/Primitive-Asymmetries-of-Persistence-v1.0.html</link>
+      <guid isPermaLink="true">https://3pilgrim.com/papers/papers/companion/Primitive-Asymmetries-of-Persistence-v1.0.html</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 -0500</pubDate>
+      <category>AI Research</category>
+      <description><![CDATA[
+        Social media: Why do smart people self‑sabotage online? Temporal asymmetry, perfect persistence, and context override explain miscalibration in human–digital systems.
+        <br/><br/>
+        PDF: https://3pilgrim.com/papers-pdfs/Primitive-Asymmetries-of-Persistence-v1.0.pdf<br/>
+        DOI: https://doi.org/10.5281/zenodo.18273851
+      ]]></description>
+    </item>
+
+    <item>
+      <title>The Compute Efficiency Frontier — Companion</title>
+      <link>https://3pilgrim.com/papers/papers/companion/The-Compute-Efficiency-Frontier-v1.0.html</link>
+      <guid isPermaLink="true">https://3pilgrim.com/papers/papers/companion/The-Compute-Efficiency-Frontier-v1.0.html</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 -0500</pubDate>
+      <category>AI Research</category>
+      <description><![CDATA[
+        Why hyperscale LLMs cannot scale beyond physics. Six walls—compute, power, heat, data, parallelism, transmission—define an efficiency frontier that caps infrastructure scale.
+        <br/><br/>
+        PDF: https://3pilgrim.com/papers-pdfs/The-Compute-Efficiency-Frontier-Why-Bigger-Models-Hit-Physical-Boundaries-v1.0.pdf<br/>
+        DOI: https://doi.org/10.5281/zenodo.18055054
+      ]]></description>
+    </item>
+
+    <item>
+      <title>Semiotic Frustration in Machine Learning — Companion</title>
+      <link>https://3pilgrim.com/papers/papers/companion/Semiotic-Frustration-in-Machine-Learning-v1.0.html</link>
+      <guid isPermaLink="true">https://3pilgrim.com/papers/papers/companion/Semiotic-Frustration-in-Machine-Learning-v1.0.html</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 -0500</pubDate>
+      <category>AI Research</category>
+      <description><![CDATA[
+        How “dimension” drifted into meaning “vector count”—and how to fix it. Distinguishes vectoral containment from true dimensional expansion via a reductionist taxonomy.
+        <br/><br/>
+        PDF: https://3pilgrim.com/papers-pdfs/semiotic-frustration-in-machine-learning-v1.0.pdf<br/>
+        DOI: https://doi.org/10.5281/zenodo.18047596
+      ]]></description>
+    </item>
+
+    <item>
+      <title>Toward a Structural Model of Relationship Compatibility — Companion</title>
+      <link>https://3pilgrim.com/papers/papers/companion/Toward-a-Structural-Model-of-Relationship-Compatibility-v1.0.html</link>
+      <guid isPermaLink="true">https://3pilgrim.com/papers/papers/companion/Toward-a-Structural-Model-of-Relationship-Compatibility-v1.0.html</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 -0500</pubDate>
+      <category>Psychology</category>
+      <description><![CDATA[
+        Why some partnerships succeed and others fail. Compatibility as structural alignment across cognitive modes (ERM/LRM), constraint topology, and PLR gradients.
+        <br/><br/>
+        PDF: https://3pilgrim.com/papers-pdfs/toward-a-structural-model-of-relationship-compatibility-v1.pdf<br/>
+        DOI: https://doi.org/10.5281/zenodo.18050285
+      ]]></description>
+    </item>
+
+    <item>
+      <title>A Geometric Theory of Cognition (Bias as Landscape) — Companion</title>
+      <link>https://3pilgrim.com/papers/papers/companion/Bias-as-Landscape-v1.0.html</link>
+      <guid isPermaLink="true">https://3pilgrim.com/papers/papers/companion/Bias-as-Landscape-v1.0.html</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 -0500</pubDate>
+      <category>Evolution / Cognition</category>
+      <description><![CDATA[
+        Why attraction follows hidden gradients. Evolution (slow) and cognition (fast) share one geometry; behavior is biased motion across that landscape.
+        <br/><br/>
+        PDF: https://3pilgrim.com/papers-pdfs/Bias-As-Geometry-v1.0.pdf<br/>
+        DOI: https://doi.org/10.5281/zenodo.18391688
+      ]]></description>
+    </item>
+
+      <item>
+      <title>Fractal–Hyperbolic Degeneracy in Overparameterized Learning Manifolds — Companion</title>
+      <link>https://3pilgrim.com/papers/papers/companion/Fractal-Hyperbolic-degeneracy-in-overparamertized-learning-models-v1.0.html</link>
+      <guid isPermaLink="true">https://3pilgrim.com/papers/papers/companion/Fractal-Hyperbolic-degeneracy-in-overparamertized-learning-models-v1.0.html</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 -0500</pubDate>
+      <category>AI Research</category>
+      <description><![CDATA[
+        A geometric readout of training: curvature collapse, manifold thinning, low‑rank Fisher structure—why overparameterization behaves like a degeneracy engine.
+        <br/><br/>
+        PDF: https://3pilgrim.com/papers-pdfs/Fractal-Hyperbolic-Degeneracy-in-Overparameterized-Learning-Manifolds-v1.0.pdf<br/>
+        DOI: https://doi.org/10.5281/zenodo.18489279
+      ]]></description>
+    </item>
+
+  </channel>
+</rss>

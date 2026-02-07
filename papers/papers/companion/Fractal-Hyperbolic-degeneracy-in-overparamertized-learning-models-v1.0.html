@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 Pilgrim LLC — Fractal–Hyperbolic Degeneracy (Companion)</title>
+
+  <meta name="description" content="A geometric analysis of how large models thin, fold, and collapse under overparameterization, and how curvature, degeneracy, and Fisher structure shape training stability. A focused contribution to the geometry of high‑dimensional learning systems.">
+  <meta name="keywords" content="3 Pilgrim LLC, degeneracy, hyperbolic geometry, Fisher metric, overparameterization, flat minima">
+  <link rel="canonical" href="https://3pilgrim.com/papers/papers/companion/Fractal-Hypermertized-learning-models-v1.0.html
+
+  <meta property="og:site_name" content="3 Pilgrim LLC">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Fractal–Hyperbolic Degeneracy — Companion Explainer">
+  <meta property="og:description" content="How overparameterized models deform into low‑dimensional manifolds — and why it matters.">
+  <meta property="og:url" content="https://3pilgrim.com/papers/papers/companion/Fractal-Hyperbolic-degeneracy-in-overparamertized-learning-models-v1.0.html">
+  <meta property="og:image" content="https://3pilgrim.com/assets/logo.png">
+  <meta property="og:image:alt" content="3 Pilgrim LLC Logo">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fractal–Hyperbolic Degeneracy — Companion Explainer">
+  <meta name="twitter:description" content="How overparameterized models deform into low‑dimensional manifolds — and why it matters.">
+  <meta name="twitter:image" content="https://3pilgrim.com/assets/logo.png">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"3 Pilgrim LLC",
+    "url":"https://3pilgrim.com/",
+    "logo":"https://3pilgrim.com/assets/logo.png",
+    "description":"Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "foundingDate":"2013",
+    "sameAs":["https://x.com/3PilgrimLLC"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ScholarlyArticle",
+    "name":"Fractal–Hyperbolic Degeneracy in Overparameterized Learning Manifolds — Companion Explainer",
+    "author":{"@type":"Organization","name":"3 Pilgrim LLC"},
+    "description":"Companion outlining degeneracy, curvature asymmetry, Fisher structure, and manifold thinning in overparameterized regimes.",
+    "datePublished":"2026-01-23",
+    "version":"1.0",
+    "identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.5281/zenodo.18489279"},
+    "url":"https://3pilgrim.com/papers/papers/companion/Fractal-Hyperbolic-degeneracy-in-overparamertized-learning-models-v1.0.html",
+    "isPartOf":{"@type":"CreativeWorkSeries","name":"3 Pilgrim Research Library"},
+    "about":["manifold thinning","hyperbolic curvature","Fisher structure","overparameterization"],
+    "citation":"Fractal–Hyperbolic Degeneracy — DOI 10.5281/zenodo.18489279",
+    "relatedLink":[
+      "https://doi.org/10.5281/zenodo.18489279",
+      "https://3pilgrim.com/papers-pdfs/Fractal-Hyperbolic-Degeneracy-in-Overparameterized-Learning-Manifolds-v1.0.pdf"
+    ],
+    "associatedMedia":{
+      "@type":"MediaObject",
+      "contentUrl":"https://3pilgrim.com/papers-pdfs/Fractal-Hyperbolic-Degeneracy-in-Overparameterized-Learning-Manifolds-v1.0.pdf",
+      "encodingFormat":"application/pdf"
+    }
+  }
+  </script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2cm; line-height: 1.6; }
+    .title-page { text-align: center; margin-top: 20%; page-break-after: always; }
+    header { position: fixed; top: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
+    footer { position: fixed; bottom: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
+    img { max-width: 100%; height: auto; }
+  </style>
+  </head>
+<body>
+  <header>
+    3 Pilgrim LLC | Fractal-Hyperbolic Degeneracy in Overparameterized Learning Manifolds | Version 1.0 · Februrary 5,2026
+  </header>
+  <div class="title-page">
+    <h1>Fractal-Hyperbolic Degeneracy in Overparameterized Learning Manifolds</h1>
+    <h2>A Companion Explainer</h2>
+    <p>3 Pilgrim LLC</p>
+    <p>Version 1.0 · Februrary 5,2026</p>
+  </div>
+ <br> 
+ <a href="https://doi.org/10.5281/zenodo.18489279">Click here for full PDF of paper </a>
+ <hr />
+  <p><strong>1) Why This Paper Exists</strong></p>
+  <p>Modern overparameterized neural networks exhibit a constellation of
+  strange, widely observed behaviors: flat minima,
+  hyperbolic curvature, fractally rough loss
+  boundaries, low intrinsic dimension, and
+  low‑rank Fisher spectra. These observations are real
+  but fragmented in the literature. There is no minimal
+  theory explaining why these features co‑occur or how they
+  jointly enable efficient training at scale. This paper proposes that
+  all of them arise from three simple primitives
+  governing the geometry of overparameterized optimization. The goal is
+  to unify disparate empirical results into a causal and
+  structural account, and to derive a practical
+  three‑phase training protocol from that structure.
+  <span data-custom-style="Hyperlink"></span></p>
+  <hr />
+  <p><strong>2) What the Paper Says (Plain‑Language
+  Summary)</strong></p>
+  <p>The paper introduces three primitives that,
+  together, explain the entire observed regime of paradoxes in
+  large‑scale learning:</p>
+  <ol type="1">
+  <li><p><strong>Gradient Erosion (Negative‑Space
+  Carving).</strong><br />
+  Training removes redundant directions instead of filling the space.
+  Erosion collapses vast degenerate regions into a resistant
+  low‑dimensional core—producing flat minima, low intrinsic
+  dimension, and the observed fractal roughness of boundaries. <span
+  data-custom-style="Hyperlink"></span></p></li>
+  <li><p><strong>Fisher Metric as a Parametric Friction
+  Field.</strong><br />
+  The Fisher information defines local friction: high
+  eigenvalues = tight data constraints; low eigenvalues = sloppy
+  directions. This explains low‑rank Fisher structure and why curvature
+  spectra show hyperbolic traits. <span
+  data-custom-style="Hyperlink"></span></p></li>
+  <li><p><strong>Overparameterization as Degeneracy
+  Amplifier.</strong><br />
+  Extra parameters create vast families of nearly equivalent solutions.
+  Degeneracy is not a bug but a feature: it accelerates exploration and
+  enables erosion to find the stable manifold. <span
+  data-custom-style="Hyperlink"></span></p></li>
+  </ol>
+  <p>From these primitives, the paper derives the Target
+  Acquisition Protocol, a three‑phase training
+  method exploiting evolving manifold geometry:</p>
+  <ul>
+  <li><p><strong>Phase 1: Acquisition (High‑LR).</strong> Rapid erosion
+  of low‑friction directions.</p></li>
+  <li><p><strong>Phase 2: Dope Re‑Ask (Mid‑Refinement).</strong>
+  Re‑calibrate the optimizer once the manifold shape changes.</p></li>
+  <li><p><strong>Phase 3: Execution (Low‑LR).</strong> Fine‑tune in flat
+  valleys for generalization. <span
+  data-custom-style="Hyperlink"></span></p></li>
+  </ul>
+  <p>Across toy experiments and a small transformer, this protocol
+  yields 15–35% fewer training steps to matched
+  accuracy under equal compute. <span
+  data-custom-style="Hyperlink"></span></p>
+  <hr />
+  <p><strong>3) What Distinguishes This Framework</strong></p>
+  <ul>
+  <li><p><strong>Minimalism with explanatory reach.</strong><br />
+  Only three primitives are needed to unify fractal
+  roughness, hyperbolic curvature, low intrinsic dimension, low‑rank
+  Fisher structure, and flat minima. No other framework connects them
+  this succinctly. <span data-custom-style="Hyperlink"></span></p></li>
+  <li><p><strong>Reframing learning as subtraction.</strong><br />
+  Instead of “accumulating signal,” the paper shows that training
+  subtracts structure—removing degrees of freedom until
+  only the resistant manifold remains. This reverses the usual
+  “capacity‑growth” intuition. <span
+  data-custom-style="Hyperlink"></span></p></li>
+  <li><p><strong>Optimization as manifold navigation, not
+  line‑following.</strong><br />
+  Overparameterization means there is no unique optimum—only a
+  degenerate solution set. The protocol is derived from
+  navigating that set as geometry evolves under erosion and friction.
+  <span data-custom-style="Hyperlink"></span></p></li>
+  <li><p><strong>Actionable diagnostics.</strong><br />
+  Intrinsic dimension collapse, Fisher‑rank plateauing, and
+  friction‑field shifts provide measurable triggers for phase
+  transitions. This gives the framework operational value beyond theory.
+  <span data-custom-style="Hyperlink"></span></p></li>
+  </ul>
+  <hr />
+  <p><strong>4) Theoretical Implications <em>(Assuming the Work Is
+  Correct)</em></strong></p>
+  <ul>
+  <li><p><strong>Overparameterization is beneficial because it creates
+  “space to erode.”</strong><br />
+  The model predicts that generalization improves when the network
+  begins with <em>more redundant structure</em>, not less—providing
+  richer negative space for gradient erosion to carve. <span
+  data-custom-style="Hyperlink"></span></p></li>
+  <li><p><strong>Fractality and hyperbolicity are emergent, not
+  architectural.</strong><br />
+  Multiscale roughness comes from layered erosion, and
+  hyperbolic curvature emerges from exponentially rare
+  voids created during carving—not from a choice of
+  architecture. <span data-custom-style="Hyperlink"></span></p></li>
+  <li><p><strong>Intrinsic dimension must collapse during effective
+  training.</strong><br />
+  The lattice predicts that good training runs always show an
+  early‑to‑mid‑phase drop in intrinsic dimension—observed empirically in
+  grokking, transformers, and quadratic bowls. <span
+  data-custom-style="Hyperlink"></span></p></li>
+  <li><p><strong>Optimizer perspective must be re‑asked once the
+  manifold sharpens.</strong><br />
+  Natural gradient–style methods (or Fisher‑aware schedulers) become
+  most useful after the manifold has been carved, not
+  before. This sequencing is structural, not heuristic. <span
+  data-custom-style="Hyperlink"></span></p></li>
+  </ul>
+  <hr />
+  <p><strong>5) Potential Implications <em>(Downstream, Not
+  Predictions)</em></strong></p>
+  <p><strong>A) Training Efficiency &amp; Scaling</strong></p>
+  <ul>
+  <li><p>Phased schedules outperform single‑phase or two‑phase
+  approaches in degenerate manifolds.</p></li>
+  <li><p>Fisher‑aware recalibration at the right moment may become a
+  standard primitive (similar to LR warmup).</p></li>
+  <li><p>Diagnostics like intrinsic‑dimension
+  trajectories could guide early stopping or prevent mode
+  collapse.<br />
+  <span data-custom-style="Hyperlink"></span></p></li>
+  </ul>
+  <p><strong>B) Model Design</strong></p>
+  <ul>
+  <li><p>Architectures that explicitly encourage
+  degeneracy (wide layers, overcomplete blocks,
+  redundant heads) may be structurally advantaged because they enhance
+  the erosion process. <span
+  data-custom-style="Hyperlink"></span></p></li>
+  <li><p>Future work may design architectures by shaping the
+  initial manifold so erosion converges faster. <span
+  data-custom-style="Hyperlink"></span></p></li>
+  </ul>
+  <p><strong>C) Theory of Generalization</strong></p>
+  <ul>
+  <li><p>Generalization emerges as a geometric outcome
+  of landing in low‑friction valleys carved by erosion, not from
+  explicit regularization or compression.</p></li>
+  <li><p>This relates grokking, mode connectivity, intrinsic dimension,
+  and Fisher spectra to a single cause. <span
+  data-custom-style="Hyperlink"></span></p></li>
+  </ul>
+  <p><strong>D) Tooling &amp; Infrastructure</strong></p>
+  <ul>
+  <li><p>Training libraries may integrate real‑time
+  Fisher‑rank and intrinsic‑dimension
+  monitors as first‑class citizens.</p></li>
+  <li><p>Auto‑phase optimizers could replace hand‑crafted LR schedules.
+  <span data-custom-style="Hyperlink"></span></p></li>
+  </ul>
+  <footer>
+    CC BY 4.0 | DOI: doi.org/10.5281/zenodo.18355899 | www.3pilgrim.com
+  </footer>
+</body>
+</html>

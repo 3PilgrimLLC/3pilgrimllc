@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" 
+        content="Companion explainer to Negative Tomography — a reductionist failure‑first framework using negative primitives to navigate sparse or unbounded spaces.">
+  <meta name="keywords" 
+        content="Negative Tomography, failure-first inference, negative primitives, structural inference, 3 Pilgrim LLC">
+
+  <link rel="canonical" href="https://3pilgrim.com/papers/papers/companion/Negative-Tomography-v1.0.html">
+
+  <meta property="og:site_name" content="3 Pilgrim LLC">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Negative Tomography — Companion Explainer">
+  <meta property="og:description" 
+        content="A companion explainer for the Negative Tomography framework: failure‑first inference, negative primitives, and symmetry as the fixed point.">
+  <meta property="og:url" 
+        content="https://3pilgrim.com/papers/papers/companion/Negative-Tomography-v1.0.html">
+  <meta property="og:image" content="https://3pilgrim.com/assets/logo.png">
+  <meta property="og:image:alt" content="3 Pilgrim LLC Logo">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Negative Tomography — Companion Explainer">
+  <meta name="twitter:description" 
+        content="Companion explainer for the Negative Tomography framework: failure‑first inference and structural invariants.">
+  <meta name="twitter:image" content="https://3pilgrim.com/assets/logo.png">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"3 Pilgrim LLC",
+    "url":"https://3pilgrim.com/",
+    "logo":"https://3pilgrim.com/assets/logo.png",
+    "description":"Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "foundingDate":"2013",
+    "sameAs":["https://x.com/3PilgrimLLC"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ScholarlyArticle",
+    "name":"Negative Tomography — Companion Explainer",
+    "author":{
+      "@type":"Organization",
+      "name":"3 Pilgrim LLC"
+    },
+    "description":"Companion explainer for Negative Tomography, summarizing failure‑first primitives, negative sets, symmetry as a fixed point, and structural inference in sparse spaces.",
+    "datePublished":"2026-02-06",
+    "version":"1.0",
+    "identifier":{
+      "@type":"PropertyValue",
+      "propertyID":"DOI",
+      "value":"10.5281/zenodo.18510535"
+    },
+    "url":"https://3pilgrim.com/papers/papers/companion/Negative-Tomography-v1.0.html",
+    "isPartOf":{
+      "@type":"CreativeWorkSeries",
+      "name":"3 Pilgrim Research Library"
+    },
+    "about":[
+      "negative primitives",
+      "failure-first inference",
+      "structural inference",
+      "sparse spaces",
+      "symmetry fixed points"
+    ],
+    "citation":"Negative Tomography — DOI 10.5281/zenodo.18510535",
+    "relatedLink":[
+      "https://doi.org/10.5281/zenodo.18510535",
+      "https://3pilgrim.com/papers-pdfs/Negative-Tomography-v1.0.pdf"
+    ],
+    "associatedMedia":{
+      "@type":"MediaObject",
+      "contentUrl":"https://3pilgrim.com/papers-pdfs/Negative-Tomography-v1.0.pdf",
+      "encodingFormat":"application/pdf"
+    }
+  }
+  </script>
+
+  <title>Negative Tomography: Structural Inference via Failure-First Primitivess</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2cm; line-height: 1.6; }
+    .title-page { text-align: center; margin-top: 20%; page-break-after: always; }
+    header { position: fixed; top: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
+    footer { position: fixed; bottom: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
+    img { max-width: 100%; height: auto; }
+  </style>
+  </head>
+<body>
+  <header>
+    3 Pilgrim LLC | Negative Tomography: Structural Inference via Failure-First Primitivess | Version 1.0 · Februrary 6,2026
+  </header>
+  <div class="title-page">
+    <h1>Negative Tomography: Structural Inference via Failure-First Primitivess</h1>
+    <h2>A Companion Explainer</h2>
+    <p>3 Pilgrim LLC</p>
+    <p>Version 1.0 · Februrary 6,2026</p>
+  </div>
+<br>
+<a href="https://doi.org/10.5281/zenodo.18510535">Click here for full PDF of paper </a>
+  <hr />
+  <p><strong>1) Why This Paper Exists</strong></p>
+  <p>Most inference systems—human or machine—start the same way:<br />
+  <em>generate possibilities, test them, keep what works.</em></p>
+  <p>That approach works fine when the space is small, well-structured,
+  or richly informative. But as spaces grow large, sparse, high-entropy,
+  or effectively unbounded, positive-first inference starts to fail in
+  predictable ways:</p>
+  <ul>
+  <li><p>Possibilities explode combinatorially.</p></li>
+  <li><p>Early partial matches lock in the wrong structure.</p></li>
+  <li><p>Search effort grows faster than information gained.</p></li>
+  <li><p>Absence of evidence is ignored instead of treated as
+  meaningful.</p></li>
+  </ul>
+  <p>In these regimes, “trying harder” or “searching longer” doesn’t
+  help. The strategy itself is wrong.</p>
+  <p>This paper starts from a simple observation:</p>
+  <p>In sparse spaces, absence carries more information than
+  presence.</p>
+  <p>Negative Tomography exists to formalize that idea—and build an
+  inference framework around it.</p>
+  <hr />
+  <p><strong>2) The Core Idea (Plain English)</strong></p>
+  <p>Instead of asking <em>“What could this be?”</em>, Negative
+  Tomography asks:</p>
+  <p>“What can this definitely not be?”</p>
+  <p>Rather than generating candidates and pruning them reactively, we
+  begin by exhaustively characterizing impossibility.</p>
+  <p>Each failure, non-occurrence, or forbidden configuration eliminates
+  not just one option, but an entire class of possibilities. Collect
+  enough of these “negative primitives,” and what remains is no longer
+  vague—it becomes sharply defined.</p>
+  <p>In other words:</p>
+  <ul>
+  <li><p>Positive inference builds outward.</p></li>
+  <li><p>Negative inference collapses inward.</p></li>
+  </ul>
+  <p>And in large or degenerate spaces, collapse is vastly more
+  efficient than expansion.</p>
+  <hr />
+  <p><strong>3) Negative and Positive Primitives</strong></p>
+  <p>Any inference problem can be described using two dual sets:</p>
+  <ul>
+  <li><p><strong>Positive primitives</strong>: minimal generators of
+  allowed states.</p></li>
+  <li><p><strong>Negative primitives</strong>: minimal
+  forbiddances—things that cannot occur under any
+  circumstances.</p></li>
+  </ul>
+  <p>Most methods prioritize positives and treat negatives as
+  constraints, penalties, or afterthoughts.</p>
+  <p>Negative Tomography inverts that priority.</p>
+  <p>Why?</p>
+  <p>Because in sparse or unbounded spaces:</p>
+  <ul>
+  <li><p>Negative sets are usually smaller.</p></li>
+  <li><p>Each negative carries more information.</p></li>
+  <li><p>Failure collapses the space faster than success expands
+  it.</p></li>
+  </ul>
+  <p>Positive structure still matters—but only as the
+  <em>complement</em> of fully satisfied negatives.</p>
+  <hr />
+  <p><strong>4) Failure as a Structural Signal</strong></p>
+  <p>In this framework, failure is not noise. It is signal.</p>
+  <p>A single failure doesn’t just say “this attempt didn’t work”—it
+  tells us that an entire region of the space is impossible.</p>
+  <p>Different kinds of failure reveal different structure:</p>
+  <ul>
+  <li><p><strong>Hard failures</strong> define absolute
+  boundaries.</p></li>
+  <li><p><strong>Systematic absences</strong> expose missing degrees of
+  freedom.</p></li>
+  <li><p><strong>Repeated failures under variation</strong> reveal
+  invariants.</p></li>
+  <li><p><strong>Failures of attempted fixes</strong> point to deeper
+  constraints.</p></li>
+  </ul>
+  <p>Negative Tomography treats these as atomic, non-negotiable
+  primitives—the raw material of inference.</p>
+  <hr />
+  <p><strong>5) Why Symmetry Always Appears at the End</strong></p>
+  <p>As negative primitives accumulate, the feasible space contracts.
+  Across domains, this contraction has a consistent outcome:</p>
+  <p>The surviving structure becomes maximally symmetric.</p>
+  <p>This isn’t aesthetic—it’s structural.</p>
+  <p>Symmetry here means:</p>
+  <ul>
+  <li><p>Minimal degrees of freedom</p></li>
+  <li><p>Maximal invariance</p></li>
+  <li><p>Stability under perturbation</p></li>
+  <li><p>No arbitrary asymmetries not enforced by constraints</p></li>
+  </ul>
+  <p>This explains a familiar phenomenon: solutions discovered through
+  long failure-first processes often look “obvious” in hindsight. They
+  seem simple <em>because everything else has been proven
+  impossible</em>.</p>
+  <p>Simplicity is not assumed—it’s what remains.</p>
+  <hr />
+  <p><strong>6) Why This Is Universal</strong></p>
+  <p>Negative Tomography isn’t tied to any one field. The same
+  invariants show up everywhere:</p>
+  <ul>
+  <li><p><strong>Physical sensing</strong>: shadows, silence, and
+  non-reflection define shape.</p></li>
+  <li><p><strong>Language</strong>: forbidden placements constrain
+  meaning faster than guesses.</p></li>
+  <li><p><strong>Probability</strong>: zero-probability transitions
+  define dynamics.</p></li>
+  <li><p><strong>Optimization</strong>: flatness and degeneracy signal
+  constrained manifolds.</p></li>
+  <li><p><strong>Theory-building</strong>: impossibility theorems bound
+  what can exist.</p></li>
+  </ul>
+  <p>The claim is strong but precise:</p>
+  <p>Any method that successfully infers structure in sparse or
+  unbounded spaces must—implicitly or explicitly—use negative
+  primitives.</p>
+  <p>Different techniques often turn out to be the same strategy in
+  disguise.</p>
+  <hr />
+  <p><strong>7) Design Invariants (Without Algorithms)</strong></p>
+  <p>This paper does <strong>not</strong> prescribe implementations. But
+  any valid realization of Negative Tomography must respect five
+  invariants:</p>
+  <ol type="1">
+  <li><p><strong>Failure-first ordering</strong> – impossibility
+  precedes construction.</p></li>
+  <li><p><strong>Non-pegging</strong> – provisional structures remain
+  revisable.</p></li>
+  <li><p><strong>Anchor acquisition</strong> – inference starts only
+  after at least one informative negative boundary exists.</p></li>
+  <li><p><strong>Recursive inversion</strong> – failed fixes are treated
+  as higher-order signals.</p></li>
+  <li><p><strong>Convergence by relaxation</strong> – stability emerges
+  by releasing unnecessary constraints, not enforcing all of
+  them.</p></li>
+  </ol>
+  <p>These define what the method <em>must be</em>, not how to code
+  it.</p>
+  <hr />
+  <p><strong>8) What This Paper Is—and Is Not</strong></p>
+  <p>This document is foundational, not procedural.</p>
+  <p>It:</p>
+  <ul>
+  <li><p>Defines why failure-first inference is necessary.</p></li>
+  <li><p>Introduces a minimal vocabulary and structure.</p></li>
+  <li><p>Provides a unifying lens across domains.</p></li>
+  </ul>
+  <p>It does <strong>not</strong>:</p>
+  <ul>
+  <li><p>Offer algorithms</p></li>
+  <li><p>Present benchmarks</p></li>
+  <li><p>Claim optimality in every setting</p></li>
+  </ul>
+  <p>Those belong in future, domain-specific work.</p>
+  <hr />
+  <p><strong>Bottom Line</strong></p>
+  <p>Negative Tomography reframes inference as a process of eliminating
+  impossibility until only structure remains. In sparse, high-entropy,
+  or degenerate spaces, this is not a clever trick—it is the only
+  strategy</p>
+  <p>that scales.</p>
+  <p>Where positive-first methods search blindly, failure-first
+  inference lets the space collapse itself.</p>
+  <footer>
+    CC BY 4.0 | DOI:  | www.3pilgrim.com
+  </footer>
+</body>
+</html>

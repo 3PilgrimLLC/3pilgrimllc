@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" 
+        content="Companion explainer to Friction‑Guided Optimization — a geometric, failure‑first framework where gradient erosion carves negative space and the Fisher information defines anisotropic friction fields.">
+  <meta name="keywords" 
+        content="Friction-Guided Optimization, gradient erosion, parametric friction field, negative tomography, degeneracy amplification, 3 Pilgrim LLC">
+
+  https://3pilgrim.com/papers/papers/companion/Friction-Guided-Optimization-v1.0.html
+
+  <meta property="og:site_name" content="3 Pilgrim LLC">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Friction-Guided Optimization — Companion Explainer">
+  <meta property="og:description" 
+        content="A companion explainer for Friction‑Guided Optimization: gradient erosion, Fisher-defined friction fields, and degeneracy amplification in overparameterized manifolds.">
+  <meta property="og:url" 
+        content="https://3pilgrim.com/papers/papers/companion/Friction-Guided-Optimization-v1.0.html">
+  <meta property="og:image" content="https://3pilgrim.com/assets/logo.png">
+  <meta property="og:image:alt" content="3 Pilgrim LLC Logo">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Friction-Guided Optimization — Companion Explainer">
+  <meta name="twitter:description" 
+        content="Companion explainer for the Friction‑Guided Optimization framework: gradient erosion, Fisher friction, and symmetry as the fixed point.">
+  <meta name="twitter:image" content="https://3pilgrim.com/assets/logo.png">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"3 Pilgrim LLC",
+    "url":"https://3pilgrim.com/",
+    "logo":"https://3pilgrim.com/assets/logo.png",
+    "description":"Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "foundingDate":"2013",
+    "sameAs":["https://x.com/3PilgrimLLC"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ScholarlyArticle",
+    "name":"Friction-Guided Optimization — Companion Explainer",
+    "author":{
+      "@type":"Organization",
+      "name":"3 Pilgrim LLC"
+    },
+    "description":"Companion explainer for Friction‑Guided Optimization, summarizing gradient erosion, parametric friction fields, degeneracy amplification, and failure‑first inference in overparameterized tensor spaces.",
+    "datePublished":"2026-02-06",
+    "version":"1.0",
+    "identifier":{
+      "@type":"PropertyValue",
+      "propertyID":"DOI",
+      "value":"10.5281/zenodo.18510602"
+    },
+    "url":"https://3pilgrim.com/papers/papers/companion/Friction-Guided-Optimization-v1.0.html",
+    "isPartOf":{
+      "@type":"CreativeWorkSeries",
+      "name":"3 Pilgrim Research Library"
+    },
+    "about":[
+      "gradient erosion",
+      "parametric friction",
+      "negative tomography",
+      "degeneracy amplification",
+      "optimization geometry"
+    ],
+    "citation":"Friction-Guided Optimization — DOI 10.5281/zenodo.18510602",
+    "relatedLink":[
+      "https://doi.org/10.5281/zenodo.18510602",
+      "https://3pilgrim.com/papers-pdfs/Friction-Guided-Optimization-v1.0.pdf"
+    ],
+    "associatedMedia":{
+      "@type":"MediaObject",
+      "contentUrl":"https://3pilgrim.com/papers-pdfs/Friction-Guided-Optimization-v1.0.pdf",
+      "encodingFormat":"application/pdf"
+    }
+  }
+  </script>
+
+  <title>Friction-Guided Optimization: Negative Tomography in Overparameterized Learning</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2cm; line-height: 1.6; }
+    .title-page { text-align: center; margin-top: 20%; page-break-after: always; }
+    header { position: fixed; top: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
+    footer { position: fixed; bottom: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
+    img { max-width: 100%; height: auto; }
+  </style>
+  </head>
+<body>
+  <header>
+    3 Pilgrim LLC | Friction-Guided Optimization: Negative Tomography in Overparameterized Learning | Version 1.0 · Februrary 6,2026
+  </header>
+  <div class="title-page">
+    <h1>Friction-Guided Optimization: Negative Tomography in Overparameterized Learning</h1>
+    <h2>A Companion Explainer</h2>
+    <p>3 Pilgrim LLC</p>
+    <p>Version 1.0 · Februrary 6,2026</p>
+  </div>
+<br>
+<a href="https://doi.org/10.5281/zenodo.18510602">Click here for full PDF of paper </a>
+    <hr />
+  <p><strong>1) Why This Paper Exists</strong></p>
+  <p>Large neural networks behave in ways that seem contradictory at
+  first glance:</p>
+  <ul>
+  <li><p>They have far more parameters than data</p></li>
+  <li><p>They converge to <em>flat</em> minima instead of sharp
+  optima</p></li>
+  <li><p>Their effective dimensionality collapses during
+  training</p></li>
+  <li><p>Their curvature metrics (Fisher, Hessian) are low-rank</p></li>
+  <li><p>Their loss landscapes look fractal and hyperbolic</p></li>
+  <li><p>They train in abrupt phases, sometimes “waking up” suddenly
+  (grokking)</p></li>
+  </ul>
+  <p>All of these effects are real and well documented—but they’re
+  usually explained separately. One theory for flat minima. Another for
+  grokking. Another for Fisher spectra. None explain why these features
+  appear together, or why overparameterization helps instead of
+  hurting.</p>
+  <p>This paper exists to give a single, minimal, structural explanation
+  for all of them—and to show how that structure can be used to train
+  models more efficiently.</p>
+  <hr />
+  <p><strong>2) The Core Reframe</strong></p>
+  <p>The usual story says training is about <em>finding a downhill
+  path</em> in a loss landscape.</p>
+  <p>We argue that’s the wrong mental model.</p>
+  <p>In highly overparameterized networks, training behaves more like
+  tomographic carving:</p>
+  <ul>
+  <li><p>The parameter space starts out mostly empty of
+  information</p></li>
+  <li><p>Many directions do almost nothing to predictions</p></li>
+  <li><p>Gradients act as probes that remove useless directions</p></li>
+  <li><p>What remains is a small, resistant core that actually
+  matters</p></li>
+  </ul>
+  <p>Training is not additive learning—it is subtractive erosion.</p>
+  <p>This reframes optimization as a form of Negative Tomography:
+  structure is revealed by identifying where movement <em>fails</em> to
+  change outcomes.</p>
+  <hr />
+  <p><strong>3) The Three Primitives</strong></p>
+  <p>All the observed phenomena reduce to three interacting
+  primitives:</p>
+  <p><strong>1. Gradient Erosion</strong></p>
+  <p>Early training steps preferentially collapse directions where
+  parameter changes don’t affect predictions. These low-impact
+  directions are carved away, shrinking the effective dimensionality of
+  the model.</p>
+  <p>This explains:</p>
+  <ul>
+  <li><p>Intrinsic dimension collapse</p></li>
+  <li><p>Flat minima</p></li>
+  <li><p>Fractal roughness (erosion happens at multiple scales)</p></li>
+  </ul>
+  <p><strong>2. Fisher Information as a Friction Field</strong></p>
+  <p>The Fisher matrix defines how “resistant” each direction is:</p>
+  <ul>
+  <li><p>High Fisher → strongly constrained by data (high
+  friction)</p></li>
+  <li><p>Low Fisher → sloppy or degenerate (low friction)</p></li>
+  </ul>
+  <p>Training naturally flows through low-friction corridors first. As
+  erosion progresses, friction becomes anisotropic—creating apparent
+  “downhill” structure <strong>after the fact</strong>, not before.</p>
+  <p>This explains:</p>
+  <ul>
+  <li><p>Low-rank Fisher and Hessian spectra</p></li>
+  <li><p>Hyperbolic curvature signatures</p></li>
+  <li><p>Why curvature only becomes meaningful mid-training</p></li>
+  </ul>
+  <p><strong>3. Overparameterization as Degeneracy
+  Amplifier</strong></p>
+  <p>Extra parameters create vast families of nearly equivalent
+  solutions. This degeneracy is not a problem—it gives erosion room to
+  operate.</p>
+  <p>Overparameterization:</p>
+  <ul>
+  <li><p>Accelerates exploration</p></li>
+  <li><p>Makes carving possible</p></li>
+  <li><p>Enables fast convergence to stable manifolds</p></li>
+  </ul>
+  <p>Without degeneracy, erosion stalls.</p>
+  <hr />
+  <p><strong>4) Why Training Happens in Phases</strong></p>
+  <p>Because the geometry itself changes during training, a single
+  optimizer configuration cannot be correct throughout.</p>
+  <p>We derive a three-phase schedule directly from the evolving
+  structure:</p>
+  <p><strong>Phase 1: Acquisition (High Learning Rate)</strong></p>
+  <p>Rapidly scour low-friction directions.<br />
+  Intrinsic dimension drops quickly.</p>
+  <p><strong>Phase 2: Re-Ask (Fisher-Aware Refinement)</strong></p>
+  <p>Once erosion sharpens the manifold, the optimizer must be
+  re-aligned to the new friction field. Fisher-aware methods become
+  useful here—not earlier.</p>
+  <p>This phase transition is detectable via:</p>
+  <ul>
+  <li><p>Intrinsic dimension stall</p></li>
+  <li><p>Fisher spectrum concentration</p></li>
+  </ul>
+  <p><strong>Phase 3: Execution (Low Learning Rate)</strong></p>
+  <p>Fine-tune inside flat, symmetric valleys for generalization.</p>
+  <p>This is not heuristic staging. These phases are
+  <strong>structurally required</strong> by the geometry.</p>
+  <hr />
+  <p><strong>5) What This Explains (All at Once)</strong></p>
+  <table style="width:76%;">
+  <colgroup>
+  <col style="width: 23%" />
+  <col style="width: 52%" />
+  </colgroup>
+  <thead>
+  <tr>
+  <th><strong>Phenomenon</strong></th>
+  <th><strong>Why It Happens</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>Flat minima</td>
+  <td>They are the symmetric fixed point after erosion</td>
+  </tr>
+  <tr>
+  <td>Low intrinsic dimension</td>
+  <td>Redundant directions are carved away</td>
+  </tr>
+  <tr>
+  <td>Low-rank Fisher</td>
+  <td>Only a few directions remain data-constrained</td>
+  </tr>
+  <tr>
+  <td>Fractal loss roughness</td>
+  <td>Multiscale erosion boundaries</td>
+  </tr>
+  <tr>
+  <td>Hyperbolic curvature</td>
+  <td>Exponentially rare high-friction directions</td>
+  </tr>
+  <tr>
+  <td>Grokking</td>
+  <td>Abrupt friction-field realignment after negative closure</td>
+  </tr>
+  </tbody>
+  </table>
+  <p>Nothing special needs to be added. These effects are consequences,
+  not separate mechanisms.</p>
+  <hr />
+  <p><strong>6) Friction-Guided Optimization (FGO)</strong></p>
+  <p>From this structure we derive Friction-Guided Optimization, a
+  state-dependent training protocol.</p>
+  <p>Key differences from standard schedules:</p>
+  <ul>
+  <li><p>Phase transitions are triggered by measured geometry, not step
+  counts</p></li>
+  <li><p>Fisher-aware updates are applied <em>only when they become
+  meaningful</em></p></li>
+  <li><p>Training efficiency improves without increasing
+  compute</p></li>
+  </ul>
+  <p>Across toy problems and a small transformer, FGO reaches matched
+  accuracy in 15–35% fewer steps under equal compute.</p>
+  <p>This is not magic—it’s simply respecting how the manifold
+  evolves.</p>
+  <hr />
+  <p><strong>7) Why This Matters Beyond ML</strong></p>
+  <p>The same friction-and-erosion dynamics appear wherever learning or
+  adaptation happens in sparse spaces:</p>
+  <ul>
+  <li><p>Alignment under uncertainty</p></li>
+  <li><p>Multi-agent incentive systems</p></li>
+  <li><p>Behavioral dynamics and habit formation</p></li>
+  <li><p>Degenerate strategy spaces</p></li>
+  <li><p>Cognitive navigation under limited feedback</p></li>
+  </ul>
+  <p>Once you see optimization as <strong>failure-first
+  carving</strong>, these systems stop looking mysterious.</p>
+  <hr />
+  <p><strong>8) What This Paper Is—and Is Not</strong></p>
+  <p>This is a reductionist framework, not an engineering
+  prescription.</p>
+  <p>It:</p>
+  <ul>
+  <li><p>Unifies fragmented empirical observations</p></li>
+  <li><p>Provides minimal explanatory primitives</p></li>
+  <li><p>Derives a practical, geometry-aware protocol</p></li>
+  </ul>
+  <p>It does <strong>not</strong>:</p>
+  <ul>
+  <li><p>Claim architectural superiority</p></li>
+  <li><p>Replace empirical benchmarking</p></li>
+  <li><p>Assert universal optimality</p></li>
+  </ul>
+  <p>Its value is structural clarity.</p>
+  <hr />
+  <p><strong>Bottom Line</strong></p>
+  <p>Overparameterized networks succeed because they start with too much
+  freedom—and then systematically destroy it.</p>
+  <p>Training works not by finding the right path, but by
+  <strong>eliminating every path that doesn’t matter</strong> until only
+  symmetry remains.</p>
+  <p>Friction-Guided Optimization simply follows that logic to its
+  conclusion.</p>
+  <footer>
+    CC BY 4.0 | DOI:  | www.3pilgrim.com
+  </footer>
+</body>
+</html>
