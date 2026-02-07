@@ -4,8 +4,8 @@
   <title>3 Pilgrim Research — Companion Papers (Atom)</title>
   <id>tag:3pilgrim.com,2026:companion-feed</id>
   <updated>2026-02-06T00:00:00Z</updated>
-
-   <link rel="self" type="application/atom+xml" href="https://3pilgrim.com/papers/papers/companion/atom.xml" />
+  <link rel="self" type="application/atom+xml" href="https://3pilgrim.com/papers/papers/companion/atom.xml" />
+  <generator uri="https://3pilgrim.com/" version="1.0">3 Pilgrim Manual Feed</generator>
 
   <author>
     <name>3 Pilgrim LLC</name>
@@ -13,28 +13,28 @@
   </author>
 
   <entry>
-    <title>Negative Tomography: Structural Inference via Failure‑First Primitives</title>
-   <link rel="alternate" href="https://doi.org/10.5281/zenodo.18510535" />  
+    <title>Negative Tomography: Structural Inference via Failure-First Primitives</title>
+    <link rel="alternate" href="https://doi.org/10.5281/zenodo.18510535" />
     <id>tag:3pilgrim.com,2026:zenodo.18510535</id>
     <updated>2026-02-06T00:00:00Z</updated>
     <published>2026-02-06T00:00:00Z</published>
     <category term="Research" />
     <category term="Inference" />
-    <summary>
-      Defines a domain‑agnostic, failure‑first inference framework using negative primitives; shows symmetry as the fixed point under exhaustive negative satisfaction; provides design invariants.
+    <summary type="html">
+      Defines a domain-agnostic, failure-first inference framework using negative primitives; shows symmetry as the fixed point under exhaustive negative satisfaction; provides design invariants.
     </summary>
   </entry>
 
   <entry>
-    <title>Friction‑Guided Optimization: Negative Tomography in Overparameterized Learning</title>
+    <title>Friction-Guided Optimization: Negative Tomography in Overparameterized Learning</title>
     <link rel="alternate" href="https://doi.org/10.5281/zenodo.18510602" />
     <id>tag:3pilgrim.com,2026:zenodo.18510602</id>
     <updated>2026-02-06T00:00:00Z</updated>
     <published>2026-02-06T00:00:00Z</published>
     <category term="Research" />
     <category term="AI Research" />
-    <summary>
-      ML instantiation of Negative Tomography with a Fisher‑defined friction field, gradient erosion, and a 3‑phase FGO schedule with triggers and diagnostics.
+    <summary type="html">
+      ML instantiation of Negative Tomography with a Fisher-defined friction field, gradient erosion, and a 3-phase FGO schedule with triggers and diagnostics.
     </summary>
   </entry>
 
@@ -43,23 +43,23 @@
     <link rel="alternate" href="https://3pilgrim.com/papers/papers/companion/A-Quantitative-Model-for-Pricing-Gold-v1.0.html" />
     <id>tag:3pilgrim.com,2026:pricing-gold-1.0</id>
     <updated>2026-01-23T00:00:00Z</updated>
-     <published>2026-02-06T00:00:00Z</published>
+    <published>2026-01-23T00:00:00Z</published>
     <category term="Economics" />
     <category term="Metrology" />
     <summary type="html">
-      A simple model for estimating gold’s intrinsic value via long‑run coupling to GDP and labor; reframes gold as a metrological invariant.
+      A simple model for estimating gold’s intrinsic value via long-run coupling to GDP and labor; reframes gold as a metrological invariant.
     </summary>
   </entry>
 
   <entry>
-    <title>The Half‑Life of Fiat — Companion</title>
+    <title>The Half-Life of Fiat — Companion</title>
     <link rel="alternate" href="https://3pilgrim.com/papers/papers/companion/The-Half-Life-of-Fiat-v1.0.html" />
     <id>tag:3pilgrim.com,2026:half-life-fiat-1.0</id>
     <updated>2026-01-23T00:00:00Z</updated>
-     <published>2026-02-06T00:00:00Z</published>
+    <published>2026-01-23T00:00:00Z</published>
     <category term="Economics" />
     <summary type="html">
-      Fiat systems exhibit a generational half‑life; drift accumulates on a predictable timescale rather than at random.
+      Fiat systems exhibit a generational half-life; drift accumulates on a predictable timescale rather than at random.
     </summary>
   </entry>
 
@@ -68,7 +68,7 @@
     <link rel="alternate" href="https://3pilgrim.com/papers/papers/companion/The-Temporal-Lattice-of-Fiat-Stability-v1.0.html" />
     <id>tag:3pilgrim.com,2026:temporal-lattice-fiat-1.0</id>
     <updated>2026-01-23T00:00:00Z</updated>
-      <published>2026-02-06T00:00:00Z</published>
+    <published>2026-01-23T00:00:00Z</published>
     <category term="Economics" />
     <summary type="html">
       Duration (WAM) acts as a stabilizer; the compression rate κ and TSR explain when volatility flips from damped to reflexive.
@@ -80,7 +80,7 @@
     <link rel="alternate" href="https://3pilgrim.com/papers/papers/companion/Primitive-Asymmetries-of-Persistence-v1.0.html" />
     <id>tag:3pilgrim.com,2026:persistence-1.0</id>
     <updated>2026-01-23T00:00:00Z</updated>
-    <published>2026-02-06T00:00:00Z</published>
+    <published>2026-01-23T00:00:00Z</published>
     <category term="AI Research" />
     <summary type="html">
       Digital miscalibration arises from architectural mismatch: temporal asymmetry, perfect persistence, and context override.
@@ -92,7 +92,7 @@
     <link rel="alternate" href="https://3pilgrim.com/papers/papers/companion/The-Compute-Efficiency-Frontier-v1.0.html" />
     <id>tag:3pilgrim.com,2026:cef-1.0</id>
     <updated>2026-01-23T00:00:00Z</updated>
-    <published>2026-02-06T00:00:00Z</published>
+    <published>2026-01-23T00:00:00Z</published>
     <category term="AI Research" />
     <summary type="html">
       Why hyperscale LLMs can’t scale beyond physics: compute, power, heat, data, parallelism, and transmission define the frontier.
@@ -104,7 +104,7 @@
     <link rel="alternate" href="https://3pilgrim.com/papers/papers/companion/Semiotic-Frustration-in-Machine-Learning-v1.0.html" />
     <id>tag:3pilgrim.com,2026:semiotic-frustration-1.0</id>
     <updated>2026-01-23T00:00:00Z</updated>
-    <published>2026-02-06T00:00:00Z</published>
+    <published>2026-01-23T00:00:00Z</published>
     <category term="AI Research" />
     <summary type="html">
       How “dimension” drifted into “vector count”—and a taxonomy separating vectoral containment from true dimensional expansion.
@@ -116,7 +116,7 @@
     <link rel="alternate" href="https://3pilgrim.com/papers/papers/companion/Toward-a-Structural-Model-of-Relationship-Compatibility-v1.0.html" />
     <id>tag:3pilgrim.com,2026:relationship-compatibility-1.0</id>
     <updated>2026-01-23T00:00:00Z</updated>
-    <published>2026-02-06T00:00:00Z</published>
+    <published>2026-01-23T00:00:00Z</published>
     <category term="Psychology" />
     <summary type="html">
       ERM/LRM mode selection, constraint topology, and PLR gradients as structural primitives.
@@ -128,7 +128,7 @@
     <link rel="alternate" href="https://3pilgrim.com/papers/papers/companion/Bias-as-Landscape-v1.0.html" />
     <id>tag:3pilgrim.com,2026:bal-1.0</id>
     <updated>2026-01-23T00:00:00Z</updated>
-    <published>2026-02-06T00:00:00Z</published>
+    <published>2026-01-23T00:00:00Z</published>
     <category term="Evolution / Cognition" />
     <summary type="html">
       Attraction and cognition as motion on a shared landscape: genes (slow) and ego* (fast) optimize on the same manifold.
@@ -137,13 +137,13 @@
 
   <entry>
     <title>Fractal–Hyperbolic Degeneracy in Overparameterized Learning Manifolds — Companion</title>
-    <link rel="alternate" href="https://3pilgrim.com/papers/papers/companion/Fractal-Hyperbolic-degeneracy-in-overparamertized-learning-models-v1.0.html" />
+    <link rel="alternate" href="https://3pilgrim.com/papers/papers/companion/Fractal-Hyperbolic-degeneracy-in-overparameterized-learning-models-v1.0.html" />
     <id>tag:3pilgrim.com,2026:fhd-1.0</id>
     <updated>2026-01-23T00:00:00Z</updated>
-    <published>2026-02-06T00:00:00Z</published>
+    <published>2026-01-23T00:00:00Z</published>
     <category term="AI Research" />
     <summary type="html">
-      Curvature collapse, manifold thinning, and low‑rank Fisher structure in overparameterized networks.
+      Curvature collapse, manifold thinning, and low-rank Fisher structure in overparameterized networks.
     </summary>
   </entry>
 
