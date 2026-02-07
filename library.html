@@ -132,7 +132,11 @@ footer {
 
 .papers-container {
   width: 100%;
-  max-width: 1000px;                   
+  max-width: 1000px;  
+  max-height: 60vh;  /* Adjust to ~6-8 items visible; or 400px, calc(100vh - 200px) for dynamic */
+  overflow-y: auto;  /* Enables vertical scrollbar when needed */
+  overflow-x: auto;  /* Already present, but explicit is good */
+  -webkit-overflow-scrolling: touch;  /* Already present, smooth on iOS */                 
   margin: 20px auto 40px;
   overflow-x: auto;                     
   -webkit-overflow-scrolling: touch;    
@@ -248,7 +252,7 @@ html, body {
   </div>
   <main class="content">
     <h2>Our Public Library</h2>
-   <p> Follow: <a href="https://3pilgrim.com/papers/papers/companion/rss.xml" rel=noopener target="_blank">RSS</a> | <a href="https://3pilgrim.com/papers/papers/companion/atom.xml" rel=noopener target="_blank">ATOM</a>)</p>
+   <p> Follow: <a href="https://3pilgrim.com/papers/papers/companion/rss.xml" rel=noopener target="_blank">RSS</a></p>
     <p>
      The 3 Pilgrim Public Library is an evolving archive of independent research papers and <a href="/notes.html" class="nav-link">technical notes</a>.
      Each document reflects a self-contained investigation within mathematics, finance, psychology, or information theory.

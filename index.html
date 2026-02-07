@@ -115,7 +115,11 @@ footer {
 
 .papers-container {
   width: 100%;
-  max-width: 1000px;                   
+  max-width: 1000px;   
+  max-height: 60vh;  /* Adjust to ~6-8 items visible; or 400px, calc(100vh - 200px) for dynamic */
+  overflow-y: auto;  /* Enables vertical scrollbar when needed */
+  overflow-x: auto;  /* Already present, but explicit is good */
+  -webkit-overflow-scrolling: touch;  /* Already present, smooth on iOS */                
   margin: 20px auto 40px;
   overflow-x: auto;                     
   -webkit-overflow-scrolling: touch;    
@@ -232,7 +236,7 @@ html, body {
    </p>
    
 <div style="margin-top: 1.5rem;">
-Follow: <a href="https://3pilgrim.com/papers/papers/companion/rss.xml" rel=noopener target="_blank">RSS</a> | <a href="https://3pilgrim.com/papers/papers/companion/atom.xml" rel=noopener target="_blank">ATOM</a>
+Follow: <a href="https://3pilgrim.com/papers/papers/companion/rss.xml" rel=noopener target="_blank">RSS</a>
 </div>
 
   <div class="papers-container">
