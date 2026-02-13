@@ -10,6 +10,19 @@
     <generator>3pilgrim.com</generator>
 
      
+     <item>
+      <title>The Economics of AI: Sailing the Insolvent Seas</title>
+      <link>https://doi.org/10.5281/zenodo.18636588</link>
+      <guid isPermaLink="false">doi:10.5281/zenodo.18636588</guid>
+      <description><![CDATA[
+      This paper dissects AI's structural disequilibrium: capital-intensive training regimes clash with low-utilization (5–15%) inference, driving reflexive oversupply, negative-return scaling, and idle capital via energy irreversibility. Argues for bifurcation—training as utility providers, inference as competitive service layer—for equilibrium. Conceptual primitives only. CC BY 4.0.
+      ]]></description>
+      <category>Research</category>
+      <category>AI Economics</category>
+      <category>Compute Infrastructure</category>
+     <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
+    </item>
+
       <item>
      <title>Negative Tomography: Structural Inference via Failure‑First Primitives</title>
      <link>https://doi.org/10.5281/zenodo.18510535</link>
