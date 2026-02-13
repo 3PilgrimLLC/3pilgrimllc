@@ -1,233 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3 Pilgrim LLC — The Half‑Life of Fiat (Companion)</title>
-  
-  <meta name="description" content="Fiat systems exhibit a characteristic temporal decay — a generational half‑life on the order of decades. Drift is not random; it accumulates on a recognizable timescale.">
-  <meta name="keywords" content="3 Pilgrim LLC, fiat half-life, monetary decay, historical analysis, drift">
-  https://3pilgrim.com/papers/papers/companion/The-Half-Life-of-Fiat-v1.0.html
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The Half Life of Fiat</title>
+
+  <meta name="description" content="Companion explainer to The Half Life
+of Fiat — a statistical analysis showing unanchored fiat regimes have an
+average lifespan of ~31 years (exponential decay constant τ ≈ 31), with
+generational turnover as a plausible driver of confidence erosion.">
+  <meta name="keywords" content="fiat half-life, monetary decay,
+unanchored regimes, exponential survival, generational timescale,
+currency failure, confidence erosion, monetary drift, fiat viability,
+base-rate decay">
+
+  <link rel="canonical" href="https://3pilgrim.com/papers/papers/companion/The-Half-Life-of-Fiat-v1.0.html">
 
   <meta property="og:site_name" content="3 Pilgrim LLC">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="The Half‑Life of Fiat — Companion Explainer">
-  <meta property="og:description" content="A generational clock for monetary drift.">
+  <meta property="og:title" content="The Half Life of
+Fiat — Companion Explainer">
+  <meta property="og:description" content="A companion explainer for The
+Half Life of Fiat: documenting ~31-year average lifespan of unanchored
+fiat systems via exponential decay, linking to generational memory loss
+and currency drift.">
   <meta property="og:url" content="https://3pilgrim.com/papers/papers/companion/The-Half-Life-of-Fiat-v1.0.html">
   <meta property="og:image" content="https://3pilgrim.com/assets/logo.png">
   <meta property="og:image:alt" content="3 Pilgrim LLC Logo">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Half‑Life of Fiat — Companion Explainer">
-  <meta name="twitter:description" content="A generational clock for monetary drift.">
+  <meta name="twitter:title" content="The Half Life of
+Fiat — Companion Explainer">
+  <meta name="twitter:description" content="A companion explainer for
+The Half Life of Fiat: documenting ~31-year average lifespan of
+unanchored fiat systems via exponential decay, linking to generational
+memory loss and currency drift.">
   <meta name="twitter:image" content="https://3pilgrim.com/assets/logo.png">
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"3 Pilgrim LLC",
-    "url":"https://3pilgrim.com/",
-    "logo":"https://3pilgrim.com/assets/logo.png",
-    "description":"Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
-    "foundingDate":"2013",
-    "sameAs":["https://x.com/3PilgrimLLC"]
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "3 Pilgrim LLC",
+    "url": "https://3pilgrim.com/",
+    "logo": "https://3pilgrim.com/assets/logo.png",
+    "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "foundingDate": "2013",
+    "sameAs": ["https://x.com/3PilgrimLLC"]
   }
   </script>
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"ScholarlyArticle",
-    "name":"The Half‑Life of Fiat — Companion Explainer",
-    "author":{"@type":"Organization","name":"3 Pilgrim LLC"},
-    "description":"Companion that frames fiat decay as a generational half‑life observable across historical cases.",
-    "datePublished":"2026-01-23",
-    "version":"1.0",
-    "identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.5281/zenodo.18055894"},
-    "url":"https://3pilgrim.com/papers/papers/companion/The-Half-Life-of-Fiat-v1.0.html",
-    "isPartOf":{"@type":"CreativeWorkSeries","name":"3 Pilgrim Research Library"},
-    "about":["fiat half-life","monetary decay","historical drift"],
-    "citation":"The Half‑Life of Fiat — DOI 10.5281/zenodo.18055894",
-    "relatedLink":[
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "The Half Life of Fiat — Companion Explainer",
+    "author": {
+      "@type": "Organization",
+      "name": "3 Pilgrim LLC"
+    },
+    "description": "Companion explainer to The Half Life of Fiat — a
+statistical analysis showing unanchored fiat regimes have an average
+lifespan of ~31 years (exponential decay constant τ ≈ 31), with
+generational turnover as a plausible driver of confidence erosion.",
+    "datePublished": "February 5,2026",
+    "version": "1.0",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.18055894"
+    },
+    "url": "https://3pilgrim.com/papers/papers/companion/The-Half-Life-of-Fiat-v1.0.html",
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "3 Pilgrim Research Library"
+    },
+    "about": fiat half-lifemonetary decayunanchored fiatexponential
+survivalgenerational timescaleconfidence erosioncurrency driftmonetary
+stabilitybase-rate failuretemporal constraintsocial memoryregime
+viability,
+    "citation": "The Half Life of Fiat — DOI 10.5281/zenodo.18055894",
+    "relatedLink": [
       "https://doi.org/10.5281/zenodo.18055894",
-      "https://3pilgrim.com/papers-pdfs/The-Half-Life-of-Fiat-A-Statistical-History-of-Monetary-Decay-v1.0.pdf"
+      "https://3pilgrim.com/papers-pdfs/The-Half-Life-of-Fiat-v1.0-v1.0.pdf"
     ],
-    "associatedMedia":{
-      "@type":"MediaObject",
-      "contentUrl":"https://3pilgrim.com/papers-pdfs/The-Half-Life-of-Fiat-A-Statistical-History-of-Monetary-Decay-v1.0.pdf",
-      "encodingFormat":"application/pdf"
+    "associatedMedia": {
+      "@type": "MediaObject",
+      "contentUrl": "https://3pilgrim.com/papers-pdfs/The-Half-Life-of-Fiat-v1.0-v1.0.pdf",
+      "encodingFormat": "application/pdf"
     }
   }
   </script>
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 2cm; line-height: 1.6; }
-    .title-page { text-align: center; margin-top: 20%; page-break-after: always; }
-    header { position: fixed; top: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
-    footer { position: fixed; bottom: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f8f9fa;
+      color: #222;
+      line-height: 1.65;
+    }
+    .content-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px 30px;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      overflow-y: auto;
+      max-height: 92vh;
+    }
+    @media (max-width: 600px) {
+      .content-container {
+        margin: 20px;
+        padding: 20px 15px;
+        border-radius: 0;
+      }
+    }
+    .title-page {
+      max-width: 800px;
+      margin: 20% auto 0 auto;
+      padding: 0 30px;
+      text-align: center;
+      page-break-after: always;
+    }
+    .title-page h1, .title-page h2, .title-page p {
+      margin: 0.5em 0;
+    }
+    header {
+      position: fixed;
+      top: 1cm;
+      width: 100%;
+      text-align: center;
+      font-size: 10pt;
+      color: gray;
+    }
+    footer {
+      position: fixed;
+      bottom: 1cm;
+      width: 100%;
+      text-align: center;
+      font-size: 10pt;
+      color: gray;
+    }
     img { max-width: 100%; height: auto; }
+    h1, h2, h3 { color: #111; margin: 1.5em 0 0.8em; }
+    p { margin: 1.2em 0; }
+    hr { border: 0; border-top: 1px solid #ddd; margin: 2.5em 0; }
   </style>
+
   </head>
 <body>
   <header>
-    3 Pilgrim LLC | The Half Life of Fiat: A Statistical History of Monetary Decay | Version 1.0 · December 25,2025
+    3 Pilgrim LLC | The Half Life of Fiat | Version 1.0 · February
+5,2026
   </header>
+
   <div class="title-page">
-    <h1>The Half Life of Fiat: A Statistical History of Monetary Decay</h1>
+    <h1>The Half Life of Fiat</h1>
     <h2>A Companion Explainer</h2>
     <p>3 Pilgrim LLC</p>
-    <p>Version 1.0 · December 25, 2025</p>
+    <p>Version 1.0 · February 5,2026</p>
   </div>
-  <br>
-   <a href="https://doi.org/10.5281/zenodo.18055894">Click here for full PDF of paper </a>
-  <hr />
-  <p><strong>1) Why This Paper Exists (Linked to the Gold
-  Paper)</strong></p>
-  <p>In our prior work, we argued that gold is better understood as a
-  stable measurement reference than as a speculative asset. Large moves
-  in the “price of gold” mostly reflect changes in the currency used to
-  measure it—that is, fiat drift relative to a slow, stable reference
-  whose supply growth tracks civilization-scale productivity.</p>
-  <p>That reframing raised a natural follow-up question:<br />
-  If fiat currencies drift structurally over time, do they also
-  <em>fail</em> in a repeatable way?</p>
-  <p>To explore this, we examined historical monetary regimes and asked
-  a simple, consistent question:<br />
-  Once a fiat system is no longer strictly backed by, or linked to,
-  gold—how long does it remain viable?</p>
-  <p>By focusing only on the lifespan of unanchored fiat regimes, and
-  not on policy details or political narratives, we isolate the <em>time
-  structure</em> of fiat decay.</p>
-  <hr />
-  <p><strong>2) What the Paper Says (Plain Language
-  Summary)</strong></p>
-  <ul>
-  <li><div data-custom-style="List Paragraph">
-  <p>We define failure in practical terms: hyperinflation,
-  redenomination, or replacement. All three reflect the same underlying
-  event—loss of confidence in the unit as a reliable measure of
-  value.</p>
-  </div></li>
-  <li><div data-custom-style="List Paragraph">
-  <p>We assemble 21 well-documented fiat episodes spanning roughly eight
-  centuries and measure how long each system survived after becoming
-  unanchored. The results are simple but striking:<br />
-  the average lifespan is about <strong>31 years</strong>, with a median
-  of about <strong>24 years</strong>. Many systems fail within roughly a
-  generation; a smaller number persist much longer.</p>
-  </div></li>
-  <li><div data-custom-style="List Paragraph">
-  <p>When we fit these outcomes to a basic survival model, we find an
-  exponential pattern:<br />
-  S(t) ≈ exp(−t/τ), with τ ≈ 31 years.<br />
-  This implies that by year ~31, an unanchored fiat system has about a
-  63% probability of failure—a functional monetary half-life.</p>
-  </div></li>
-  <li><div data-custom-style="List Paragraph">
-  <p>This pattern appears across regions, eras, and political systems.
-  The paper does not claim specific policy causes. It documents a
-  recurring statistical regularity and leaves causation open.</p>
-  </div></li>
-  </ul>
-  <hr />
-  <p><strong>3) What Distinguishes This Framework From Existing
-  Approaches</strong></p>
-  <p>Most discussions of fiat collapse focus on specific stories: wars,
-  bad leadership, corruption, or poor policy choices. While often true
-  in detail, those explanations vary widely from case to case.</p>
-  <p>Our approach strips all of that away. We ignore ideology,
-  institutions, and policy design, and look only at two variables:</p>
-  <p><strong>time since unbacking</strong>, and <strong>whether the
-  currency survived</strong>.</p>
-  <p>Viewed through this lens, a common pattern emerges: a
-  generational-scale decay constant—about 31 years—that repeats across
-  very different monetary regimes.</p>
-  <p>Rather than trying to predict failure using country-specific
-  drivers, we identify a systems-level regularity. Confidence in
-  unanchored fiat appears to erode gradually and probabilistically, much
-  like a relaxation process bounded by human memory and time
-  preference.</p>
-  <p>This also complements the gold paper. If gold provides a
-  <em>measurement lens</em> that reveals fiat drift, this paper provides
-  a <em>temporal lens</em> that describes how long unanchored fiat
-  systems tend to remain viable. Together, they describe the same
-  phenomenon from two different angles.</p>
-  <hr />
-  <p><strong>4) Theoretical Implications (Assuming the Work Is
-  Correct)</strong></p>
-  <ul>
-  <li><div data-custom-style="List Paragraph">
-  <p><strong>A time constraint on fiat:</strong> Unanchored fiat systems
-  appear to share a generational decay timescale, suggesting that
-  confidence erosion operates independently of specific policies or
-  regimes.</p>
-  </div></li>
-  <li><div data-custom-style="List Paragraph">
-  <p><strong>Confidence as a gradual process:</strong> The exponential
-  survival curve implies many small, distributed decisions over time—not
-  a single catastrophic mistake. Fiat failure looks less like an
-  accident and more like a slow loss of collective trust.</p>
-  </div></li>
-  <li><div data-custom-style="List Paragraph">
-  <p><strong>Two-axis monetary analysis:</strong> Combined with the gold
-  framework, monetary systems can be analyzed along two independent
-  dimensions:<br />
-  a measurement axis (drift versus alignment, via gold ratios),
-  and<br />
-  a time axis (how far the system has progressed along its decay
-  curve).</p>
-  </div></li>
-  </ul>
-  <hr />
-  <p><strong>Generational Horizons and the ~31 Year Decay
-  Constant</strong></p>
-  <p>The estimated decay constant of roughly 31 years closely matches a
-  familiar generational boundary. Across the dataset, most unanchored
-  fiat regimes fail within a span corresponding to about one to two
-  human generations.</p>
-  <p>The model does not claim a causal mechanism, but the alignment is
-  suggestive. Monetary stability depends on restraint, credibility, and
-  shared memory of past failures. As generations turn over, the lived
-  experience that once enforced discipline fades.</p>
-  <p>After one generation, the reasons for caution weaken. After two,
-  they are often forgotten entirely. This provides a plausible
-  interpretation for why fiat systems show a repeatable half-life rather
-  than a random pattern of collapse.</p>
-  <p>In this sense, the ~31-year timescale may reflect not just a
-  statistical regularity, but a deeper social rhythm: the lifespan of
-  collective economic memory in systems where trust must be continuously
-  renewed.</p>
-  <p><strong>5) Potential Implications (Downstream, Not
-  Predictions)</strong></p>
-  <ul>
-  <li><div data-custom-style="List Paragraph">
-  <p><strong>Monitoring, not mandates:</strong> Institutions could track
-  where a currency sits on the survival curve alongside gold-based drift
-  measures, improving situational awareness without prescribing regime
-  changes.</p>
-  </div></li>
-  <li><div data-custom-style="List Paragraph">
-  <p><strong>Scenario design and stress testing:</strong> Risk teams can
-  include time-since-unbacking as a base-rate input when designing
-  long-horizon scenarios. This remains descriptive, not
-  deterministic.</p>
-  </div></li>
-  <li><div data-custom-style="List Paragraph">
-  <p><strong>Model hygiene:</strong> Macro and AI models can include a
-  temporal stability feature (years unanchored) to reduce misattribution
-  of late-cycle regime behavior to short-term shocks, complementing
-  invariant features from the gold framework.</p>
-  </div></li>
-  <li><div data-custom-style="List Paragraph">
-  <p><strong>Clearer historical teaching:</strong> Monetary history can
-  be taught using base rates and time horizons rather than anecdotal
-  collapse stories, pairing temporal decay with measurement drift for a
-  more systematic view.</p>
-  </div></li>
-  </ul>
+
+  <div class="content-container">
+      <p><a href="https://doi.org/10.5281/zenodo.18055894">Click here for full PDF of paper</a></p>  
+	<hr />
+      <p><strong>1) Why This Paper Exists (Linked to the Gold
+      Paper)</strong></p>
+      <p>In our prior work, we argued that gold is better understood as
+      a stable measurement reference than as a speculative asset. Large
+      moves in the “price of gold” mostly reflect changes in the
+      currency used to measure it—that is, fiat drift relative to a
+      slow, stable reference whose supply growth tracks
+      civilization-scale productivity.</p>
+      <p>That reframing raised a natural follow-up question:<br />
+      If fiat currencies drift structurally over time, do they also
+      <em>fail</em> in a repeatable way?</p>
+      <p>To explore this, we examined historical monetary regimes and
+      asked a simple, consistent question:<br />
+      Once a fiat system is no longer strictly backed by, or linked to,
+      gold—how long does it remain viable?</p>
+      <p>By focusing only on the lifespan of unanchored fiat regimes,
+      and not on policy details or political narratives, we isolate the
+      <em>time structure</em> of fiat decay.</p>
+      <hr />
+      <p><strong>2) What the Paper Says (Plain Language
+      Summary)</strong></p>
+      <ul>
+      <li><div data-custom-style="List Paragraph">
+      <p>We define failure in practical terms: hyperinflation,
+      redenomination, or replacement. All three reflect the same
+      underlying event—loss of confidence in the unit as a reliable
+      measure of value.</p>
+      </div></li>
+      <li><div data-custom-style="List Paragraph">
+      <p>We assemble 21 well-documented fiat episodes spanning roughly
+      eight centuries and measure how long each system survived after
+      becoming unanchored. The results are simple but striking:<br />
+      the average lifespan is about <strong>31 years</strong>, with a
+      median of about <strong>24 years</strong>. Many systems fail
+      within roughly a generation; a smaller number persist much
+      longer.</p>
+      </div></li>
+      <li><div data-custom-style="List Paragraph">
+      <p>When we fit these outcomes to a basic survival model, we find
+      an exponential pattern:<br />
+      S(t) ≈ exp(−t/τ), with τ ≈ 31 years.<br />
+      This implies that by year ~31, an unanchored fiat system has about
+      a 63% probability of failure—a functional monetary half-life.</p>
+      </div></li>
+      <li><div data-custom-style="List Paragraph">
+      <p>This pattern appears across regions, eras, and political
+      systems. The paper does not claim specific policy causes. It
+      documents a recurring statistical regularity and leaves causation
+      open.</p>
+      </div></li>
+      </ul>
+      <hr />
+      <p><strong>3) What Distinguishes This Framework From Existing
+      Approaches</strong></p>
+      <p>Most discussions of fiat collapse focus on specific stories:
+      wars, bad leadership, corruption, or poor policy choices. While
+      often true in detail, those explanations vary widely from case to
+      case.</p>
+      <p>Our approach strips all of that away. We ignore ideology,
+      institutions, and policy design, and look only at two
+      variables:</p>
+      <p><strong>time since unbacking</strong>, and <strong>whether the
+      currency survived</strong>.</p>
+      <p>Viewed through this lens, a common pattern emerges: a
+      generational-scale decay constant—about 31 years—that repeats
+      across very different monetary regimes.</p>
+      <p>Rather than trying to predict failure using country-specific
+      drivers, we identify a systems-level regularity. Confidence in
+      unanchored fiat appears to erode gradually and probabilistically,
+      much like a relaxation process bounded by human memory and time
+      preference.</p>
+      <p>This also complements the gold paper. If gold provides a
+      <em>measurement lens</em> that reveals fiat drift, this paper
+      provides a <em>temporal lens</em> that describes how long
+      unanchored fiat systems tend to remain viable. Together, they
+      describe the same phenomenon from two different angles.</p>
+      <hr />
+      <p><strong>4) Theoretical Implications (Assuming the Work Is
+      Correct)</strong></p>
+      <ul>
+      <li><div data-custom-style="List Paragraph">
+      <p><strong>A time constraint on fiat:</strong> Unanchored fiat
+      systems appear to share a generational decay timescale, suggesting
+      that confidence erosion operates independently of specific
+      policies or regimes.</p>
+      </div></li>
+      <li><div data-custom-style="List Paragraph">
+      <p><strong>Confidence as a gradual process:</strong> The
+      exponential survival curve implies many small, distributed
+      decisions over time—not a single catastrophic mistake. Fiat
+      failure looks less like an accident and more like a slow loss of
+      collective trust.</p>
+      </div></li>
+      <li><div data-custom-style="List Paragraph">
+      <p><strong>Two-axis monetary analysis:</strong> Combined with the
+      gold framework, monetary systems can be analyzed along two
+      independent dimensions:<br />
+      a measurement axis (drift versus alignment, via gold ratios),
+      and<br />
+      a time axis (how far the system has progressed along its decay
+      curve).</p>
+      </div></li>
+      </ul>
+      <hr />
+      <p><strong>Generational Horizons and the ~31 Year Decay
+      Constant</strong></p>
+      <p>The estimated decay constant of roughly 31 years closely
+      matches a familiar generational boundary. Across the dataset, most
+      unanchored fiat regimes fail within a span corresponding to about
+      one to two human generations.</p>
+      <p>The model does not claim a causal mechanism, but the alignment
+      is suggestive. Monetary stability depends on restraint,
+      credibility, and shared memory of past failures. As generations
+      turn over, the lived experience that once enforced discipline
+      fades.</p>
+      <p>After one generation, the reasons for caution weaken. After
+      two, they are often forgotten entirely. This provides a plausible
+      interpretation for why fiat systems show a repeatable half-life
+      rather than a random pattern of collapse.</p>
+      <p>In this sense, the ~31-year timescale may reflect not just a
+      statistical regularity, but a deeper social rhythm: the lifespan
+      of collective economic memory in systems where trust must be
+      continuously renewed.</p>
+      <p><strong>5) Potential Implications (Downstream, Not
+      Predictions)</strong></p>
+      <ul>
+      <li><div data-custom-style="List Paragraph">
+      <p><strong>Monitoring, not mandates:</strong> Institutions could
+      track where a currency sits on the survival curve alongside
+      gold-based drift measures, improving situational awareness without
+      prescribing regime changes.</p>
+      </div></li>
+      <li><div data-custom-style="List Paragraph">
+      <p><strong>Scenario design and stress testing:</strong> Risk teams
+      can include time-since-unbacking as a base-rate input when
+      designing long-horizon scenarios. This remains descriptive, not
+      deterministic.</p>
+      </div></li>
+      <li><div data-custom-style="List Paragraph">
+      <p><strong>Model hygiene:</strong> Macro and AI models can include
+      a temporal stability feature (years unanchored) to reduce
+      misattribution of late-cycle regime behavior to short-term shocks,
+      complementing invariant features from the gold framework.</p>
+      </div></li>
+      <li><div data-custom-style="List Paragraph">
+      <p><strong>Clearer historical teaching:</strong> Monetary history
+      can be taught using base rates and time horizons rather than
+      anecdotal collapse stories, pairing temporal decay with
+      measurement drift for a more systematic view.</p>
+      </div></li>
+      </ul>
+  </div>
+
+   
+   
+
   <footer>
-    CC BY 4.0 | DOI: doi.org/10.5281/zenodo.18055894 | www.3pilgrim.com
+    CC BY 4.0 | DOI: 10.5281/zenodo.18055894 | www.3pilgrim.com
   </footer>
 </body>
 </html>

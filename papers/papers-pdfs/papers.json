@@ -2,13 +2,13 @@
 
     [
           {
-    "title": "Friction-Guided Optimization: Negative Tomography in Overparameterized Learning",
+    "title": "Hallucinated Agents: A Cognitive Mechanism for Resolving Ambiguous Threats",
     "version": "1.0",
-    "doi": "10.5281/zenodo.18510602",
-    "date": "2026-02-06",
-    "category": ["AI Research"],
-    "companion": "https://3pilgrim.com/papers/papers/companion/Friction-Guided-Optimization-v1.0.html",
-    "pdf": "https://3pilgrim.com/papers-pdfs/Friction-Guided-Optimization-v1.0.pdf"
+    "doi": "10.5281/zenodo.18615682",
+    "date": "2026-02-12",
+    "category": ["Cognitive Science"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/Hallucinated-Agents-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/Hallucinated-Agents-v1.0.pdf"
   },
   {
     "title": "Negative Tomography: Structural Inference via Failure-First Primitives",

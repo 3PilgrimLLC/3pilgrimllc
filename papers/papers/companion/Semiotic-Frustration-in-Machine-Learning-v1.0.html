@@ -1,310 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3 Pilgrim LLC — Semiotic Frustration in Machine Learning (Companion)</title>
- 
-  <meta name="description" content="How a single word — “dimensions” — is holding back an entire field. We present a structural model showing how semiotic drift between “vector count” and true dimension blocks progress, along with a proposed taxonomy that resolves the category error.">
-  <meta name="keywords" content="3 Pilgrim LLC, dimensionality, vector aggregation, true dimension, taxonomy, scaling">
-  https://3pilgrim.com/papers/papers/companion/Semiotic-Frustration-in-Machine-Learning-v1.0.html
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Semiotic Frustration in Machine Learning</title>
+
+  <meta name="description" content="Companion explainer to Semiotic
+Frustration in Machine Learning — a taxonomic repair distinguishing true
+dimensional expansion from vector aggregation, resolving paradoxes like
+flat minima, low intrinsic dimension, and scaling plateaus via VNode as
+the core primitive.">
+  <meta name="keywords" content="semiotic frustration, high-dimensional
+spaces, true dimensional expansion, vector aggregation, VNode, semantic
+drift, low intrinsic dimension, flat minima, thin-shell concentration,
+distance collapse, scaling plateaus, category error">
+
+  <link rel="canonical" href="https://3pilgrim.com/papers/papers/companion/Semiotic-Frustration-in-Machine-Learning-v1.0.html">
 
   <meta property="og:site_name" content="3 Pilgrim LLC">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Semiotic Frustration in Machine Learning — Companion Explainer">
-  <meta property="og:description" content="Why confusing size with dimension blocks progress — and how to fix it.">
+  <meta property="og:title" content="Semiotic Frustration in Machine
+Learning — Companion Explainer">
+  <meta property="og:description" content="A companion explainer for
+Semiotic Frustration in Machine Learning: fixing the ‘dimension’
+category error by separating independence from aggregation, clarifying
+ML geometry limits and innovation paths.">
   <meta property="og:url" content="https://3pilgrim.com/papers/papers/companion/Semiotic-Frustration-in-Machine-Learning-v1.0.html">
   <meta property="og:image" content="https://3pilgrim.com/assets/logo.png">
   <meta property="og:image:alt" content="3 Pilgrim LLC Logo">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Semiotic Frustration in Machine Learning — Companion Explainer">
-  <meta name="twitter:description" content="Why confusing size with dimension blocks progress — and how to fix it.">
+  <meta name="twitter:title" content="Semiotic Frustration in Machine
+Learning — Companion Explainer">
+  <meta name="twitter:description" content="A companion explainer for
+Semiotic Frustration in Machine Learning: fixing the ‘dimension’
+category error by separating independence from aggregation, clarifying
+ML geometry limits and innovation paths.">
   <meta name="twitter:image" content="https://3pilgrim.com/assets/logo.png">
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"3 Pilgrim LLC",
-    "url":"https://3pilgrim.com/",
-    "logo":"https://3pilgrim.com/assets/logo.png",
-    "description":"Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
-    "foundingDate":"2013",
-    "sameAs":["https://x.com/3PilgrimLLC"]
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "3 Pilgrim LLC",
+    "url": "https://3pilgrim.com/",
+    "logo": "https://3pilgrim.com/assets/logo.png",
+    "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "foundingDate": "2013",
+    "sameAs": ["https://x.com/3PilgrimLLC"]
   }
   </script>
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"ScholarlyArticle",
-    "name":"Semiotic Frustration in Machine Learning — Companion Explainer",
-    "author":{"@type":"Organization","name":"3 Pilgrim LLC"},
-    "description":"Companion that distinguishes vector aggregation (containment) from true dimensional expansion, resolving the field’s semiotic paradox.",
-    "datePublished":"2026-01-23",
-    "version":"1.0",
-    "identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.5281/zenodo.18047596"},
-    "url":"https://3pilgrim.com/papers/papers/companion/Semiotic-Frustration-in-Machine-Learning-v1.0.html",
-    "isPartOf":{"@type":"CreativeWorkSeries","name":"3 Pilgrim Research Library"},
-    "about":["dimensionality","vector aggregation","taxonomy","containment vs expansion"],
-    "citation":"Semiotic Frustration in Machine Learning — DOI 10.5281/zenodo.18047596",
-    "relatedLink":[
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "Semiotic Frustration in Machine
+Learning — Companion Explainer",
+    "author": {
+      "@type": "Organization",
+      "name": "3 Pilgrim LLC"
+    },
+    "description": "Companion explainer to Semiotic Frustration in
+Machine Learning — a taxonomic repair distinguishing true dimensional
+expansion from vector aggregation, resolving paradoxes like flat minima,
+low intrinsic dimension, and scaling plateaus via VNode as the core
+primitive.",
+    "datePublished": "February 5,2026",
+    "version": "1.0",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.18047596"
+    },
+    "url": "https://3pilgrim.com/papers/papers/companion/Semiotic-Frustration-in-Machine-Learning-v1.0.html",
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "3 Pilgrim Research Library"
+    },
+    "about": semiotic frustrationdimension invarianttrue dimensional
+expansionvector aggregationVNodesemantic driftlow intrinsic
+dimensionflat minimathin-shell concentrationdistance collapsescaling
+plateauscontainment vs expansion,
+    "citation": "Semiotic Frustration in Machine
+Learning — DOI 10.5281/zenodo.18047596",
+    "relatedLink": [
       "https://doi.org/10.5281/zenodo.18047596",
-      "https://3pilgrim.com/papers-pdfs/semiotic-frustration-in-machine-learning-v1.0.pdf"
+      "https://3pilgrim.com/papers-pdfs/Semiotic-Frustration-in-Machine-Learning-v1.0-v1.0.pdf"
     ],
-    "associatedMedia":{
-      "@type":"MediaObject",
-      "contentUrl":"https://3pilgrim.com/papers-pdfs/semiotic-frustration-in-machine-learning-v1.0.pdf",
-      "encodingFormat":"application/pdf"
+    "associatedMedia": {
+      "@type": "MediaObject",
+      "contentUrl": "https://3pilgrim.com/papers-pdfs/Semiotic-Frustration-in-Machine-Learning-v1.0-v1.0.pdf",
+      "encodingFormat": "application/pdf"
     }
   }
   </script>
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 2cm; line-height: 1.6; }
-    .title-page { text-align: center; margin-top: 20%; page-break-after: always; }
-    header { position: fixed; top: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
-    footer { position: fixed; bottom: 1cm; width: 100%; text-align: center; font-size: 10pt; color: gray; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f8f9fa;
+      color: #222;
+      line-height: 1.65;
+    }
+    .content-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px 30px;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      overflow-y: auto;
+      max-height: 92vh;
+    }
+    @media (max-width: 600px) {
+      .content-container {
+        margin: 20px;
+        padding: 20px 15px;
+        border-radius: 0;
+      }
+    }
+    .title-page {
+      max-width: 800px;
+      margin: 20% auto 0 auto;
+      padding: 0 30px;
+      text-align: center;
+      page-break-after: always;
+    }
+    .title-page h1, .title-page h2, .title-page p {
+      margin: 0.5em 0;
+    }
+    header {
+      position: fixed;
+      top: 1cm;
+      width: 100%;
+      text-align: center;
+      font-size: 10pt;
+      color: gray;
+    }
+    footer {
+      position: fixed;
+      bottom: 1cm;
+      width: 100%;
+      text-align: center;
+      font-size: 10pt;
+      color: gray;
+    }
     img { max-width: 100%; height: auto; }
+    h1, h2, h3 { color: #111; margin: 1.5em 0 0.8em; }
+    p { margin: 1.2em 0; }
+    hr { border: 0; border-top: 1px solid #ddd; margin: 2.5em 0; }
   </style>
+
   </head>
 <body>
   <header>
-    3 Pilgrim LLC | Semiotic Frustration in Machine Learning | Version 1.0 · December 24,2025
+    3 Pilgrim LLC | Semiotic Frustration in Machine
+Learning | Version 1.0 · February 5,2026
   </header>
+
   <div class="title-page">
     <h1>Semiotic Frustration in Machine Learning</h1>
     <h2>A Companion Explainer</h2>
     <p>3 Pilgrim LLC</p>
-    <p>Version 1.0 · December 24,2025</p>
+    <p>Version 1.0 · February 5,2026</p>
   </div>
-  <br>
-  <a href="https://doi.org/10.5281/zenodo.18047596">Click here for full PDF of paper </a>
-  <hr />
-  <p><strong>Preface</strong></p>
-  <hr /> 
-  <p><strong>Why This Paper Exists, in Human Terms</strong></p>
-  <p>Modern machine learning talks constantly about “high-dimensional
-  spaces.”</p>
-  <p>Most of the time, that phrase does not mean what it sounds
-  like.</p>
-  <p>In mathematics and physics, a dimension is an independent direction
-  of freedom. Adding one changes the structure of a space. It creates
-  new volume, new paths, and new invariants. A higher-dimensional space
-  is not just a more crowded version of a lower-dimensional one—it can
-  do things the lower-dimensional space fundamentally cannot.</p>
-  <p>In much of machine learning, the same word is used differently.
-  “High-dimensional” often means <em>many features</em>, <em>wide
-  embeddings</em>, or <em>large parameter counts</em>. These additions
-  increase size, but they usually do not introduce new independent
-  directions. The underlying geometry stays the same. The space becomes
-  denser, not broader.</p>
-  <p>For a long time, this distinction did not matter. Early models were
-  small, and borrowing the term “dimension” as shorthand was convenient
-  and mostly harmless. As models scaled into the billions and trillions
-  of parameters—and as machine learning began to intersect seriously
-  with geometry, topology, and physics—the shortcut hardened into a
-  category error.</p>
-  <p>Today, the field routinely explains observed behaviors using
-  “high-dimensional effects,” even when measurements show that effective
-  dimensionality remains low. Flat minima, low-rank curvature,
-  thin-shell concentration, distance collapse, and scaling plateaus are
-  treated as mysterious consequences of vast dimensionality—despite
-  arising precisely because true dimensional expansion has not
-  occurred.</p>
-  <p>This paper exists to fix that mismatch.</p>
-  <ul>
-  <li><div data-custom-style="List Paragraph">
-  <p>It does not propose new algorithms.</p>
-  </div></li>
-  <li><div data-custom-style="List Paragraph">
-  <p>It does not dispute existing empirical findings.</p>
-  </div></li>
-  <li><div data-custom-style="List Paragraph">
-  <p>It does not claim that current models are “wrong.”</p>
-  </div></li>
-  </ul>
-  <p>Instead, it performs a corrective act of language.</p>
-  <p>By restoring “dimension” to its invariant meaning—independent axes
-  of freedom—and naming the other mechanism actually at work—vector
-  aggregation within a fixed topology—the paper makes a long-standing
-  paradox analytically tractable. Phenomena that appear contradictory
-  under the current vocabulary become coherent once the mechanisms are
-  separated.</p>
-  <p>The result is not a new theory of machine learning, but a clearer
-  map. A way to see which kinds of scaling increase density, which kinds
-  saturate, and which kinds might plausibly create new degrees of
-  freedom in the future.</p>
-  <p>If the argument is correct, then many current limits are not
-  optimization failures or empirical surprises. They are structural
-  consequences of containment. Managing that containment can improve
-  efficiency—but it cannot substitute for genuine expansion.</p>
-  <p>This paper is offered as a foundation: a small set of distinctions
-  meant to align language, geometry, and mechanism as machine learning
-  increasingly converges with the disciplines from which its mathematics
-  was borrowed.</p>
-  <p><strong>Semiotic Frustration in Machine Learning
-  (v1.0)</strong></p>
-  <hr />
-  <p><strong>1) Why This Paper Exists</strong></p>
-  <p>This paper exists to fix a language failure that has quietly become
-  a thinking failure.</p>
-  <p>In mathematics and physics, <em>dimension</em> has an invariant
-  meaning: an independent axis of freedom that expands configuration
-  space and enables new structural properties. In machine learning, the
-  same word is routinely used to mean something else—feature count,
-  embedding width, or parameter volume—even when those additions do not
-  introduce independence or alter topology.</p>
-  <p>For years, this semantic drift was mostly harmless. As models
-  scaled and machine learning began to intersect more directly with
-  geometry, topology, and physics, the mismatch hardened into a category
-  error. The field now routinely explains observed behaviors—flat
-  minima, low intrinsic dimension, thin-shell concentration, scaling
-  plateaus—as “high-dimensional effects,” even when those behaviors
-  arise precisely because true dimensional expansion has <em>not</em>
-  occurred.</p>
-  <p>This paper exists to resolve that paradox by repairing the
-  taxonomy. It separates two mechanisms that are currently conflated
-  under the single word “dimensionality,” restoring analytical clarity
-  without disputing existing empirical results.</p>
-  <hr />
-  <p><strong>2) What the Paper Says (Plain Language)</strong></p>
-  <ul>
-  <li><p><strong>Dimension means independence.</strong><br />
-  A true dimension is an independent direction of variation. Adding one
-  changes the structure of a space, multiplies its volume, and enables
-  new paths, separations, and invariants. More coordinates alone do not
-  accomplish this.</p></li>
-  <li><p><strong>Most ML “dimensionality” is aggregation, not
-  expansion.</strong><br />
-  When models grow wider or larger, they typically add
-  <em>correlated</em> coordinates inside a fixed topology. This
-  increases density and redundancy, not independent degrees of
-  freedom.</p></li>
-  <li><p><strong>Name the real mechanism.</strong><br />
-  The paper introduces <em>vector aggregation</em> (also called vectoral
-  containment) as the correct primitive for most contemporary ML growth.
-  To make this precise, it defines the VNode (Vector-Node): a
-  correlated, non-orthogonal vector element added without changing
-  topology.</p></li>
-  <li><p><strong>The paradox dissolves once the mechanisms are
-  separated.</strong><br />
-  Low intrinsic dimension, low-rank Fisher information, flat minima,
-  curvature collapse, and thin-shell sparsity are not contradictory
-  “high-D effects.” They are coherent consequences of aggregation within
-  a fixed space.</p></li>
-  <li><p><strong>The contribution is semantic, not
-  algorithmic.</strong><br />
-  The paper does not propose new models or benchmarks. It supplies a
-  minimal, reductionist taxonomy that aligns language with geometry so
-  existing observations can be interpreted correctly.</p></li>
-  </ul>
-  <hr />
-  <p><strong>3) What Distinguishes This Framework</strong></p>
-  <ul>
-  <li><p>It restores an invariant definition.<br />
-  Dimensionality is treated as an independence primitive, consistent
-  with mathematics and physics, rather than a proxy for size or
-  count.</p></li>
-  <li><p>It separates two distinct growth regimes.</p>
-  <ul>
-  <li><p><em>True Dimensional Expansion (TDE):</em> adding independent
-  axes → exponential volume + new invariants</p></li>
-  <li><p><em>Vector Aggregation / Containment:</em> adding correlated
-  vectors → redundancy, degeneracy, low effective dimension</p></li>
-  </ul></li>
-  <li><p>It unifies fragmented observations without new
-  assumptions.<br />
-  The framework explains why phenomena like flat minima, low-rank
-  curvature, and scaling plateaus reliably co-occur—without invoking ad
-  hoc explanations or new forces.</p></li>
-  <li><p>It is deliberately reductionist.<br />
-  Two primitives—independence and aggregation—are sufficient. The paper
-  aims to clarify, not to proliferate concepts.</p></li>
-  </ul>
-  <hr />
-  <p><strong>4) Why This Distinction Matters</strong></p>
-  <ul>
-  <li><p>Scaling limits become structural, not mysterious.<br />
-  If additional parameters mostly increase vector aggregation, then
-  diminishing returns and early plateaus are expected outcomes, not
-  anomalies or optimization failures.</p></li>
-  <li><p>“High-dimensional effects” are often misattributed.<br />
-  Many behaviors blamed on vast dimensionality arise from containment in
-  crowded, correlated spaces. The difficulty is not navigating
-  exponential volume, but operating inside a dense, degenerate
-  one.</p></li>
-  <li><p>Interdisciplinary synthesis stops stalling.<br />
-  When ML intersects with geometry or physics, shared words currently
-  denote different primitives. Fixing the taxonomy removes that friction
-  and enables genuine synthesis.</p></li>
-  <li><p>Innovation paths become clearer.<br />
-  Managing aggregation (pruning, sparsity, routing) improves efficiency
-  but cannot substitute for true expansion. Genuine breakthroughs likely
-  require new independent axes—temporal, causal, or modal—not further
-  densification.</p></li>
-  </ul>
-  <hr />
-  <p><strong>5) The Core Primitive: Vector Aggregation
-  (VNode)</strong></p>
-  <p>To make the distinction operational, the paper introduces VNode
-  (Vector-Node) as a naming anchor—not a new object, but a precise label
-  for what ML has been calling “dimensions.”</p>
-  <ul>
-  <li><p>Definition (informal):<br />
-  A VNode is a correlated, non-orthogonal vector element added within a
-  fixed topology.</p></li>
-  <li><p>Key properties:</p>
-  <ul>
-  <li><p>VNode count can grow arbitrarily while effective dimensionality
-  remains low</p></li>
-  <li><p>Measurable signatures include low intrinsic dimension, low-rank
-  Fisher information, flat minima, and thin-shell concentration</p></li>
-  <li><p>Adding VNodes increases density, not independence</p></li>
-  </ul></li>
-  <li><p>Contrast with TDE:<br />
-  True dimensional expansion introduces new independent axes and changes
-  what the space can support. VNode accumulation does not.</p></li>
-  </ul>
-  <p>This naming repair allows existing literature to be reinterpreted
-  cleanly: many references to “high dimensionality” are more accurately
-  references to high VNode count.</p>
-  <hr />
-  <p><strong>6) Implications (Interpretive, Not
-  Prescriptive)</strong></p>
-  <ul>
-  <li><p><strong>Model analysis:</strong><br />
-  Evaluate effective independence (intrinsic dimension, Fisher rank)
-  rather than nominal size when diagnosing capacity and
-  redundancy.</p></li>
-  <li><p><strong>Scaling expectations:</strong><br />
-  Anticipate earlier saturation when growth is dominated by aggregation.
-  Plateaus signal containment, not failure.</p></li>
-  <li><p><strong>Research direction:</strong><br />
-  Distinguish efforts that manage aggregation from those that plausibly
-  introduce new degrees of freedom. The latter, not the former,
-  correspond to true dimensional gains.</p></li>
-  <li><p><strong>Interpretability and safety:</strong><br />
-  Understanding where independence actually lives in a model improves
-  reasoning about failure modes, generalization, and out-of-distribution
-  behavior.</p></li>
-  </ul>
-  <hr />
-  <p>7<strong>) Scope and Intent (Re-Emphasized)</strong></p>
-  <p>This paper:</p>
-  <ul>
-  <li><p>introduces no new algorithms</p></li>
-  <li><p>disputes no empirical findings</p></li>
-  <li><p>makes no performance claims</p></li>
-  </ul>
-  <p>Its purpose is to repair a category error that has accumulated as
-  machine learning scaled faster than its language. By separating
-  containment from expansion, it renders a long-standing paradox
-  tractable and reorients discussion toward structure rather than
-  size.</p>
+
+  <div class="content-container">
+      <p><a href="https://doi.org/10.5281/zenodo.18047596">Click here for full PDF of paper</a></p>  
+	<hr />
+      <p><strong>Preface</strong></p>
+      <p><strong>Why This Paper Exists, in Human Terms</strong></p>
+      <p>Modern machine learning talks constantly about
+      “high-dimensional spaces.”</p>
+      <p>Most of the time, that phrase does not mean what it sounds
+      like.</p>
+      <p>In mathematics and physics, a dimension is an independent
+      direction of freedom. Adding one changes the structure of a space.
+      It creates new volume, new paths, and new invariants. A
+      higher-dimensional space is not just a more crowded version of a
+      lower-dimensional one—it can do things the lower-dimensional space
+      fundamentally cannot.</p>
+      <p>In much of machine learning, the same word is used differently.
+      “High-dimensional” often means <em>many features</em>, <em>wide
+      embeddings</em>, or <em>large parameter counts</em>. These
+      additions increase size, but they usually do not introduce new
+      independent directions. The underlying geometry stays the same.
+      The space becomes denser, not broader.</p>
+      <p>For a long time, this distinction did not matter. Early models
+      were small, and borrowing the term “dimension” as shorthand was
+      convenient and mostly harmless. As models scaled into the billions
+      and trillions of parameters—and as machine learning began to
+      intersect seriously with geometry, topology, and physics—the
+      shortcut hardened into a category error.</p>
+      <p>Today, the field routinely explains observed behaviors using
+      “high-dimensional effects,” even when measurements show that
+      effective dimensionality remains low. Flat minima, low-rank
+      curvature, thin-shell concentration, distance collapse, and
+      scaling plateaus are treated as mysterious consequences of vast
+      dimensionality—despite arising precisely because true dimensional
+      expansion has not occurred.</p>
+      <p>This paper exists to fix that mismatch.</p>
+      <ul>
+      <li><div data-custom-style="List Paragraph">
+      <p>It does not propose new algorithms.</p>
+      </div></li>
+      <li><div data-custom-style="List Paragraph">
+      <p>It does not dispute existing empirical findings.</p>
+      </div></li>
+      <li><div data-custom-style="List Paragraph">
+      <p>It does not claim that current models are “wrong.”</p>
+      </div></li>
+      </ul>
+      <p>Instead, it performs a corrective act of language.</p>
+      <p>By restoring “dimension” to its invariant meaning—independent
+      axes of freedom—and naming the other mechanism actually at
+      work—vector aggregation within a fixed topology—the paper makes a
+      long-standing paradox analytically tractable. Phenomena that
+      appear contradictory under the current vocabulary become coherent
+      once the mechanisms are separated.</p>
+      <p>The result is not a new theory of machine learning, but a
+      clearer map. A way to see which kinds of scaling increase density,
+      which kinds saturate, and which kinds might plausibly create new
+      degrees of freedom in the future.</p>
+      <p>If the argument is correct, then many current limits are not
+      optimization failures or empirical surprises. They are structural
+      consequences of containment. Managing that containment can improve
+      efficiency—but it cannot substitute for genuine expansion.</p>
+      <p>This paper is offered as a foundation: a small set of
+      distinctions meant to align language, geometry, and mechanism as
+      machine learning increasingly converges with the disciplines from
+      which its mathematics was borrowed.</p>
+      <p><strong>Semiotic Frustration in Machine Learning
+      (v1.0)</strong></p>
+      <hr />
+      <p><strong>1) Why This Paper Exists</strong></p>
+      <p>This paper exists to fix a language failure that has quietly
+      become a thinking failure.</p>
+      <p>In mathematics and physics, <em>dimension</em> has an invariant
+      meaning: an independent axis of freedom that expands configuration
+      space and enables new structural properties. In machine learning,
+      the same word is routinely used to mean something else—feature
+      count, embedding width, or parameter volume—even when those
+      additions do not introduce independence or alter topology.</p>
+      <p>For years, this semantic drift was mostly harmless. As models
+      scaled and machine learning began to intersect more directly with
+      geometry, topology, and physics, the mismatch hardened into a
+      category error. The field now routinely explains observed
+      behaviors—flat minima, low intrinsic dimension, thin-shell
+      concentration, scaling plateaus—as “high-dimensional effects,”
+      even when those behaviors arise precisely because true dimensional
+      expansion has <em>not</em> occurred.</p>
+      <p>This paper exists to resolve that paradox by repairing the
+      taxonomy. It separates two mechanisms that are currently conflated
+      under the single word “dimensionality,” restoring analytical
+      clarity without disputing existing empirical results.</p>
+      <hr />
+      <p><strong>2) What the Paper Says (Plain Language)</strong></p>
+      <ul>
+      <li><p><strong>Dimension means independence.</strong><br />
+      A true dimension is an independent direction of variation. Adding
+      one changes the structure of a space, multiplies its volume, and
+      enables new paths, separations, and invariants. More coordinates
+      alone do not accomplish this.</p></li>
+      <li><p><strong>Most ML “dimensionality” is aggregation, not
+      expansion.</strong><br />
+      When models grow wider or larger, they typically add
+      <em>correlated</em> coordinates inside a fixed topology. This
+      increases density and redundancy, not independent degrees of
+      freedom.</p></li>
+      <li><p><strong>Name the real mechanism.</strong><br />
+      The paper introduces <em>vector aggregation</em> (also called
+      vectoral containment) as the correct primitive for most
+      contemporary ML growth. To make this precise, it defines the VNode
+      (Vector-Node): a correlated, non-orthogonal vector element added
+      without changing topology.</p></li>
+      <li><p><strong>The paradox dissolves once the mechanisms are
+      separated.</strong><br />
+      Low intrinsic dimension, low-rank Fisher information, flat minima,
+      curvature collapse, and thin-shell sparsity are not contradictory
+      “high-D effects.” They are coherent consequences of aggregation
+      within a fixed space.</p></li>
+      <li><p><strong>The contribution is semantic, not
+      algorithmic.</strong><br />
+      The paper does not propose new models or benchmarks. It supplies a
+      minimal, reductionist taxonomy that aligns language with geometry
+      so existing observations can be interpreted correctly.</p></li>
+      </ul>
+      <hr />
+      <p><strong>3) What Distinguishes This Framework</strong></p>
+      <ul>
+      <li><p>It restores an invariant definition.<br />
+      Dimensionality is treated as an independence primitive, consistent
+      with mathematics and physics, rather than a proxy for size or
+      count.</p></li>
+      <li><p>It separates two distinct growth regimes.</p>
+      <ul>
+      <li><p><em>True Dimensional Expansion (TDE):</em> adding
+      independent axes → exponential volume + new invariants</p></li>
+      <li><p><em>Vector Aggregation / Containment:</em> adding
+      correlated vectors → redundancy, degeneracy, low effective
+      dimension</p></li>
+      </ul></li>
+      <li><p>It unifies fragmented observations without new
+      assumptions.<br />
+      The framework explains why phenomena like flat minima, low-rank
+      curvature, and scaling plateaus reliably co-occur—without invoking
+      ad hoc explanations or new forces.</p></li>
+      <li><p>It is deliberately reductionist.<br />
+      Two primitives—independence and aggregation—are sufficient. The
+      paper aims to clarify, not to proliferate concepts.</p></li>
+      </ul>
+      <hr />
+      <p><strong>4) Why This Distinction Matters</strong></p>
+      <ul>
+      <li><p>Scaling limits become structural, not mysterious.<br />
+      If additional parameters mostly increase vector aggregation, then
+      diminishing returns and early plateaus are expected outcomes, not
+      anomalies or optimization failures.</p></li>
+      <li><p>“High-dimensional effects” are often misattributed.<br />
+      Many behaviors blamed on vast dimensionality arise from
+      containment in crowded, correlated spaces. The difficulty is not
+      navigating exponential volume, but operating inside a dense,
+      degenerate one.</p></li>
+      <li><p>Interdisciplinary synthesis stops stalling.<br />
+      When ML intersects with geometry or physics, shared words
+      currently denote different primitives. Fixing the taxonomy removes
+      that friction and enables genuine synthesis.</p></li>
+      <li><p>Innovation paths become clearer.<br />
+      Managing aggregation (pruning, sparsity, routing) improves
+      efficiency but cannot substitute for true expansion. Genuine
+      breakthroughs likely require new independent axes—temporal,
+      causal, or modal—not further densification.</p></li>
+      </ul>
+      <hr />
+      <p><strong>5) The Core Primitive: Vector Aggregation
+      (VNode)</strong></p>
+      <p>To make the distinction operational, the paper introduces VNode
+      (Vector-Node) as a naming anchor—not a new object, but a precise
+      label for what ML has been calling “dimensions.”</p>
+      <ul>
+      <li><p>Definition (informal):<br />
+      A VNode is a correlated, non-orthogonal vector element added
+      within a fixed topology.</p></li>
+      <li><p>Key properties:</p>
+      <ul>
+      <li><p>VNode count can grow arbitrarily while effective
+      dimensionality remains low</p></li>
+      <li><p>Measurable signatures include low intrinsic dimension,
+      low-rank Fisher information, flat minima, and thin-shell
+      concentration</p></li>
+      <li><p>Adding VNodes increases density, not independence</p></li>
+      </ul></li>
+      <li><p>Contrast with TDE:<br />
+      True dimensional expansion introduces new independent axes and
+      changes what the space can support. VNode accumulation does
+      not.</p></li>
+      </ul>
+      <p>This naming repair allows existing literature to be
+      reinterpreted cleanly: many references to “high dimensionality”
+      are more accurately references to high VNode count.</p>
+      <hr />
+      <p><strong>6) Implications (Interpretive, Not
+      Prescriptive)</strong></p>
+      <ul>
+      <li><p><strong>Model analysis:</strong><br />
+      Evaluate effective independence (intrinsic dimension, Fisher rank)
+      rather than nominal size when diagnosing capacity and
+      redundancy.</p></li>
+      <li><p><strong>Scaling expectations:</strong><br />
+      Anticipate earlier saturation when growth is dominated by
+      aggregation. Plateaus signal containment, not failure.</p></li>
+      <li><p><strong>Research direction:</strong><br />
+      Distinguish efforts that manage aggregation from those that
+      plausibly introduce new degrees of freedom. The latter, not the
+      former, correspond to true dimensional gains.</p></li>
+      <li><p><strong>Interpretability and safety:</strong><br />
+      Understanding where independence actually lives in a model
+      improves reasoning about failure modes, generalization, and
+      out-of-distribution behavior.</p></li>
+      </ul>
+      <hr />
+      <p>7<strong>) Scope and Intent (Re-Emphasized)</strong></p>
+      <p>This paper:</p>
+      <ul>
+      <li><p>introduces no new algorithms</p></li>
+      <li><p>disputes no empirical findings</p></li>
+      <li><p>makes no performance claims</p></li>
+      </ul>
+      <p>Its purpose is to repair a category error that has accumulated
+      as machine learning scaled faster than its language. By separating
+      containment from expansion, it renders a long-standing paradox
+      tractable and reorients discussion toward structure rather than
+      size.</p>
+  </div>
+
+   
+   
+
   <footer>
-    CC BY 4.0 | DOI: doi.org/10.5281/zenodo.18055054 | www.3pilgrim.com
+    CC BY 4.0 | DOI: 10.5281/zenodo.18047596 | www.3pilgrim.com
   </footer>
 </body>
 </html>
