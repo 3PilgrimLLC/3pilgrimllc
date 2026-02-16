@@ -1,6 +1,15 @@
 [
 
     [
+                {
+    "title": "The Information Density Limit: When Parallel Computers Become a Communication Medium",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18652029",
+    "date": "2026-02-15",
+    "category": ["Cognitive Science"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/The-Information-Density-Limit-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/papers/The-Information-Density-Limit-v1.0.pdf"
+  },
           {
     "title": "Hallucinated Agents: A Cognitive Mechanism for Resolving Ambiguous Threats",
     "version": "1.0",
