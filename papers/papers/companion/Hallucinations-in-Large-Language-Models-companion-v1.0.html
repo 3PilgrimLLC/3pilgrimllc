@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hallucinations in Large Language Models</title>
+
+  <meta name="description" content="Companion explainer to
+Hallucinations in Large Language Models: a prompt-level fork that
+separates resolvable trajectory errors (semiotic frustration,
+underspecification, compression loss) from irreducible true
+hallucinations, with a zero-cost perturbation protocol, specification
+gate, severity matrix, and Sense-Binding Rate (SBR) metric for practical
+triage and error reduction.">
+  <meta name="keywords" content="hallucination fork, trajectory error,
+true hallucination, semiotic frustration, prompt perturbation,
+specification gate, severity matrix, tolerance range, sense-binding
+rate, diagnostic primitive, error-tracking taxonomy, irreducible tail,
+comprehension limit, liability threshold">
+
+  <link rel="canonical" href="https://3pilgrim.com/papers/papers/companion/Hallucinations-in-Large-Language-Models-companion-v1.0.html">
+
+  <meta property="og:site_name" content="3 Pilgrim LLC">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Hallucinations in Large Language
+Models — Companion Explainer">
+  <meta property="og:description" content="Companion explainer for
+Hallucinations in Large Language Models: a diagnostic fork that
+reclassifies most ‘hallucinations’ as resolvable trajectory errors,
+introduces a simple perturbation protocol, gate criterion, severity
+triage matrix, and Sense-Binding Rate metric to enable meaningful error
+reduction and unlock high-liability applications.">
+  <meta property="og:url" content="https://3pilgrim.com/papers/papers/companion/Hallucinations-in-Large-Language-Models-companion-v1.0.html">
+  <meta property="og:image" content="https://3pilgrim.com/assets/logo.png">
+  <meta property="og:image:alt" content="3 Pilgrim LLC Logo">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hallucinations in Large Language
+Models — Companion Explainer">
+  <meta name="twitter:description" content="Companion explainer for
+Hallucinations in Large Language Models: a diagnostic fork that
+reclassifies most ‘hallucinations’ as resolvable trajectory errors,
+introduces a simple perturbation protocol, gate criterion, severity
+triage matrix, and Sense-Binding Rate metric to enable meaningful error
+reduction and unlock high-liability applications.">
+  <meta name="twitter:image" content="https://3pilgrim.com/assets/logo.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "3 Pilgrim LLC",
+    "url": "https://3pilgrim.com/",
+    "logo": "https://3pilgrim.com/assets/logo.png",
+    "description": "Independent research organization exploring decision theory, probabilistic geometry, behavioral finance, market cognition, and complex systems.",
+    "foundingDate": "2013",
+    "sameAs": ["https://x.com/3PilgrimLLC"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "Hallucinations in Large Language
+Models — Companion Explainer",
+    "author": {
+      "@type": "Organization",
+      "name": "3 Pilgrim LLC"
+    },
+    "description": "Companion explainer to Hallucinations in Large
+Language Models: a prompt-level fork that separates resolvable
+trajectory errors (semiotic frustration, underspecification, compression
+loss) from irreducible true hallucinations, with a zero-cost
+perturbation protocol, specification gate, severity matrix, and
+Sense-Binding Rate (SBR) metric for practical triage and error
+reduction.",
+    "datePublished": "February 17,2026",
+    "version": "1.0",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.18674477"
+    },
+    "url": "https://3pilgrim.com/papers/papers/companion/Hallucinations-in-Large-Language-Models-companion-v1.0.html",
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "3 Pilgrim Research Library"
+    },
+    "about": hallucination forktrajectory errortrue
+hallucinationsemiotic frustrationprompt perturbationspecification
+gateseverity matrixtolerance rangesense-binding ratediagnostic
+primitiveerror-tracking taxonomyirreducible tailcomprehension
+limitliability threshold,
+    "citation": "Hallucinations in Large Language
+Models — DOI 10.5281/zenodo.18674477",
+    "relatedLink": [
+      "https://doi.org/10.5281/zenodo.18674477",
+      "https://3pilgrim.com/papers-pdfs/Hallucinations-in-Large-Language-Models-companion-v1.0-v1.0.pdf"
+    ],
+    "associatedMedia": {
+      "@type": "MediaObject",
+      "contentUrl": "https://3pilgrim.com/papers-pdfs/Hallucinations-in-Large-Language-Models-companion-v1.0-v1.0.pdf",
+      "encodingFormat": "application/pdf"
+    }
+  }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f8f9fa;
+      color: #222;
+      line-height: 1.65;
+    }
+    .content-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px 30px;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      overflow-y: auto;
+      max-height: 92vh;
+    }
+    @media (max-width: 600px) {
+      .content-container {
+        margin: 20px;
+        padding: 20px 15px;
+        border-radius: 0;
+      }
+    }
+    .title-page {
+      max-width: 800px;
+      margin: 20% auto 0 auto;
+      padding: 0 30px;
+      text-align: center;
+      page-break-after: always;
+    }
+    .title-page h1, .title-page h2, .title-page p {
+      margin: 0.5em 0;
+    }
+    header {
+      position: fixed;
+      top: 1cm;
+      width: 100%;
+      text-align: center;
+      font-size: 10pt;
+      color: gray;
+    }
+    footer {
+      position: fixed;
+      bottom: 1cm;
+      width: 100%;
+      text-align: center;
+      font-size: 10pt;
+      color: gray;
+    }
+    img { max-width: 100%; height: auto; }
+    h1, h2, h3 { color: #111; margin: 1.5em 0 0.8em; }
+    p { margin: 1.2em 0; }
+    hr { border: 0; border-top: 1px solid #ddd; margin: 2.5em 0; }
+  </style>
+
+  </head>
+<body>
+  <header>
+    3 Pilgrim LLC | Hallucinations in Large Language
+Models | Version 1.0 · February 17,2026
+  </header>
+
+  <div class="title-page">
+    <h1>Hallucinations in Large Language Models</h1>
+    <h2>A Companion Explainer</h2>
+    <p>3 Pilgrim LLC</p>
+    <p>Version 1.0 · February 17,2026</p>
+  </div>
+
+  <div class="content-container">
+      <p><a href="https://doi.org/10.5281/zenodo.18674477">Click here for full PDF of paper</a></p>  
+	<hr />
+      <p><strong>What this paper is actually about<br />
+      </strong>Most people think “hallucinations” are one kind of
+      mistake: the model makes up facts it has no business making up.
+      This paper shows that’s not true for the majority of cases.</p>
+      <p>The word “hallucination” has become a catch-all label. When
+      engineers or researchers say “the model hallucinates 8% of the
+      time,” they are usually lumping together two completely different
+      problems:</p>
+      <ol type="1">
+      <li><p>The model picks a wrong but reasonable-sounding path
+      because the prompt didn’t give it enough clues (what we call
+      trajectory errors).</p></li>
+      <li><p>The model produces something that makes no statistical
+      sense at all, no matter how clearly you write the prompt (true
+      hallucinations).</p></li>
+      </ol>
+      <p>The first kind is common and usually fixable with one-line
+      clarifications. The second kind is rare but dangerous — especially
+      in finance, law, medicine, or any domain where being wrong can
+      cost millions or hurt people.</p>
+      <p><strong>Why most “hallucinations” aren’t really
+      hallucinations</strong></p>
+      <p><strong><br />
+      </strong>If you take a prompt that gives a bad answer and add one
+      short clarifying sentence — defining a word, stating the intent,
+      or giving missing context — the answer often flips from wrong to
+      correct.</p>
+      <p>We call this a trajectory error: the model was following a
+      statistically valid path, just the wrong one.<br />
+      Examples in the paper (booty = pirate treasure vs. slang; bitch =
+      female dog vs. slang) show how common this is when everyday
+      language is casual and the training data is skewed toward popular
+      meanings.</p>
+      <p>These cases are not the model “imagining” things. They are the
+      model doing exactly what it was trained to do: pick the most
+      likely next words given the data it saw. The problem is the prompt
+      didn’t steer it to the right part of that data.</p>
+      <p><strong>The real hallucinations — the ones that don’t go
+      away<br />
+      </strong></p>
+      <p>After you make the prompt as clear as possible, some answers
+      still come out incoherent or made-up. These are what we call true
+      hallucinations.</p>
+      <p>They happen when something internal goes wrong — attention
+      drifts, gradients get stale, or probability mass collapses in
+      weird ways.</p>
+      <p>The paper does not explain the tensor-level reasons for these
+      events (that work exists but is not public yet). It simply shows
+      how to recognize them and how bad they are.</p>
+      <p><strong>What the paper actually gives you</strong></p>
+      <ul>
+      <li><p>A simple three-step test (add one clarifying line, see if
+      the answer flips) that anyone can run in seconds on any
+      model.</p></li>
+      <li><p>A gate: if the prompt is fully specified and the answer
+      still contradicts evidence, it’s a true hallucination.</p></li>
+      <li><p>A severity matrix: four sliders (evidence conflict,
+      materiality/risk, detectability) that tell you whether to log it,
+      review it, or block the output entirely.</p></li>
+      <li><p>A proposed metric (Sense-Binding Rate): how often does a
+      one-line definition fix the answer? This tells you how much of
+      your error problem is fixable right now.</p></li>
+      </ul>
+      <p>Why this matters for real money and real risk</p>
+      <p>In casual chat or creative writing, being wrong sometimes is
+      fine.</p>
+      <p>In trading systems, legal research, medical advice, or
+      regulatory filings, being wrong even once can be catastrophic.</p>
+      <p>Today’s fixes (more data, lower temperature, RAG, alignment)
+      mostly polish comprehension — they make the model better at
+      picking the right path when the prompt is vague.</p>
+      <p>They do almost nothing to the true hallucinations that survive
+      perfect prompts.</p>
+      <p>That means current methods can’t deliver the kind of
+      reliability needed for high-value applications. The fork and
+      severity matrix are the first step toward changing that.What the
+      paper deliberately does not do</p>
+      <p>It does not explain the internal tensor mechanics of
+      hallucinations.</p>
+      <p>That work exists in private models and is available to
+      qualified partners under controlled disclosure.</p>
+      <p>The focus here is narrow: give practitioners a better way to
+      measure, triage, and prioritize the problem today.</p>
+      <p><strong>Bottom line<br />
+      </strong></p>
+      <p>Most “hallucinations” are not hallucinations — they are fixable
+      mis-steering.</p>
+      <p>The ones that aren’t are the real blocker to serious
+      deployment.</p>
+      <p>This paper gives you the tools to tell the difference and act
+      accordingly.</p>
+  </div>
+
+   
+   
+
+  <footer>
+    CC BY 4.0 | DOI: 10.5281/zenodo.18674477 | www.3pilgrim.com
+  </footer>
+</body>
+</html>

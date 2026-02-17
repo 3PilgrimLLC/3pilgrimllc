@@ -2,11 +2,21 @@
 
     [
                 {
+    "title": "Hallucinations in Large Language Models: When More Data Reinforces Error and Minimal Perturbations Reveal Misclassification",
+    "version": "1.0",
+    "doi": "10.5281/zenodo.18674477",
+    "date": "2026-02-15",
+    "category": ["AI Research"],
+    "companion": "https://3pilgrim.com/papers/papers/companion/Hallucinations-in-Large-Language-Models-v1.0.html",
+    "pdf": "https://3pilgrim.com/papers-pdfs/Hallucinations-in-Large-Language-Models-v1.0.pdf"
+  },
+
+                {
     "title": "The Information Density Limit: When Parallel Computers Become a Communication Medium",
     "version": "1.0",
     "doi": "10.5281/zenodo.18652029",
     "date": "2026-02-15",
-    "category": ["Cognitive Science"],
+    "category": ["AI Research"],
     "companion": "https://3pilgrim.com/papers/papers/companion/The-Information-Density-Limit-v1.0.html",
     "pdf": "https://3pilgrim.com/papers-pdfs/papers/The-Information-Density-Limit-v1.0.pdf"
   },
