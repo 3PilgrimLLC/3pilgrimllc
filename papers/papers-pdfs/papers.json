@@ -1,6 +1,42 @@
 [
 
     [
+      {
+  "title": "The Origin of Emergence: A Dual-Plane Framework for the Synthetic Generation of Pre-Agent Intelligence through Natural Constraint Geometry",
+  "version": "1.0",
+  "doi": "10.5281/zenodo.18807724",
+  "date": "2026-02-27",
+  "category": ["Foundational Theory"],
+  "companion": "https://3pilgrim.com/papers/papers/companion/Origin_of_Emergence_Companion_v1.0.html",
+  "pdf": "https://3pilgrim.com/papers-pdfs/Origin_of_Emergence_v1.0.pdf"
+}
+      {
+  "title": "A Universal Decoder for Lost Oral Cultures: Structural Translation Through the Three Linguistic Primitives and Keystone Alignment",
+  "version": "1.0",
+  "doi": "10.5281/zenodo.18807013",
+  "date": "2026-02-27",
+  "category": ["Systems Linguistics"],
+  "companion": "https://3pilgrim.com/papers/papers/companion/Universal_Decoder_Companion_v1.0.html",
+  "pdf": "https://3pilgrim.com/papers-pdfs/Universal_Decoder_v1.0.pdf"
+}
+      {
+  "title": "Language as Constraint Geometry: Tripartite Attractor Structure in Tokenized Biological Communication Systems",
+  "version": "1.0",
+  "doi": "10.5281/zenodo.18807009",
+  "date": "2026-02-27",
+  "category": ["Systems Linguistics"],
+  "companion": "https://3pilgrim.com/papers/papers/companion/Language_as_Constraint_Geometry_Companion_v1.0.html",
+  "pdf": "https://3pilgrim.com/papers-pdfs/Language_as_Constraint_Geometry_v1.0.pdf"
+}
+      {
+  "title": "Hallucinations in Large Language Models: When More Data Reinforces Error and Minimal Perturbations Reveal Misclassification",
+  "version": "1.0",
+  "doi": "10.5281/zenodo.18805427",
+  "date": "2026-02-27",
+  "category": ["Cognitive Science"],
+  "companion": "https://3pilgrim.com/papers/papers/companion/Hallucinations-in-Large-Language-Models-v1.0.html",
+  "pdf": "https://3pilgrim.com/papers-pdfs/Hallucinations-in-Large-Language-Models-v1.0.pdf"
+}
                 {
     "title": "Hallucinations in Large Language Models: When More Data Reinforces Error and Minimal Perturbations Reveal Misclassification",
     "version": "1.0",
